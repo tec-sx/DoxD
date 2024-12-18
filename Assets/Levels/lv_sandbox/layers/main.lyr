@@ -1,5 +1,5 @@
 <ObjectLayer>
- <Layer Name="Main" FullName="Main" GUID="1c9ff051-b2be-c96f-1d78-aa52cce96da0" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1734526185">
+ <Layer Name="Main" FullName="Main" GUID="1c9ff051-b2be-c96f-1d78-aa52cce96da0" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1734539242">
   <LayerObjects>
    <Object Type="EntityWithComponent" Layer="Main" LayerGUID="1c9ff051-b2be-c96f-1d78-aa52cce96da0" Id="03092002-42d4-011c-9c2a-1a6afbd118f4" Name="ExitPoint" LinkedTo="ba0b94c9-959e-ed74-59c3-ab2e978ef0e5" Pos="0,0,0.5" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
     <Properties />
@@ -283,13 +283,13 @@
      </Component>
     </Components>
    </Object>
-   <Object Type="EntityWithComponent" Layer="Main" LayerGUID="1c9ff051-b2be-c96f-1d78-aa52cce96da0" Id="0cba4be7-0516-933d-a78a-8f0ff9db28a0" Name="Player" Pos="297.90204,670.7384,116.38193" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+   <Object Type="EntityWithComponent" Layer="Main" LayerGUID="1c9ff051-b2be-c96f-1d78-aa52cce96da0" Id="64871e98-45b8-1125-7fdb-93a9153daf26" Name="Entity-9" Pos="302.65308,683.11182,123.05486" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
     <Properties />
     <Components>
-     <Component CryXmlVersion="2" TypeGUID="63f4c0c6-32af-4acb-8fb0-57d45dd14725" TypeName="DoxD::CPlayerComponent" GUID="6eead12b-58e9-1d7d-bb61-41d64e1db2df" Name="" UserAdded="true">
-      <properties playerwalkspeed="0" playerrunspeed="0" playerjumpheight="0" playerrotationspeed="10" capsuleheightcrouching="0" capsuleheightstanding="0" capsulegroundoffset="0"/>
+     <Component CryXmlVersion="2" TypeGUID="63f4c0c6-32af-4acb-8fb0-57d45dd14725" TypeName="DoxD::CPlayerComponent" GUID="7fae0681-483e-c889-05e8-1da7886a8e24" Name="" UserAdded="true">
+      <properties playerwalkspeed="12" playerrunspeed="39" playerjumpheight="3" playerrotationspeedwalking="6" playerrotationspeedrunning="3" capsuleheightcrouching="0.75" capsuleheightstanding="1.6" capsulegroundoffset="0.2"/>
      </Component>
-     <Component CryXmlVersion="2" TypeGUID="98183f31-a685-43cd-92a9-815274f0a81c" TypeName="Cry::DefaultComponents::CCharacterControllerComponent" GUID="4dc4bc73-0eaa-053d-5917-25ead53515bc" Name="" UserAdded="false">
+     <Component CryXmlVersion="2" TypeGUID="98183f31-a685-43cd-92a9-815274f0a81c" TypeName="Cry::DefaultComponents::CCharacterControllerComponent" GUID="1381b8a3-659b-e804-e6c5-348bf378e535" Name="" UserAdded="false">
       <Transform>
        <translation>
         <position>
@@ -307,20 +307,20 @@
       </Transform>
       <properties Networked="false">
        <Physics Mass="80" Radius="0.44999999" Height="0.935" Capsule="true" GroundContactEps="0.0040000002" SendCollisionSignal="false"/>
-       <Movement AirControl="0" AirResistance="0.2" Inertia="8" InertiaAcc="8" MaxClimb="0.87440991" MaxJump="0.87266463" MinSlide="1.2234758" MinFall="1.3962634" MaxGroundVelocity="16"/>
+       <Movement AirControl="0" AirResistance="0.2" Inertia="8" InertiaAcc="8" MaxClimb="0.87266463" MaxJump="0.87266463" MinSlide="1.2217305" MinFall="1.3962634" MaxGroundVelocity="16"/>
       </properties>
      </Component>
-     <Component CryXmlVersion="2" TypeGUID="183e3c84-2e08-4506-95fa-b362f7e735e9" TypeName="Cry::DefaultComponents::CInputComponent" GUID="4785e42a-84ef-bdbb-61c5-599aed003c4b" Name="" UserAdded="false">
+     <Component CryXmlVersion="2" TypeGUID="183e3c84-2e08-4506-95fa-b362f7e735e9" TypeName="Cry::DefaultComponents::CInputComponent" GUID="4ef40362-34ef-2552-6711-08ba4ab66763" Name="" UserAdded="false">
       <properties />
      </Component>
-     <Component CryXmlVersion="2" TypeGUID="bae91d5c-8cfb-40b2-8397-f5a9eedb9ac4" TypeName="Cry::Audio::DefaultComponents::CListenerComponent" GUID="2f0bd3fb-650f-44a0-044f-bac955c94062" Name="" UserAdded="false">
+     <Component CryXmlVersion="2" TypeGUID="bae91d5c-8cfb-40b2-8397-f5a9eedb9ac4" TypeName="Cry::Audio::DefaultComponents::CListenerComponent" GUID="6c44d93a-45ea-1119-d913-caa008b6c13c" Name="" UserAdded="false">
       <properties>
        <listener name="Default Listener">
         <offset x="0" y="0" z="0"/>
        </listener>
       </properties>
      </Component>
-     <Component CryXmlVersion="2" TypeGUID="3cd5ddc5-ee15-437f-a997-79c2391537fe" TypeName="Cry::DefaultComponents::CAdvancedAnimationComponent" GUID="d267f271-a819-090d-5edd-10f06ed67e97" Name="" UserAdded="false">
+     <Component CryXmlVersion="2" TypeGUID="3cd5ddc5-ee15-437f-a997-79c2391537fe" TypeName="Cry::DefaultComponents::CAdvancedAnimationComponent" GUID="6c5f7a8c-5fc1-2fc7-34ea-110bccb1528c" Name="" UserAdded="false">
       <Transform>
        <translation>
         <position>

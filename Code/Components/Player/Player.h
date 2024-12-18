@@ -137,7 +137,7 @@ namespace DoxD
 	////////////////////////////////////////////////////////
 	// Represents a player participating in gameplay
 	////////////////////////////////////////////////////////
-	class CPlayerComponent final : public CActor, public IEntityComponent
+	class CPlayerComponent final : public IEntityComponent, public CActor
 	{
 	public:
 		enum class EPlayerState
@@ -160,7 +160,8 @@ namespace DoxD
 		static constexpr float DEFAULT_CAPSULE_HEIGHT_STANDING = 1.6;
 		static constexpr float DEFAULT_CAPSULE_GROUND_OFFSET = 0.2;
 		static constexpr EPlayerStance DEFAULT_STANCE = EPlayerStance::Standing;
-		static constexpr float DEFAULT_ROTATION_SPEED = 2;
+		static constexpr float DEFAULT_ROTATION_SPEED_WALK = 6;
+		static constexpr float DEFAULT_ROTATION_SPEED_RUN = 3;
 
 	public:
 		CPlayerComponent();
@@ -182,7 +183,8 @@ namespace DoxD
 			desc.AddMember(&CPlayerComponent::m_walkSpeed, 'pws', "playerwalkspeed", "Player Walk Speed", "Sets the Player Walking Speed", DEFAULT_SPEED_WALKING);
 			desc.AddMember(&CPlayerComponent::m_runSpeed, 'prs', "playerrunspeed", "Player Run Speed", "Sets the Player Running Speed", DEFAULT_SPEED_RUNNING);
 			desc.AddMember(&CPlayerComponent::m_jumpHeight, 'pjh', "playerjumpheight", "Player Jump Height", "Sets the Player Jump Height", DEFAULT_JUMP_ENERGY);
-			desc.AddMember(&CPlayerComponent::m_rotationSpeed, 'rsp', "playerrotationspeed", "Player Rotation Speed", "Sets the player rotation speed", DEFAULT_ROTATION_SPEED);
+			desc.AddMember(&CPlayerComponent::m_rotationSpeedWalking, 'rspw', "playerrotationspeedwalking", "Player Walking Rotation Speed", "Sets the player rotation speed when walking", DEFAULT_ROTATION_SPEED_WALK);
+			desc.AddMember(&CPlayerComponent::m_rotationSpeedRunning, 'rspr', "playerrotationspeedrunning", "Player Running Rotation Speed", "Sets the player rotation speed when running", DEFAULT_ROTATION_SPEED_RUN);
 			desc.AddMember(&CPlayerComponent::m_capsuleHeightCrouching, 'capc', "capsuleheightcrouching", "Capsule Crouching Height", "Height of collision capsule while crouching", DEFAULT_CAPSULE_HEIGHT_CROUCHING);
 			desc.AddMember(&CPlayerComponent::m_capsuleHeightStanding, 'caps', "capsuleheightstanding", "Capsule Standing Height", "Height of collision capsule while standing", DEFAULT_CAPSULE_HEIGHT_STANDING);
 			desc.AddMember(&CPlayerComponent::m_capsuleGroundOffset, 'capo', "capsulegroundoffset", "Capsule Ground Offset", "Offset of the capsule from the entity floor", DEFAULT_CAPSULE_GROUND_OFFSET);
@@ -208,6 +210,19 @@ namespace DoxD
 		void TryUpdateStance();
 		bool IsCapsuleIntersectingGeometry(const primitives::capsule& capsule) const;
 
+		// Component properties
+		float m_capsuleHeightCrouching = DEFAULT_CAPSULE_HEIGHT_CROUCHING;
+		float m_capsuleHeightStanding = DEFAULT_CAPSULE_HEIGHT_STANDING;
+		float m_capsuleGroundOffset = DEFAULT_CAPSULE_GROUND_OFFSET;
+		float m_walkSpeed = DEFAULT_SPEED_WALKING;
+		float m_runSpeed = DEFAULT_SPEED_RUNNING;
+		float m_jumpHeight = DEFAULT_JUMP_ENERGY;
+		float m_rotationSpeedWalking = DEFAULT_ROTATION_SPEED_WALK;
+		float m_rotationSpeedRunning = DEFAULT_ROTATION_SPEED_RUN;
+
+		FragmentID m_idleFragmentId;
+		FragmentID m_walkFragmentId;
+		TagID m_rotateTagId;
 	private:
 		CPlayerCamera* m_pPlayerCamera;
 		
@@ -240,18 +255,5 @@ namespace DoxD
 		Vec3 m_cameraEndOffset;
 
 		FragmentID m_activeFragmentId;
-
-		// Component properties
-		float m_capsuleHeightCrouching;
-		float m_capsuleHeightStanding;
-		float m_capsuleGroundOffset;
-		float m_walkSpeed;
-		float m_runSpeed;
-		float m_jumpHeight;
-		float m_rotationSpeed;
-
-		FragmentID m_idleFragmentId;
-		FragmentID m_walkFragmentId;
-		TagID m_rotateTagId;
 	};
 }

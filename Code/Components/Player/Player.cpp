@@ -87,20 +87,6 @@ namespace DoxD
 		, m_currentYaw(IDENTITY)
 		, m_currentPitch(0.f)
 		, m_movementDelta(ZERO)
-		, m_currentPlayerState(DEFAULT_STATE)
-		, m_currentStance(DEFAULT_STANCE)
-		, m_desiredStance(DEFAULT_STANCE)
-		, m_capsuleHeightStanding(DEFAULT_CAPSULE_HEIGHT_STANDING)
-		, m_capsuleHeightCrouching(DEFAULT_CAPSULE_HEIGHT_CROUCHING)
-		, m_capsuleGroundOffset(DEFAULT_CAPSULE_GROUND_OFFSET)
-		, m_walkSpeed(DEFAULT_SPEED_WALKING)
-		, m_runSpeed(DEFAULT_SPEED_RUNNING)
-		, m_jumpHeight(DEFAULT_JUMP_ENERGY)
-		, m_activeFragmentId(FRAGMENT_ID_INVALID)
-		, m_idleFragmentId(FRAGMENT_ID_INVALID)
-		, m_walkFragmentId(FRAGMENT_ID_INVALID)
-		, m_rotateTagId(TAG_ID_INVALID)
-		, m_rotationSpeed(DEFAULT_ROTATION_SPEED)
 		, m_lastFrameDesiredRotation(IDENTITY)
 
 	{
@@ -422,13 +408,14 @@ namespace DoxD
 		// We only want to affect Z-axis rotation, zero pitch and roll
 
 		
-		if (!GetEntity()->GetRotation().IsZero())
+		if (!m_pCharacterController->GetVelocity().IsZero())
 		{
 			Ang3 ypr = CCamera::CreateAnglesYPR(Matrix33(m_lookOrientation));
 			ypr.y = 0;
 			ypr.z = 0;
+			const float rotationSpeed = m_currentPlayerState == EPlayerState::Sprinting ? m_rotationSpeedRunning : m_rotationSpeedWalking;
 			const Quat targetRotation = Quat(CCamera::CreateOrientationYPR(ypr));
-			const Quat finalRotation = Quat::CreateSlerp(m_lastFrameDesiredRotation, targetRotation, m_rotationSpeed * frameTime);
+			const Quat finalRotation = Quat::CreateSlerp(m_lastFrameDesiredRotation, targetRotation, rotationSpeed * frameTime);
 			
 			m_lastFrameDesiredRotation = finalRotation;
 
