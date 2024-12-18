@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="f0644f57-1a4d-985a-4b29-3724263d71c4">
+ <Files>
+  <File path="mv_cuckooflower_patch.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">181</Detail>
+  <Detail name="vertexCount">295</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

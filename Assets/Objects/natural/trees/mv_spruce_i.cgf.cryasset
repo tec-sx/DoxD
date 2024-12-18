@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="4801d407-6b07-38ac-aca3-bade32571dcd">
+ <Files>
+  <File path="mv_spruce_i.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">6</Detail>
+  <Detail name="triangleCount">1697</Detail>
+  <Detail name="vertexCount">2064</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_trees.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

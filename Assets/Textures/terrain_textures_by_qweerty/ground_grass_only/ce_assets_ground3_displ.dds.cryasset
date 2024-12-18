@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="aa687da4-6f88-6355-d3c4-cba7348afde1" source="ce_assets_ground3_displ.tif">
+ <Files>
+  <File path="ce_assets_ground3_displ.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

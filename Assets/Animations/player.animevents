@@ -1,0 +1,6 @@
+<anim_event_list>
+ <animation name="animations/puffydelite/locomotion/walk.caf">
+  <event name="footstep" time="0.30000001" endTime="0.30000001" parameter="" bone="foot_l" offset="0,0,0" dir="0,0,0" model=""/>
+  <event name="footstep" time="0.80000001" endTime="0.80000001" parameter="" bone="foot_r" offset="0,0,0" dir="0,0,0" model=""/>
+ </animation>
+</anim_event_list>

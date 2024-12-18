@@ -1,0 +1,69 @@
+{
+	"version": 4,
+	"type": "",
+	"info": { "name": "DoxD.Game", "guid": "e3865104-7321-f784-b95f-43e034a4e34b" },
+	"content": {
+		"assets": [ "Assets" ],
+		"code": [ "Code" ],
+		"libs": [
+			{ "name": "DoxD.Game", "shared": { "any": "", "win_x64": "", "win_x86": "" } }
+		]
+	},
+	"require": {
+		"engine": "engine-5.7",
+		"plugins": [
+			{ "guid": "", "type": "`EType::Native`", "path": "CryDefaultEntities" },
+			{ "guid": "", "type": "EType::Native", "path": "CrySensorSystem" },
+			{ "guid": "", "type": "EType::Native", "path": "CryScaleformSchematyc" },
+			{ "guid": "", "type": "EType::Native", "path": "CryPerceptionSystem" },
+			{ "guid": "", "type": "EType::Native", "path": "bin/win_x64/DoxD.Game.dll" },
+			{
+				"guid": "",
+				"type": "EType::Native",
+				"path": "CryGamePlatform",
+				"platforms": [ "PS4" ]
+			}
+		]
+	},
+	"console_variables": {
+		"ca_SkeletonEffectsPlayAudioInEngine": "1",
+		"ca_useIMG_CAF": "0",
+		"con_showonload": "0",
+		"e_Fog": "1",
+		"e_ShadowsMaxTexRes": "1024",
+		"e_SkyBox": "1",
+		"e_VolumetricFog": "1",
+		"log_Verbosity": "3",
+		"log_WriteToFile": "1",
+		"log_WriteToFileVerbosity": "3",
+		"p_draw_helpers": "0",
+		"r_AntialiasingMode": "2",
+		"r_HDREyeAdaptationMode": "1",
+		"r_PostProcessEffects": "1",
+		"r_ShaderCompilerPort": "61453",
+		"r_ShaderCompilerServer": "localhost",
+		"r_ShadersAllowCompilation": "1",
+		"r_ShadersAsyncCompiling": "3",
+		"r_ShadersAsyncMaxThreads": "1",
+		"r_ShadersRemoteCompiler": "0",
+		"r_ShadowsScreenSpace": "0",
+		"r_VolumetricClouds": "1",
+		"r_WaterCaustics": "1",
+		"r_WaterReflections": "1",
+		"r_WindowIconTexture": "%ENGINE%/EngineAssets/Textures/default_icon.dds",
+		"r_displayInfo": "1",
+		"r_driver": "DX12",
+		"r_profiler": "0",
+		"r_ssdo": "1",
+		"r_vsync": "1",
+		"s_ImplName": "CryAudioImplSDLMixer",
+		"s_drawdebug": "0",
+		"sys_DeactivateConsole": "0",
+		"sys_audio_disable": "0",
+		"sys_flash": "1",
+		"sys_maxFPS": "-1",
+		"sys_physics": "1",
+		"sys_target_platforms": "pc,ps4,xboxone,linux"
+	},
+	"console_commands": { }
+}

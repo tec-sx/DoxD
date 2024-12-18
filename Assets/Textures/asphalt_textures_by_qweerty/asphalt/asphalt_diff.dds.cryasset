@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="6e90e726-d7b6-8f18-0fd8-8db4ea57d481" source="asphalt_diff.tif">
+ <Files>
+  <File path="asphalt_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Character" guid="121d8688-ee54-0dff-38e0-98f09fd8127b">
+ <Files>
+  <File path="cc_kevin.cdf"/>
+ </Files>
+ <Details />
+ <Dependencies>
+  <Path>./</Path>
+ </Dependencies>
+</AssetMetadata>

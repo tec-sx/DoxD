@@ -1,0 +1,20 @@
+<Material MtlFlags="526336" Shader="Terrain.Layer" GenMask="2200208000020" StringGenMask="%NORMAL_MAP%PARALLAX_OCCLUSION_MAPPING%SPECULAR_MAP%TEMP_TERRAIN%USE_ORIGINAL_DIFFUSE_MAP" SurfaceType="mat_vegetation" MatTemplate="" Diffuse="0.34191453,0.34191453,0.34191453" Specular="0.20507877,0.20507877,0.20507877" Opacity="1" Shininess="225.93007" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ground_grass_in_sand_wet_diff.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ground_grass_in_sand_wet_ddna.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ground_grass_in_sand_wet_spec.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Detail" File="textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ground_grass_in_sand_wet_detail.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Heightmap" File="textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ce_assets_ground1_wet_displ.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+ </Textures>
+ <PublicParams BlendFactor="16" BlendFalloff="0.1" HeightBias="0" NormalMapBumpiness="2" PomDisplacement="0.021" SelfShadowStrength="5"/>
+</Material>

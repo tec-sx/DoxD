@@ -1,0 +1,20 @@
+<Material MtlFlags="526336" Shader="Terrain.Layer" GenMask="2200208000022" StringGenMask="%NORMAL_MAP%PARALLAX_OCCLUSION_MAPPING%SOFT_DEPTH_TEST%SPECULAR_MAP%TEMP_TERRAIN%USE_ORIGINAL_DIFFUSE_MAP" SurfaceType="mat_vegetation" MatTemplate="" Diffuse="0.34191453,0.34191453,0.34191453" Specular="1,1,1" Opacity="1" Shininess="255" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/terrain_textures_by_qweerty/ground_sand_only_wet/ground_sand_only_wet_diff.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/terrain_textures_by_qweerty/ground_sand_only_wet/ground_sand_only_wet_ddna.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/terrain_textures_by_qweerty/ground_sand_only_wet/ground_sand_only_wet_spec.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Detail" File="textures/terrain_textures_by_qweerty/ground_sand_only_wet/ground_sand_only_wet_detail.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Heightmap" File="textures/terrain_textures_by_qweerty/ground_sand_only_wet/ce_assets_ground2_wet_displ.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+ </Textures>
+ <PublicParams BlendFactor="16" BlendFalloff="0.1" HeightBias="0" NormalMapBumpiness="1.497" PomDisplacement="0.013" SelfShadowStrength="5" SoftDepthTestDistRatio="0.245" SoftDepthTestRange="0.167"/>
+</Material>

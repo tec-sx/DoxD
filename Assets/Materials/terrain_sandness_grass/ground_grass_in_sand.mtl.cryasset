@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="d24ef309-7a6e-703b-4ae0-9b4599cf8887" timestamp="1655316750">
+ <Files>
+  <File path="ground_grass_in_sand.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_grass_in_sand/ground_grass_in_sand_diff.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_grass_in_sand/ground_grass_in_sand_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_grass_in_sand/ground_grass_in_sand_spec.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_grass_in_sand/ground_grass_in_sand_detail.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_grass_in_sand/ce_assets_ground1_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

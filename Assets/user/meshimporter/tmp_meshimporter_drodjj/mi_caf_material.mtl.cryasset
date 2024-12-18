@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="772fa9dc-a063-30bd-55cc-bb8abe3ede3d">
+ <Files>
+  <File path="mi_caf_material.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">4</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

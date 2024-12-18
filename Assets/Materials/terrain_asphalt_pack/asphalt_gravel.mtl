@@ -1,0 +1,20 @@
+<Material MtlFlags="526336" Shader="Terrain.Layer" GenMask="220020A000020" StringGenMask="%NORMAL_MAP%OFFSET_BUMP_MAPPING%PARALLAX_OCCLUSION_MAPPING%SPECULAR_MAP%TEMP_TERRAIN%USE_ORIGINAL_DIFFUSE_MAP" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0.2917707,0.2917707,0.2917707" Specular="1,1,1" Opacity="1" Shininess="127.5" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/asphalt_textures_by_qweerty/asphalt_gravel/asphalt_gravel_diff.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/asphalt_textures_by_qweerty/asphalt_gravel/asphalt_gravel_ddna.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Specular" File="textures/asphalt_textures_by_qweerty/asphalt_gravel/asphalt_gravel_spec.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Detail" File="textures/asphalt_textures_by_qweerty/asphalt_gravel/asphalt_gravel_detail.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+  <Texture Map="Heightmap" File="textures/asphalt_textures_by_qweerty/asphalt_gravel/asphalt_gravel_displ.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TileU="0.2" TileV="0.2"/>
+  </Texture>
+ </Textures>
+ <PublicParams BlendFactor="16" BlendFalloff="2" HeightBias="0" NormalMapBumpiness="1.671" ObmDisplacement="0.025" PomDisplacement="0.022" SelfShadowStrength="5"/>
+</Material>
