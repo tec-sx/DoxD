@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="aa8a33af-e2aa-d0a9-b965-9ae2dcd18f38">
+ <Files>
+  <File path="mv_grass_3_patch.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">220</Detail>
+  <Detail name="vertexCount">294</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="126c96e9-60af-4826-0bdf-7ce2165fc6fb">
+ <Files>
+  <File path="mv_flower_yellow.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">271</Detail>
+  <Detail name="vertexCount">426</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

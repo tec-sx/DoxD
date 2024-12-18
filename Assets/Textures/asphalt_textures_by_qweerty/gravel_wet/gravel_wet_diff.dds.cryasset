@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="fffaa907-2950-9ede-d6db-689ba0ff4dbc" source="gravel_wet_diff.tif">
+ <Files>
+  <File path="gravel_wet_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

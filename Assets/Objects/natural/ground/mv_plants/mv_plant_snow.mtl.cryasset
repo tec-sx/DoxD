@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="fb2170f0-9138-d105-dc47-e1953b1cba23">
+ <Files>
+  <File path="mv_plant_snow.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">1</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants_snow_diff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

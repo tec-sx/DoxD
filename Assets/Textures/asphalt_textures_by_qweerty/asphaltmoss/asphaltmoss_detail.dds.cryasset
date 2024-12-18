@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="ae589f05-b149-0e76-095b-f20ed738ce77" source="asphaltmoss_detail.tif">
+ <Files>
+  <File path="asphaltmoss_detail.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

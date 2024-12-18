@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="2e62bec5-9628-b3d4-7ea5-59e922b57a83">
+ <Files>
+  <File path="mv_hemlock_single_a.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">76</Detail>
+  <Detail name="vertexCount">109</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

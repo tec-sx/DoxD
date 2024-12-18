@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="06822425-1c3c-fa97-550f-65a452f9c522" timestamp="1654487854">
+ <Files>
+  <File path="gravel.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/gravel/gravel_diff.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/gravel/gravel_ddna.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/gravel/gravel_spec.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/gravel/gravel_detail.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/gravel/gravel_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

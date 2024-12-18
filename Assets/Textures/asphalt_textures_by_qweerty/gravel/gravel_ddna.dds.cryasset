@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="eb89d79d-3717-44e6-859c-592fd18b5fe0" source="gravel_ddna.tif">
+ <Files>
+  <File path="gravel_ddna.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

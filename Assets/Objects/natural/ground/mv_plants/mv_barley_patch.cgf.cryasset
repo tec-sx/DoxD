@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="017674ce-68e3-f326-448f-7ae77e334c16">
+ <Files>
+  <File path="mv_barley_patch.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">221</Detail>
+  <Detail name="vertexCount">347</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants.mtl</Path>
+ </Dependencies>
+</AssetMetadata>
