@@ -37,33 +37,32 @@
 # Ignore Cryengine specific
 #####################################
 
-*.pak
-
-/user.cfg
-/system.cfg
-/editor.cfg
-/.bootstrap*.*
-
-# Ignore bin folders
-/bin/*
-/BinTemp/*
-
-# Ignore auto generated cmake solutions
-/solutions/*
-
-# Temp files
-/user/*
-/user(1)/*
-/user(2)/*
 *.log
 *.dmp
-/testresults/*
-/logbackups/*
 *.pyo
 *.pyc
+*.bak
+*.bak2
+*.pak
 
-/.depproj/*
-/project.sln
+# Temporary directories.
+/[Bb]in*/
+/[Ss]olutions/*
+/[Ss]olutions_cmake/*
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]og[Bb]ackups
+/[Ll]ogs/
+/[Uu]ser*/
+/[Tt]emp/
+/[Ee]ditor/
+/rc_out_PC_pure/
+/*_package/
+
+# Code Editors
+.idea/
+.vscode/
+.vs/
 
 #ignore Assets for now
 
@@ -76,10 +75,4 @@
 *.png
 *.jpg
 *.tif
-
-# Might contain a license key, so don't add it to a repo.
-/Code/Tools/waf-1.7.13/recode.lic
-
-# Ignore IDE Folders
-.vs/
-.vscode/
+*.dds

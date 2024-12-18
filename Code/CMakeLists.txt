@@ -42,11 +42,11 @@ add_sources("Camera_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components\\\\Camera"
 		"Components/Camera/CameraModes.cpp"
-		"Components/Camera/PlayerCamera.cpp"
 		"Components/Camera/ICameraMode.cpp"
+		"Components/Camera/PlayerCamera.cpp"
 		"Components/Camera/CameraModes.h"
-		"Components/Camera/PlayerCamera.h"
 		"Components/Camera/ICameraMode.h"
+		"Components/Camera/PlayerCamera.h"
 )
 add_sources("Ladder_uber.cpp"
     PROJECTS DoxD.Game
