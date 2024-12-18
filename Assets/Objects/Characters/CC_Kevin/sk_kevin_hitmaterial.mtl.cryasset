@@ -1,9 +1,0 @@
-<AssetMetadata version="0" type="Material" guid="792a5c9a-0e9a-4f02-1031-bd037a816741">
- <Files>
-  <File path="sk_kevin_hitmaterial.mtl"/>
- </Files>
- <Details>
-  <Detail name="subMaterialCount">6</Detail>
-  <Detail name="textureCount">0</Detail>
- </Details>
-</AssetMetadata>
