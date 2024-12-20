@@ -168,6 +168,7 @@ namespace DoxD
 			UpdateAnimation(frameTime);
 
 			m_pPlayerCamera->Update(frameTime);
+			m_pAudioListener->SetOffset(gEnv->pSystem->GetViewCamera().GetPosition());
 		}
 		break;
 		case Cry::Entity::EEvent::PhysicalTypeChanged:
@@ -422,8 +423,6 @@ namespace DoxD
 			// Send updated transform to the entity, only orientation changes
 			GetEntity()->SetPosRotScale(GetEntity()->GetWorldPos(), finalRotation, Vec3(1, 1, 1));
 		}
-
-		// m_pAudioListener->SetOffset(finalTransform.GetTranslation());
 	}
 
 	void CPlayerComponent::TryUpdateStance()

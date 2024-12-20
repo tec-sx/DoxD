@@ -1,6 +1,6 @@
 <AssetMetadata version="0" type="Texture" guid="1cf17214-c0dd-66d9-4f43-f0d6288d795f" source="Entity-3_cm.tif">
  <Files>
-  <File path="Entity-3_cm_diff.dds"/>
+  <File path="entity-3_cm_diff.dds"/>
  </Files>
  <Details>
   <Detail name="width">192</Detail>

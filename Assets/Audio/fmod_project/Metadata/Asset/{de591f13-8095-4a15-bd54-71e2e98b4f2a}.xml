@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{de591f13-8095-4a15-bd54-71e2e98b4f2a}">
+		<property name="assetPath">
+			<value>Music/SkyTower/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d15c9756-d987-4e69-ba8a-21bf6a3fdf95}</destination>
+		</relationship>
+	</object>
+</objects>

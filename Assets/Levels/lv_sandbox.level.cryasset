@@ -1,11 +1,9 @@
-<AssetMetadata version="0" type="Level" guid="39d4ee98-79fb-7824-f0e0-c88533e38629" source="" timestamp="1734539242">
+<AssetMetadata version="0" type="Level" guid="39d4ee98-79fb-7824-f0e0-c88533e38629" source="" timestamp="1734657631">
  <Files>
   <File path="lv_sandbox/lv_sandbox.level"/>
  </Files>
  <Dependencies>
   <Path usageCount="1">%ENGINE%/EngineAssets/Shading/default.env</Path>
-  <Path>%editor%/objects/envcube.cgf</Path>
-  <Path>%editor%/objects/envcube.mtl</Path>
   <Path>%engine%/engineassets/icons/averagememoryusage.dds</Path>
   <Path>%engine%/engineassets/icons/highmemoryusage.dds</Path>
   <Path>%engine%/engineassets/icons/livepreview.dds</Path>
@@ -24,6 +22,7 @@
   <Path>%engine%/engineassets/objects/primitive_cube.cgf</Path>
   <Path>%engine%/engineassets/objects/primitive_sphere.cgf</Path>
   <Path>%engine%/engineassets/texturemsg/defaultnouvs.dds</Path>
+  <Path>%engine%/engineassets/texturemsg/defaultsolids.mtl</Path>
   <Path>%engine%/engineassets/textures/grey.dds</Path>
   <Path>%engine%/engineassets/textures/skys/night/half_moon.dds</Path>
   <Path>%engine%/engineassets/textures/white.dds</Path>
@@ -89,6 +88,34 @@
   <Path>animations/puffydelite/locomotion/walk.caf</Path>
   <Path>animations/puffydelite/locomotion/walk_arc_left.caf</Path>
   <Path>animations/puffydelite/locomotion/walk_arc_right.caf</Path>
+  <Path>audio/fmod/ace/default_controls.xml</Path>
+  <Path>audio/fmod/ace/music.xml</Path>
+  <Path>audio/fmod/ace/preload.xml</Path>
+  <Path>audio/fmod/ace/preloads.xml</Path>
+  <Path>audio/fmod_project/assets/hh.wav</Path>
+  <Path>audio/fmod_project/assets/music/skytower/bass.wav</Path>
+  <Path>audio/fmod_project/assets/music/skytower/hh.wav</Path>
+  <Path>audio/fmod_project/assets/music/skytower/kick.wav</Path>
+  <Path>audio/fmod_project/assets/music/skytower/pad.wav</Path>
+  <Path>audio/fmod_project/assets/music/skytower/snare.wav</Path>
+  <Path>audio/fmod_project/metadata/bank/{31b09258-e814-4563-b211-26bc7e5ebf32}.xml</Path>
+  <Path>audio/fmod_project/metadata/bank/{83d93c5e-79f5-4db9-8d23-09790c6d711a}.xml</Path>
+  <Path>audio/fmod_project/metadata/bank/{9d7aa3d0-e6f8-4425-bfd2-ee212567cfb0}.xml</Path>
+  <Path>audio/fmod_project/metadata/bank/{ec461e9c-31f2-4ddc-99ac-89dfeb6b728a}.xml</Path>
+  <Path>audio/fmod_project/metadata/event/{277a4022-a6ce-421e-ba1a-062ebf7d4637}.xml</Path>
+  <Path>audio/fmod_project/metadata/event/{4672b2b7-d903-47d8-8014-fb02e9440c9d}.xml</Path>
+  <Path>audio/fmod_project/metadata/eventfolder/{331d17e8-d86f-4b31-80e6-a2ae8ad41958}.xml</Path>
+  <Path>audio/fmod_project/metadata/eventfolder/{9c10819d-32b3-4b32-99b4-247954d95ae3}.xml</Path>
+  <Path>audio/fmod_project/metadata/eventfolder/{ecb6e15d-3aa1-49d9-a95e-bf6ee8020f4c}.xml</Path>
+  <Path>audio/fmod_project/metadata/eventfolder/{ee8be1d8-da87-431f-921b-0587dd011ef2}.xml</Path>
+  <Path>audio/fmod_project/metadata/group/{410b41fd-f7e7-4c12-96c1-e9d8ecec2060}.xml</Path>
+  <Path>audio/fmod_project/metadata/parameterpreset/{9565a959-7f47-4882-beea-3901f2e08162}.xml</Path>
+  <Path>audio/fmod_project/metadata/parameterpresetfolder/{4c9ff127-6709-413b-8cc5-9faefa225d86}.xml</Path>
+  <Path>audio/fmod_project/metadata/parameterpresetfolder/{cc1f5a5e-cc00-484c-a584-ba2ff1a0520c}.xml</Path>
+  <Path>audio/fmod_project/metadata/return/{7ec504fe-a531-431e-8c7f-510b030a7e41}.xml</Path>
+  <Path>audio/fmod_project/metadata/return/{b3fb3973-a8ef-47ba-a1c7-7cf34860e847}.xml</Path>
+  <Path>audio/fmod_project/metadata/snapshotgroup/{5a271dec-c767-4bd4-bb67-bb645aa8db6d}.xml</Path>
+  <Path>audio/fmod_project/metadata/snapshotgroup/{70aecb19-4d4b-4633-96bd-44671d3f328f}.xml</Path>
   <Path>editor/resourcecache/objects/characters/puffydelite/materials/chocomint_4096.dds</Path>
   <Path>editor/resourcecache/objects/characters/samplecharacter/mcg_ddna.dds</Path>
   <Path>editor/resourcecache/objects/characters/samplecharacter/mcg_diff.dds</Path>
@@ -99,8 +126,6 @@
   <Path>editor/resourcecache/objects/natural/trees/mv_spruce_lod_sss.dds</Path>
   <Path>editor/resourcecache/objects/natural/trees/mv_spruce_sss.dds</Path>
   <Path>editor/resourcecache/objects/natural/trees/spruce_trunk_ddna.dds</Path>
-  <Path>editor/resourcecache/textures/cubemaps/example/entity-3_cm.dds</Path>
-  <Path>editor/resourcecache/textures/cubemaps/example/entity-3_cm_diff.dds</Path>
   <Path>editor/resourcecache/textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ce_assets_ground1_wet_displ.dds</Path>
   <Path>editor/resourcecache/textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ground_grass_in_sand_wet_ddna.dds</Path>
   <Path>editor/resourcecache/textures/terrain_textures_by_qweerty/ground_grass_in_sand_wet/ground_grass_in_sand_wet_detail.dds</Path>
@@ -142,6 +167,8 @@
   <Path>objects/natural/trees/mv_spruce_d.cgf</Path>
   <Path>objects/natural/trees/mv_spruce_ddna.dds</Path>
   <Path>objects/natural/trees/mv_spruce_diff.dds</Path>
+  <Path>objects/natural/trees/mv_spruce_e.cgf</Path>
+  <Path>objects/natural/trees/mv_spruce_i_dead.cgf</Path>
   <Path>objects/natural/trees/mv_spruce_lod_diff.dds</Path>
   <Path>objects/natural/trees/mv_spruce_lod_sss.dds</Path>
   <Path>objects/natural/trees/mv_spruce_sss.dds</Path>
@@ -150,8 +177,6 @@
   <Path>objects/weapons/sampleweapon/defaultweapon.cgf</Path>
   <Path>objects/weapons/sampleweapon/defaultweapon.mtl</Path>
   <Path>scripts/ai/factions.xml</Path>
-  <Path>textures/cubemaps/example/entity-3_cm.dds</Path>
-  <Path>textures/cubemaps/example/entity-3_cm_diff.dds</Path>
   <Path>textures/terrain_textures_by_qweerty/ground_sand_only/ground_sand_only_diff.dds</Path>
   <Path>user/meshimporter/tmp_meshimporter_hcxxyg/mi_caf_material.mtl</Path>
  </Dependencies>
