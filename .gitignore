@@ -54,10 +54,14 @@
 /[Ll]og[Bb]ackups
 /[Ll]ogs/
 /[Uu]ser*/
+/Assets/[Uu]ser*/
 /[Tt]emp/
 /[Ee]ditor/
 /rc_out_PC_pure/
 /*_package/
+
+# Assets is a submodule in a private repo
+/Assets/
 
 # Code Editors
 .idea/
@@ -75,5 +79,3 @@
 *.png
 *.jpg
 *.tif
-*.dds
-*.mtl

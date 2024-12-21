@@ -1,9 +1,0 @@
-<AssetMetadata version="0" type="Material" guid="1b0900cd-6a6d-a64e-5c84-95238ff8912c" timestamp="1732206276">
- <Files>
-  <File path="sk_puffydelite_hitmaterial.mtl"/>
- </Files>
- <Details>
-  <Detail name="subMaterialCount">4</Detail>
-  <Detail name="textureCount">0</Detail>
- </Details>
-</AssetMetadata>
