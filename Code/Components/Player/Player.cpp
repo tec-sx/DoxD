@@ -386,16 +386,16 @@ namespace DoxD
 		const float angularVelocityTurningThreshold = 0.174; // [rad/s]
 
 		// Update tags and motion parameters used for turning
-		const bool isTurning = std::abs(m_averagedHorizontalAngularVelocity.Get()) > angularVelocityTurningThreshold;
-		m_pAnimationComponent->SetTagWithId(m_rotateTagId, isTurning);
-		if (isTurning)
-		{
-			// TODO: This is a very rough predictive estimation of eMotionParamID_TurnAngle that could easily be replaced with accurate reactive motion 
-			// if we introduced IK look/aim setup to the character's model and decoupled entity's orientation from the look direction derived from mouse input.
+		//const bool isTurning = std::abs(m_averagedHorizontalAngularVelocity.Get()) > angularVelocityTurningThreshold;
+		//m_pAnimationComponent->SetTagWithId(m_rotateTagId, isTurning);
+		//if (isTurning)
+		//{
+		//	// TODO: This is a very rough predictive estimation of eMotionParamID_TurnAngle that could easily be replaced with accurate reactive motion 
+		//	// if we introduced IK look/aim setup to the character's model and decoupled entity's orientation from the look direction derived from mouse input.
 
-			const float turnDuration = 1.0f; // Expect the turning motion to take approximately one second.
-			m_pAnimationComponent->SetMotionParameter(eMotionParamID_TurnAngle, m_horizontalAngularVelocity * turnDuration);
-		}
+		//	const float turnDuration = 1.0f; // Expect the turning motion to take approximately one second.
+		//	m_pAnimationComponent->SetMotionParameter(eMotionParamID_TurnAngle, m_horizontalAngularVelocity * turnDuration);
+		//}
 
 		// Update active fragment
 		const FragmentID& desiredFragmentId = m_pCharacterController->IsWalking() ? m_walkFragmentId : m_idleFragmentId;

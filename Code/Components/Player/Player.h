@@ -179,6 +179,7 @@ namespace DoxD
 		{
 			desc.SetGUID("{63F4C0C6-32AF-4ACB-8FB0-57D45DD14725}"_cry_guid);
 			desc.SetComponentFlags(IEntityComponent::EFlags::Singleton);
+			desc.SetLabel("Third Person Character");
 
 			desc.AddMember(&CPlayerComponent::m_walkSpeed, 'pws', "playerwalkspeed", "Player Walk Speed", "Sets the Player Walking Speed", DEFAULT_SPEED_WALKING);
 			desc.AddMember(&CPlayerComponent::m_runSpeed, 'prs', "playerrunspeed", "Player Run Speed", "Sets the Player Running Speed", DEFAULT_SPEED_RUNNING);
