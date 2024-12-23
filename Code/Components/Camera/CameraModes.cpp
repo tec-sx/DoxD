@@ -35,6 +35,7 @@ namespace DoxD
 		: ICameraMode(camera)
 	{
 		m_targetArmLength = g_pGameCVars->cm_tpvDist;
+		m_lastTpvDistance = m_targetArmLength;
 		m_cameraLagSpeed = 10;
 		m_cameraRotationLagSpeed = 8;
 		m_cameraLagMaxDistance = 0;
@@ -85,28 +86,28 @@ namespace DoxD
 		const Vec3 crosshairPosition = desiredLocation + cameraDirection;
 		
 		// Handle camera collisions
-		//if (g_pGameCVars->cm_tpvCameraCollision)
-		//{
-		//	IPhysicalEntity* pSkipEnts[5];
-		//	const int nSkipEnts = player.GetPhysicalSkipEntities(pSkipEnts, CRY_ARRAY_COUNT(pSkipEnts));
+		if (g_pGameCVars->cm_tpvCameraCollision)
+		{
+			IPhysicalEntity* pSkipEnts[5];
+			const int nSkipEnts = player.GetPhysicalSkipEntities(pSkipEnts, CRY_ARRAY_COUNT(pSkipEnts));
 
-		//	primitives::sphere spherePrim;
-		//	spherePrim.center = crosshairPosition;
-		//	spherePrim.r = g_pGameCVars->cm_tpvCameraCollisionOffset;
+			primitives::sphere spherePrim;
+			spherePrim.center = crosshairPosition;
+			spherePrim.r = g_pGameCVars->cm_tpvCameraCollisionOffset;
 
-		//	float fDist = gEnv->pPhysicalWorld->PrimitiveWorldIntersection(
-		//		spherePrim.type, &spherePrim, -cameraDirection, ent_all, nullptr, 0, geom_colltype0, nullptr, nullptr, 0, pSkipEnts, nSkipEnts);
+			float fDist = gEnv->pPhysicalWorld->PrimitiveWorldIntersection(
+				spherePrim.type, &spherePrim, -cameraDirection, ent_all, nullptr, 0, geom_colltype0, nullptr, nullptr, 0, pSkipEnts, nSkipEnts);
 
-		//	if (fDist <= 0.0f)
-		//	{
-		//		fDist = m_targetArmLength;
-		//	}
+			if (fDist <= 0.0f)
+			{
+				fDist = m_targetArmLength;
+			}
 
-		//	fDist = max(g_pGameCVars->cm_tpvMinDist, fDist);
+			fDist = max(g_pGameCVars->cm_tpvMinDist, fDist);
 
-		//	Interpolate(m_lastTpvDistance, fDist, g_pGameCVars->cm_tpvInterpolationSpeed, frameTime);
-		//	desiredLocation = crosshairPosition - (cameraDirection.GetNormalized() * m_lastTpvDistance);
-		//}	
+			Interpolate(m_lastTpvDistance, fDist, g_pGameCVars->cm_tpvInterpolationSpeed, frameTime);
+			desiredLocation = crosshairPosition - (cameraDirection.GetNormalized() * m_lastTpvDistance);
+		}	
 
 		// Form a transform for new world transform for camera
 		CCamera camera = gEnv->pSystem->GetViewCamera();
