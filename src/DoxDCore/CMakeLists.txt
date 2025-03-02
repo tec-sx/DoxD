@@ -14,7 +14,7 @@ include("${TOOLS_CMAKE_DIR}/Configure.cmake")
 start_sources()
 
 sources_platform(ALL)
-add_sources("Code_uber.cpp"
+add_sources("DoxDCore_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Root"
 		"GameCVars.cpp"
@@ -23,6 +23,11 @@ add_sources("Code_uber.cpp"
 		"GameCVars.h"
 		"GamePlugin.h"
 		"StdAfx.h"
+)
+add_sources("Actor_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Actor"
+		"Actor/Fate.h"
 )
 add_sources("Components_uber.cpp"
     PROJECTS DoxD.Game
@@ -59,6 +64,12 @@ add_sources("Player_uber.cpp"
     SOURCE_GROUP "Components\\\\Player"
 		"Components/Player/Player.cpp"
 		"Components/Player/Player.h"
+)
+add_sources("Contracts_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Contracts"
+		"Contracts/IActor.h"
+		"Contracts/IItem.h"
 )
 add_sources("Utility_uber.cpp"
     PROJECTS DoxD.Game

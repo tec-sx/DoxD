@@ -15,8 +15,13 @@ public:
 	inline const SStanceInfo* GetStanceInfo(EStance stance) const
 	{
 		if (stance < 0 || stance > STANCE_LAST)
+		{
 			return &m_defaultStance;
-		return &m_stances[stance];
+		}
+		else
+		{
+			return &m_stances[stance];
+		}
 	}
 
 	//get actor status

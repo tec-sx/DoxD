@@ -68,7 +68,7 @@
 .vscode/
 .vs/
 
-#ignore Assets for now
+#ignore Asset sources
 
 *.fbx
 *.obj
@@ -79,3 +79,4 @@
 *.png
 *.jpg
 *.tif
+*.tiff
