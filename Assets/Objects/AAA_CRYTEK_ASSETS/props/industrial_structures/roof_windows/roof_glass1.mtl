@@ -1,0 +1,23 @@
+<Material MtlFlags="524544">
+ <SubMaterials>
+  <Material AlphaTest="0.050000001" Diffuse="1,1,1" Emissive="0,0,0" GenMask="40018050" LayerAct="1" MatTemplate="" MtlFlags="2623650" Name="wire_glass" Opacity="1" Shader="Glass" Shininess="180" Specular="1,1,1" StringGenMask="%BILINEAR_FP16%BLUR_REFRACTION%DIRT_MAP%ENVIRONMENT_MAP%SPEC_MAP" SurfaceType="mat_glass_unbreakable">
+   <Textures>
+    <Texture File="objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_windows/textures/wire_glass.tif" Map="Diffuse" />
+    <Texture File="objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_windows/textures/wire_glass_spec.tif" Map="Specular" />
+    <Texture File="objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_windows/textures/wire_glass_ddn.tif" Map="Bumpmap" />
+    <Texture File="objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_windows/textures/generic_cubemap_day_cm.tif" Map="Environment" />
+   </Textures>
+   <PublicParams BackLightScale="0.25" BlurAmount="0.1" BumpMapTile="1" BumpScale="0.1" FresnelBias="0.89999998" FresnelScale="1" IndirectColor="0.25,0.25,0.25" TintCloudiness="0.050000001" TintColor="1,1,1" />
+  </Material>
+  <Material Diffuse="1,1,1" Emissive="0,0,0" GenMask="80000081" LayerAct="1" MatTemplate="" MtlFlags="524416" Name="steel" Opacity="1" Shader="Illum" Shininess="255" Specular="0.029556841,0.029556841,0.029556841" StringGenMask="%ALLOW_SILHOUETTE_POM%BUMP_MAP%SUBSURFACE_SCATTERING" SurfaceType="mat_metal">
+   <Textures>
+    <Texture File="objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_windows/textures/rusted_steel_diff.tif" Map="Diffuse">
+     <TexMod TileU="2" TileV="2" />
+    </Texture>
+    <Texture File="objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_windows/textures/rusted_steel_ddna.tif" Map="Bumpmap" />
+   </Textures>
+   <PublicParams IndirectColor="0.25,0.25,0.25" SSSIndex="0" />
+  </Material>
+ </SubMaterials>
+ <PublicParams IndirectColor="0.25,0.25,0.25" SSSIndex="0" />
+</Material>

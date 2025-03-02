@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="3516c24a-4070-af89-62b8-a5e4d3db99bd" timestamp="1654489719">
+ <Files>
+  <File path="asphaltmoss.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/asphaltmoss/asphaltmoss_diff.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/asphaltmoss/asphaltmoss_ddna.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/asphaltmoss/asphaltmoss_spec.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/asphaltmoss/asphaltmoss_detail.dds</Path>
+  <Path usageCount="1">textures/asphalt_textures_by_qweerty/asphaltmoss/asphaltmoss_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

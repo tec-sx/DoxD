@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="70551675-e8c9-4bd2-ba93-0a147cfa95df" source="eye_water_spec.tif">
+ <Files>
+  <File path="eye_water_spec.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">256</Detail>
+  <Detail name="height">128</Detail>
+  <Detail name="mipCount">6</Detail>
+ </Details>
+</AssetMetadata>

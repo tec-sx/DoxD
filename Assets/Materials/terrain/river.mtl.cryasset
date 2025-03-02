@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="8777ec34-bc3e-4cd8-8d22-5f47bd35ad4a" source="" timestamp="1740243518">
+ <Files>
+  <File path="river.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Textures/cubemaps/01_bar/lp_global_cm_diff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

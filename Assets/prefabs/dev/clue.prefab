@@ -1,0 +1,31 @@
+<Prefab Name="clue" Id="168fa60d-0a5d-ae45-0b42-1125945f020f" Library="prefabs/dev/clue" Version="1">
+ <Objects>
+  <Object Type="EntityWithComponent" Layer="Bar" LayerGUID="7494fb93-7f40-5799-af17-0d0e92850561" Id="244bfa88-e429-5c01-17e3-de36d61ee4fb" Name="arrow" Pos="0,0,0" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+   <Properties />
+   <Components>
+    <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="08bee5b7-2be3-0d83-7df6-64cce8dc7f05" Name="" UserAdded="true">
+     <Transform>
+      <translation>
+       <position>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </position>
+      </translation>
+      <rotation x="0" y="-0" z="0"/>
+      <scale>
+       <element element="1"/>
+       <element element="1"/>
+       <element element="1"/>
+      </scale>
+     </Transform>
+     <properties Type="RenderAndCollider" FilePath="Objects/debug/clue.cgf" Material="Materials/dev/dev_info.mtl">
+      <IEditorEntityComponent />
+      <Render ShadowSpec="Low" IgnoreVisArea="false" IgnoreTerrainLayerBlend="false" IgnoreDecalBlend="false" ViewDistRatio="100" LODDistance="100" GIMode="None"/>
+      <Physics WeightType="EWeightType::Mass" Density="9.9999997e-05" Mass="10"/>
+     </properties>
+    </Component>
+   </Components>
+  </Object>
+ </Objects>
+</Prefab>

@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="d38a2c81-787b-abac-9bc4-e9c00d7ed226" source="papers_roughness.tif">
+ <Files>
+  <File path="papers_roughness.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

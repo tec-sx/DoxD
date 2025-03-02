@@ -1,0 +1,6 @@
+<Material MtlFlags="526336" Shader="Terrain.Layer" GenMask="200000000" StringGenMask="%TEMP_TERRAIN" SurfaceType="" MatTemplate="" Diffuse="0.46207702,0.26635563,0.066625945" Specular="0,0,0" Opacity="1" Shininess="10" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/defaults/white.dds"/>
+ </Textures>
+ <PublicParams BlendFalloff="1" DetailTextureStrength="1" DetailTextureStrengthFade="1" DetailTextureHighPassRange="15" BlendFactor="0" NormalMapBumpiness="1"/>
+</Material>

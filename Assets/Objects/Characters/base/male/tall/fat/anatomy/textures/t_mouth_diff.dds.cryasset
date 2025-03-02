@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="fd948dda-5c0a-ccf8-81db-b73fee069488" source="t_mouth_diff.tif" timestamp="1740520554">
+ <Files>
+  <File path="t_mouth_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">2048</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

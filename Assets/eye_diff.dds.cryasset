@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="f39d31f3-04bb-f023-43f6-317b0b0310ee" source="eye_diff.tif">
+ <Files>
+  <File path="eye_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

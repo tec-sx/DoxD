@@ -1,0 +1,15 @@
+{
+	"entries": [
+		{
+			"name": "human_animations",
+			"condition": { "hasTags": { "tags": [ "NPC" ] } },
+			"settings": {
+				"compressionValue": 10,
+				"positionEpsilon": 0.01,
+				"rotationEpsilon": 0.001,
+				"scaleEpsilon": 0.2,
+				"perJointSettings": [ ]
+			}
+		}
+	]
+}

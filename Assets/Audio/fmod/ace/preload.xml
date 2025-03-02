@@ -1,0 +1,13 @@
+<AudioSystemData name="Preload" version="5" preloads="1" files="1">
+ <ImplData banks="1"/>
+ <Preloads>
+  <PreloadRequest name="Music" type="autoload">
+   <File name="Music.bank"/>
+  </PreloadRequest>
+ </Preloads>
+ <EditorData>
+  <Library />
+  <Folders />
+  <Controls />
+ </EditorData>
+</AudioSystemData>

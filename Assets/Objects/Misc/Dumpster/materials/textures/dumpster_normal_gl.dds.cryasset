@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="24c08e75-7d19-cad0-9e84-276fb4ee0d93" source="dumpster_normal_gl.tif">
+ <Files>
+  <File path="dumpster_normal_gl.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

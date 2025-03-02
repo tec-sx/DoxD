@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="61599f43-1ca1-2fb5-6d01-bb3fde17bb2c" source="trash_bag_basecolor.tif">
+ <Files>
+  <File path="trash_bag_basecolor.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

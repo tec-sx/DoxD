@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="3eaeb8c9-b7f3-9b41-457d-c82121fd7926">
+ <Files>
+  <File path="pipes.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Objects\props\industrial_structures\pipes\small_pipes\textures/pipe_diff.dds</Path>
+  <Path usageCount="1">Objects\props\industrial_structures\pipes\small_pipes\textures/pipe_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

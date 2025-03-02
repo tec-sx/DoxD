@@ -1,0 +1,14 @@
+<ObjectLayer>
+ <Layer Name="Global_Audio" FullName="Global_Audio" GUID="79c6fd6c-20b7-a716-3391-b55724294981" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1734615634">
+  <LayerObjects>
+   <Object Type="AudioTriggerSpot" Layer="Global_Audio" LayerGUID="79c6fd6c-20b7-a716-3391-b55724294981" Id="3520d96b-55dc-6ac9-5ba8-3ef7de06cf36" Name="MusicTrigger" Pos="308.78262,677.59503,119.76425" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="AudioTriggerSpot" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component typeId="1009fa03-153c-459c-883d-33b33298813d" guid="684b0356-b9b6-3d0d-9e7f-cd32b852a67d" CryXmlVersion="2" Enabled="true" PlayTrigger="SkyTower" StopTrigger="" TriggerAreasOnMove="false" OcclusionType="ignore_state_name" Behavior="trigger_rate_state_name" MinDelay="0" MaxDelay="5000" DrawActivityRadius="eDrawActivityRadius_Disabled" DrawRandomizationArea="false">
+      <RandomizationArea x="0" y="0" z="0"/>
+     </Component>
+    </Components>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

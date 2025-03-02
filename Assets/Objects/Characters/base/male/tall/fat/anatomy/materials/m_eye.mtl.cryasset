@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="94f71c82-b028-1682-3490-35c2eeb1c1b2" source="" timestamp="1740569686">
+ <Files>
+  <File path="m_eye.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/anatomy/textures/eye_diff.dds</Path>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/anatomy/textures/eye_ddn.dds</Path>
+  <Path usageCount="1">Textures/cubemaps/01_bar/lp_global_cm.dds</Path>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/anatomy/textures/eye_displ.dds</Path>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/anatomy/textures/eye_cornea_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

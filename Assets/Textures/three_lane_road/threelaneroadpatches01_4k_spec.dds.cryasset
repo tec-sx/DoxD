@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="6012cb49-0249-35d7-7b24-2ff20d2eb20b" source="threelaneroadpatches01_4k_spec.tif">
+ <Files>
+  <File path="threelaneroadpatches01_4k_spec.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

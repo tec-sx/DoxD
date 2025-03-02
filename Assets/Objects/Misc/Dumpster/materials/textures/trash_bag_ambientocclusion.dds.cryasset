@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="ed2b6778-d17d-6c1c-683c-f9ad2f808177" source="trash_bag_ambientocclusion.tif">
+ <Files>
+  <File path="trash_bag_ambientocclusion.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

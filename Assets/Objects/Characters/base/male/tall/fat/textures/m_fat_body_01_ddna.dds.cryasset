@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="74e868bc-16a5-b862-551c-cd5dc0110a71" source="m_fat_body_01_ddna.tif">
+ <Files>
+  <File path="m_fat_body_01_ddna.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

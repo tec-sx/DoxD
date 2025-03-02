@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="d53aa558-717b-9ae3-5c74-8cc8cbc74f8a">
+ <Files>
+  <File path="fence_wood_cross_corner.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">916</Detail>
+  <Detail name="vertexCount">893</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./fence_wood_cross.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

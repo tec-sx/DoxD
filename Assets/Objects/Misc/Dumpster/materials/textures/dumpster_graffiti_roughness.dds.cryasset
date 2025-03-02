@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="6d59a241-c8c8-eb4c-5857-7cc2bc0ca9c5" source="dumpster_graffiti_roughness.tif">
+ <Files>
+  <File path="dumpster_graffiti_roughness.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">2048</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

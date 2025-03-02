@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="872efcdc-2cfb-b2d9-edc8-1617ffa30179">
+ <Files>
+  <File path="door_a.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_doors/textures/door_a_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_doors/textures/door_a_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,5 @@
+<Params>
+ <AnimationList>
+  <Animation name="$Include" path="Animations/human/male/fat/anim_m_fat.chrparams"/>
+ </AnimationList>
+</Params>

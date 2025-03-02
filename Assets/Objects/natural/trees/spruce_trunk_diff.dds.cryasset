@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="093c3dfa-1a04-ce56-aeaa-827b42e4fefe" source="spruce_trunk_diff.tif">
+ <Files>
+  <File path="spruce_trunk_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="a442b4c3-fa71-39d3-7474-3f98531370f7" source="mv_spruce_snow_diff.tif">
+ <Files>
+  <File path="mv_spruce_snow_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

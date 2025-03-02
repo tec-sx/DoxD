@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="1c401083-67e7-e390-3a2e-d5de63d7e7c9" source="m_fat_tall.fbx" timestamp="1740517495">
+ <Files>
+  <File path="m_tall_fat_body.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">7</Detail>
+  <Detail name="triangleCount">6748</Detail>
+  <Detail name="vertexCount">3804</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">76</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./Default.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

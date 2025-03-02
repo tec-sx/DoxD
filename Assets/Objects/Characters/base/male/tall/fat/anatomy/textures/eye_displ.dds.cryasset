@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="c6fe09cd-05f8-f82e-6776-c4514e9ceff2" source="eye_displ.tif">
+ <Files>
+  <File path="eye_displ.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

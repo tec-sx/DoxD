@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="92482952-56bd-0b73-994e-83171664cd34" source="objects/characters/base/male/tall/fat/m_fat_tall.fbx" timestamp="1740517376">
+ <Files>
+  <File path="eyes.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">9</Detail>
+  <Detail name="triangleCount">448</Detail>
+  <Detail name="vertexCount">274</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">11</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/anatomy/materials/m_eye.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

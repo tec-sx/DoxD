@@ -60,9 +60,6 @@
 /rc_out_PC_pure/
 /*_package/
 
-# Assets is a submodule in a private repo
-/Assets/
-
 # Code Editors
 .idea/
 .vscode/
@@ -78,5 +75,8 @@
 *.ogg
 *.png
 *.jpg
+*.jpeg
 *.tif
 *.tiff
+*.blend
+*.blend1

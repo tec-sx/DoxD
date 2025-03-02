@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="34e2e65a-fbf4-118b-3a04-cdfefcf780fb">
+ <Files>
+  <File path="roof_glass_end.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">86</Detail>
+  <Detail name="vertexCount">160</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./roof_glass1.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

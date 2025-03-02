@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Texture" guid="08aeda92-4b42-4f07-4c2d-37ae8de468a2">
+ <Files>
+  <File path="metalstripes_a_spec.dds"/>
+  <File path="metalstripes_a_spec.dds.1"/>
+  <File path="metalstripes_a_spec.dds.2"/>
+  <File path="metalstripes_a_spec.dds.3"/>
+  <File path="metalstripes_a_spec.dds.4"/>
+  <File path="metalstripes_a_spec.dds.5"/>
+  <File path="metalstripes_a_spec.dds.6"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

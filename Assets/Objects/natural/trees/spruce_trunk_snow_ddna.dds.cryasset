@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="2050a69d-e83f-88af-34d7-af45ad4b70e6" source="spruce_trunk_snow_ddna.tif">
+ <Files>
+  <File path="spruce_trunk_snow_ddna.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

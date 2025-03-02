@@ -1,0 +1,14 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="6002000000020" StringGenMask="%NORMAL_MAP%SPECULAR_MAP%SUBSURFACE_SCATTERING%VERTCOLORS" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Opacity="1" Shininess="250.92007" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_diff.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_ddna.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Specular" File="objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_spec.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+ </Textures>
+ <PublicParams EmittanceMapGamma="1" SSSIndex="0"/>
+</Material>

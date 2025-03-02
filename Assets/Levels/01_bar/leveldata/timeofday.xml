@@ -1,0 +1,5 @@
+<TimeOfDay Time="11.963667" TimeStart="0" TimeEnd="24" TimeAnimSpeed="0">
+ <Presets>
+  <Preset Name="Libs/environmentpresets/env_preset_pack/magic_hour_low_clouds.env" Default="1"/>
+ </Presets>
+</TimeOfDay>

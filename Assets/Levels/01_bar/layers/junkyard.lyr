@@ -1,0 +1,16 @@
+<ObjectLayer>
+ <Layer Name="Junkyard" FullName="Junkyard" GUID="b5c31f1d-5490-c1f1-0a62-59bf7ddb4251" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1735394242">
+  <LayerObjects>
+   <Object Type="SplineDistributor" Layer="Junkyard" LayerGUID="b5c31f1d-5490-c1f1-0a62-59bf7ddb4251" Id="c409bb25-8657-2614-d540-38a46432f471" Name="sp_fence" Pos="473.72424,661.68463,32.099487" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="6717542" UseCustomLevelLayerColor="0" MinSpec="0" Geometry="Objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/barbwire_fence_gate_d_door_b.cgf" StepSize="4" Follow="1" ZAngle="95.6016" OutdoorOnly="1" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" Hideable="0" LodRatio="100" ViewDistRatio="100" NotTriangulate="0" NoStaticDecals="0" RecvWind="0" Occluder="0">
+    <Points>
+     <Point Pos="0,0,0" Back="0,0,0" Forw="-0.47265488,-11.968187,-0.084177449" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="4.9481201,-35.590454,-0.21806717" Back="-0.99486065,-25.191063,-0.17717966" Forw="10.456738,-45.229767,-0.25596625" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="31.687653,-55.44899,-0.21800995" Back="21.19556,-51.818741,-0.21798322" Forw="42.60495,-59.22636,-0.21803777" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="66.317291,-56.824112,-0.21822357" Back="55.42775,-60.591972,-1.0410006" Forw="72.300148,-54.754002,0.2338208" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="75.296753,-40.359924,3.0769463" Back="73.603806,-46.464237,2.6825356" Forw="78.286819,-29.57856,3.7735496" Angle="0" Width="0" IsDefaultWidth="1"/>
+     <Point Pos="80.114014,-7.0769043,2.9960327" Back="79.20726,-18.243483,3.38188" Forw="80.114014,-7.0769043,2.9960327" Angle="0" Width="0" IsDefaultWidth="1"/>
+    </Points>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

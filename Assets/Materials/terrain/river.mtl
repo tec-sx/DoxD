@@ -1,0 +1,8 @@
+<Material MtlFlags="542720" Shader="Watervolume" GenMask="4B" StringGenMask="" SurfaceType="mat_water" MatTemplate="" Diffuse="1,1,1" Specular="0.020288559,0.020288559,0.020288559" Opacity="1" Shininess="255" FurAmount="235" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Environment" File="Textures/cubemaps/01_bar/lp_global_cm_diff.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+ </Textures>
+ <PublicParams DetailNormalsScale="1.275" DetailTilling="1" EnvCubeScale="0.215" FoamAmount="1.632" FoamSoftIntersectionFactor="0.2" FoamTilling="10.377" NormalsFlatten="0.333" NormalsScale="1" RainTilling="0.5" SoftIntersectionFactor="2" Tilling="1" VertexWaveScale="0.5" WaterFlowSpeed="-0.80000001" ssrBGMultiplier="1" ssrBorderFadeExponent="1" ssrBorderSizeY="0.5" ssrBorderSizeZ="1" ssrDistanceAtt="1" ssrSamplingAtt="1"/>
+</Material>

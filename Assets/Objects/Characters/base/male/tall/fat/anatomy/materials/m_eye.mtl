@@ -1,0 +1,20 @@
+<Material MtlFlags="524288" Shader="Eye" GenMask="3000010020" StringGenMask="%ENVIRONMENT_MAP%NORMAL_MAP%TEMP_EYES%VERTCOLORS" SurfaceType="mat_default" MatTemplate="" Diffuse="1,1,1" Opacity="1" Shininess="255" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="Objects/Characters/base/male/tall/fat/anatomy/textures/eye_diff.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="Objects/Characters/base/male/tall/fat/anatomy/textures/eye_ddn.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Environment" File="Textures/cubemaps/01_bar/lp_global_cm.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Heightmap" File="Objects/Characters/base/male/tall/fat/anatomy/textures/eye_displ.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Custom" File="Objects/Characters/base/male/tall/fat/anatomy/textures/eye_cornea_ddn.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+ </Textures>
+ <PublicParams CorneaRefraction="0.0099999998" CorneaSmoothness="1" IrisColor="0.5,0.5,0.5" IrisDepth="0.0049999999" IrisSSS="0.60000002" IrisShadowing="5" ScleraSSS="0.40000001"/>
+</Material>

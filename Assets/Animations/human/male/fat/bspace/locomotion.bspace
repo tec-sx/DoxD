@@ -1,0 +1,9 @@
+<ParaGroup>
+ <Dimensions>
+  <Param Name="MoveSpeed" Min="0" Max="1.3" Cells="3"/>
+ </Dimensions>
+ <ExampleList>
+  <Example SetPara0="0" AName="Fat_M_Idle"/>
+  <Example SetPara0="1.3" AName="Fat_M_Walk_F"/>
+ </ExampleList>
+</ParaGroup>

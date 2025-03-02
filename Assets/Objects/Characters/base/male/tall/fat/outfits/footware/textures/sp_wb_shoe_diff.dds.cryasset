@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="22361a17-f344-29ea-8a13-1d24d5d3cfdf" source="sp_wb_shoe_diff.tif">
+ <Files>
+  <File path="sp_wb_shoe_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

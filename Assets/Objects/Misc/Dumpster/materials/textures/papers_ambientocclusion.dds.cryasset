@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="7c3c5c9c-d93a-4b12-c66c-bb4db7e7e1b6" source="papers_ambientocclusion.tif">
+ <Files>
+  <File path="papers_ambientocclusion.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

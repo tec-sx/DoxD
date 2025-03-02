@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="49c6e084-69f2-d79b-769a-b87632424398" source="dumpster_roughness.tif">
+ <Files>
+  <File path="dumpster_roughness.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

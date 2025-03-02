@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="469ff548-16e6-e255-0611-c8a01ea262aa" source="objects/characters/base/male/tall/fat/m_fat_tall.fbx" timestamp="1740517399">
+ <Files>
+  <File path="teeth_lower.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">9</Detail>
+  <Detail name="triangleCount">446</Detail>
+  <Detail name="vertexCount">255</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">11</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

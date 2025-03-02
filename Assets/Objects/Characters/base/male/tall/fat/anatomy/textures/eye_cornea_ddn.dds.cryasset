@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="76c8eb09-d4cf-ffe6-5a71-1b717d4fe2b8" source="eye_cornea_ddn.tif">
+ <Files>
+  <File path="eye_cornea_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

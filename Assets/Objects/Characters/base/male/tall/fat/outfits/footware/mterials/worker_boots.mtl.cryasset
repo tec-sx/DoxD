@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="e9aceab7-57e0-07fa-82fd-b229d53e4b3a" source="" timestamp="1740859158">
+ <Files>
+  <File path="worker_boots.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_diff.dds</Path>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_ddna.dds</Path>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

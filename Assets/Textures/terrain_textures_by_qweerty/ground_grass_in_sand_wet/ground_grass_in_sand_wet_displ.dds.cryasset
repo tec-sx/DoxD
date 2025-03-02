@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="e5e33eda-878a-30e9-7e42-12769ac6e2ad" source="ground_grass_in_sand_wet_displ.tif">
+ <Files>
+  <File path="ground_grass_in_sand_wet_displ.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

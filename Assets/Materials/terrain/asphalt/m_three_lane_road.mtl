@@ -1,0 +1,17 @@
+<Material MtlFlags="524288" Shader="Illum" GenMask="6000002000020" StringGenMask="%NORMAL_MAP%OFFSET_BUMP_MAPPING%SPECULAR_MAP%SUBSURFACE_SCATTERING" SurfaceType="mat_concrete" MatTemplate="" Diffuse="1,1,1" Opacity="1" Shininess="106.08002" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="Textures/three_lane_road/threelaneroadpatches01_4k_albedo.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="Textures/three_lane_road/threelaneroadpatches01_4k_ddna.dds">
+   <TexMod TexMod_RotateType="1" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Specular" File="Textures/three_lane_road/threelaneroadpatches01_4k_spec.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+  <Texture Map="Heightmap" File="Textures/three_lane_road/threelaneroadpatches01_4k_height.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>
+  </Texture>
+ </Textures>
+ <PublicParams EmittanceMapGamma="1" HeightBias="1" ObmDisplacement="0.0089999996" SSSIndex="0" SelfShadowStrength="3"/>
+</Material>

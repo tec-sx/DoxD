@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="dab0d3bb-6fc0-27b5-813c-633a72290196" source="threelaneroadpatches01_4k_albedo.tif">
+ <Files>
+  <File path="threelaneroadpatches01_4k_albedo.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

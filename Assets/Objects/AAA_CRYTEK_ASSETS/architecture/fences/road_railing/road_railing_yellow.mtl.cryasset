@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="112ee019-99df-08f3-d292-9e054b8069e7">
+ <Files>
+  <File path="road_railing_yellow.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/road_railing/textures/metal_iron_a_diff.dds</Path>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/architecture/fences/road_railing/textures/metal_iron_a_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/road_railing/textures/metal_iron_a_spec.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/road_railing/textures/yellow_dark_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/road_railing/textures/black_white_horiz_mask.dds</Path>
+ </Dependencies>
+</AssetMetadata>

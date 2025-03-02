@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="2524cb0a-a9ff-5bbf-5279-92115a98a078" source="" timestamp="1735660605">
+ <Files>
+  <File path="m_three_lane_road.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Textures/three_lane_road/threelaneroadpatches01_4k_albedo.dds</Path>
+  <Path usageCount="1">Textures/three_lane_road/threelaneroadpatches01_4k_ddna.dds</Path>
+  <Path usageCount="1">Textures/three_lane_road/threelaneroadpatches01_4k_spec.dds</Path>
+  <Path usageCount="1">Textures/three_lane_road/threelaneroadpatches01_4k_height.dds</Path>
+ </Dependencies>
+</AssetMetadata>

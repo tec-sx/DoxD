@@ -1,0 +1,13 @@
+<AudioSystemData name="Music" version="5" triggers="1">
+ <ImplData events="1"/>
+ <Triggers>
+  <Trigger name="SkyTower">
+   <Event name="Music/SkyTower"/>
+  </Trigger>
+ </Triggers>
+ <EditorData>
+  <Library />
+  <Folders />
+  <Controls />
+ </EditorData>
+</AudioSystemData>

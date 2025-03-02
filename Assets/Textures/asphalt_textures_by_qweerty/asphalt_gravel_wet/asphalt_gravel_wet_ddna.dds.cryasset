@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="a22f77dd-8291-c42e-de4a-edf240762926" source="asphalt_gravel_wet_ddna.tif">
+ <Files>
+  <File path="asphalt_gravel_wet_ddna.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

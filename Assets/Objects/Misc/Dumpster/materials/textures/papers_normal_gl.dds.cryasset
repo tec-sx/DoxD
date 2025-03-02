@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="4a179295-8415-ebf9-db80-4947804617be" source="papers_normal_gl.tif">
+ <Files>
+  <File path="papers_normal_gl.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

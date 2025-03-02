@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="4153a3f6-54a3-0eec-d052-a835044d0e3d" source="comm build.obj">
+ <Files>
+  <File path="commercial_building_OBJ.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">84140</Detail>
+  <Detail name="vertexCount">154355</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Objects/scenery/urban/commercial_building/commercial_building_MAT.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

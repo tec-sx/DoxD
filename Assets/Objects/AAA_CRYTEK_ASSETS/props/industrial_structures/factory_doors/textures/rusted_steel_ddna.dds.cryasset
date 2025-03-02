@@ -1,0 +1,23 @@
+<AssetMetadata version="0" type="Texture" guid="6d593926-f6b4-1ead-63b6-2ee1bc0c126e">
+ <Files>
+  <File path="rusted_steel_ddna.dds"/>
+  <File path="rusted_steel_ddna.dds.a"/>
+  <File path="rusted_steel_ddna.dds.1"/>
+  <File path="rusted_steel_ddna.dds.1a"/>
+  <File path="rusted_steel_ddna.dds.2"/>
+  <File path="rusted_steel_ddna.dds.2a"/>
+  <File path="rusted_steel_ddna.dds.3"/>
+  <File path="rusted_steel_ddna.dds.3a"/>
+  <File path="rusted_steel_ddna.dds.4"/>
+  <File path="rusted_steel_ddna.dds.4a"/>
+  <File path="rusted_steel_ddna.dds.5"/>
+  <File path="rusted_steel_ddna.dds.5a"/>
+  <File path="rusted_steel_ddna.dds.6"/>
+  <File path="rusted_steel_ddna.dds.6a"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

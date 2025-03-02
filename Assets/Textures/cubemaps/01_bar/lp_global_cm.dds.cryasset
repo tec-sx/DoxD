@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="86d39874-9ab5-503e-f4bf-9d7f41e3380e" source="lp_global_cm.tif">
+ <Files>
+  <File path="lp_global_cm.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1536</Detail>
+  <Detail name="height">256</Detail>
+  <Detail name="mipCount">7</Detail>
+ </Details>
+</AssetMetadata>

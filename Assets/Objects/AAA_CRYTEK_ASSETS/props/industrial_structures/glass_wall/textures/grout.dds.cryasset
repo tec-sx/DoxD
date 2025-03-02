@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Texture" guid="b37e5f04-c7a1-8ca0-0be9-f94a9ca9b389">
+ <Files>
+  <File path="grout.dds"/>
+  <File path="grout.dds.1"/>
+  <File path="grout.dds.2"/>
+  <File path="grout.dds.3"/>
+  <File path="grout.dds.4"/>
+ </Files>
+ <Details>
+  <Detail name="width">256</Detail>
+  <Detail name="height">256</Detail>
+  <Detail name="mipCount">7</Detail>
+ </Details>
+</AssetMetadata>

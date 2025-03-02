@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="6a52b76d-73df-b13d-244e-1be298adfabf" source="CyberMaricadae.dae">
+ <Files>
+  <File path="cyber_marica.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">2958</Detail>
+  <Detail name="vertexCount">5190</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./Cyber_Marica.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

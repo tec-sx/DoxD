@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="a67a2b8f-a8d1-c3c0-9759-4a77c56be1d8" source="" timestamp="1735162759">
+ <Files>
+  <File path="dev_info.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">%engine%/engineassets/textures/white_cm_diff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

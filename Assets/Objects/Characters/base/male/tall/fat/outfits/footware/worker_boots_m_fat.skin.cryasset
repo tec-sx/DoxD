@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="7c2dad4a-2ff8-9844-0ccd-de755dd6c13e" source="m_fat_tall.fbx">
+ <Files>
+  <File path="worker_boots_m_fat.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">9</Detail>
+  <Detail name="triangleCount">1870</Detail>
+  <Detail name="vertexCount">1148</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">12</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/outfits/footware/mterials/worker_boots.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

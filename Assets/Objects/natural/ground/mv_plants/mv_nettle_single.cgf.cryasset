@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="37343c3e-4e70-826d-95f9-e0104f7dfdb4">
+ <Files>
+  <File path="mv_nettle_single.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">2</Detail>
+  <Detail name="triangleCount">64</Detail>
+  <Detail name="vertexCount">75</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./mv_plants.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

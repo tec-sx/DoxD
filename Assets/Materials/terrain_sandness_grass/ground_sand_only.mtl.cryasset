@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="3e57e34e-ce29-3652-1b6f-3cf349409a1c" timestamp="1724793692">
+ <Files>
+  <File path="ground_sand_only.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Textures/terrain_textures_by_qweerty/ground_sand_only/ground_sand_only_diff.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_sand_only/ground_sand_only_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_sand_only/ground_sand_only_spec.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_sand_only/ground_sand_only_detail.dds</Path>
+  <Path usageCount="1">textures/terrain_textures_by_qweerty/ground_sand_only/ce_assets_ground1_wet_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

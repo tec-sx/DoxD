@@ -1,0 +1,18 @@
+<AssetMetadata version="0" type="Material" guid="c59a90bb-3409-d601-c273-40964ae89a46">
+ <Files>
+  <File path="pipe_details.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">4</Detail>
+  <Detail name="textureCount">7</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/metalstripes_a_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/metalstripes_a_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/metalstripes_a_spec.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/chainlink_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/chainlink_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/pipes_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/textures/pipes_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

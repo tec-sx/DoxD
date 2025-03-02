@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="f652fa2e-3707-461c-f4fd-9a26cd22faf0" source="bridge.tif">
+ <Files>
+  <File path="bridge.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">1</Detail>
+ </Details>
+</AssetMetadata>

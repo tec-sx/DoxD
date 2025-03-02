@@ -1,0 +1,16 @@
+Description:
+Iron bridge, for people, cars and trains.
+
+Specifications:
+Geometry: Polygonal 
+Polygon Count: 770
+Vertice Count: 1.563
+UV Mapped: Yes
+Textures: Yes
+Rigged: No
+Animated: No
+
+ Texture 
+Dimensions: 2000 cm x 650 cm x 730 cm
+Textures: (*.tiff)
+	  1024 x 1024 pixels

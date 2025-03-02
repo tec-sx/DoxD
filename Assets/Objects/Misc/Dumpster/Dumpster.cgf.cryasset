@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="a23dd657-baf1-5921-9e4d-abee7f1acfd8" source="trash_1.fbx">
+ <Files>
+  <File path="Dumpster.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">6</Detail>
+  <Detail name="triangleCount">21628</Detail>
+  <Detail name="vertexCount">27695</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">materials/m_dumpster.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

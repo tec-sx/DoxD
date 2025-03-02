@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Texture" guid="a1bfdb2f-97a1-bae1-d478-2afea7fba123">
+ <Files>
+  <File path="wire_glass_spec.dds"/>
+  <File path="wire_glass_spec.dds.1"/>
+  <File path="wire_glass_spec.dds.2"/>
+  <File path="wire_glass_spec.dds.3"/>
+  <File path="wire_glass_spec.dds.4"/>
+  <File path="wire_glass_spec.dds.5"/>
+  <File path="wire_glass_spec.dds.6"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

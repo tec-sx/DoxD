@@ -1,0 +1,22 @@
+<AssetMetadata version="0" type="Character" guid="4c7d4e61-1ee7-e2c6-0ddc-7a20eaacdc68" timestamp="1740521451">
+ <Files>
+  <File path="m_biker_fat_01.cdf"/>
+ </Files>
+ <Dependencies>
+  <Path>Objects/Characters/base/male/tall/fat/m_fat_tall.chr</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/teeth_lower.skin</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/eyes.skin</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/materials/m_eye.mtl</Path>
+  <Path>Objects/Characters/base/male/tall/fat/m_tall_fat_body.skin</Path>
+  <Path>Materials/characters/fat/m_m_fat.mtl</Path>
+  <Path>Objects/Characters/base/male/tall/fat/m_tall_fat_head.skin</Path>
+  <Path>Materials/characters/fat/m_m_fat.mtl</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/tongue.skin</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/teeth_upper.skin</Path>
+  <Path>Objects/Characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
+  <Path>Objects/Characters/base/male/tall/fat/outfits/footware/worker_boots_m_fat.skin</Path>
+ </Dependencies>
+ <Details />
+</AssetMetadata>

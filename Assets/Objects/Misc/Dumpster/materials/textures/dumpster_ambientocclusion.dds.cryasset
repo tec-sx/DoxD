@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="96500a9a-a9cb-5f10-16ba-384ba461aa31" source="dumpster_ambientocclusion.tif">
+ <Files>
+  <File path="dumpster_ambientocclusion.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

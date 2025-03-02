@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="9f7baa0f-74bf-ffa0-e617-a9e2edb537ef" source="asphalt_wet_detail.tif">
+ <Files>
+  <File path="asphalt_wet_detail.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>
