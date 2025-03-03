@@ -40,7 +40,9 @@ add_sources("Actor_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components\\\\Actor"
 		"Components/Actor/Actor.cpp"
+		"Components/Actor/ActorComponent.cpp"
 		"Components/Actor/Actor.h"
+		"Components/Actor/ActorComponent.h"
 		"Components/Actor/ActorDefinitions.h"
 )
 add_sources("Camera_uber.cpp"
