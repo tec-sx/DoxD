@@ -29,6 +29,12 @@ add_sources("Actor_uber.cpp"
     SOURCE_GROUP "Actor"
 		"Actor/Fate.h"
 )
+add_sources("Attachments_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Attachments"
+		"Attachments/Attachment.cpp"
+		"Attachments/Attachment.h"
+)
 add_sources("Components_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components"
@@ -44,6 +50,12 @@ add_sources("Actor_uber.cpp"
 		"Components/Actor/Actor.h"
 		"Components/Actor/ActorComponent.h"
 		"Components/Actor/ActorDefinitions.h"
+)
+add_sources("Attachments_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Components\\\\Attachments"
+		"Components/Attachments/AttachmentComponent.cpp"
+		"Components/Attachments/AttachmentComponent.h"
 )
 add_sources("Camera_uber.cpp"
     PROJECTS DoxD.Game

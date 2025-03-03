@@ -7,8 +7,9 @@
 #define GAME_API   DLL_EXPORT
 
 #include <CryCore/Platform/platform.h>
-#include <CrySystem/ISystem.h>
+#include <CryEntitySystem/IEntitySystem.h>
 #include <Cry3DEngine/I3DEngine.h>
+#include "Utility/CryWatch.h"
 
 #include "GamePlugin.h"
 #include "GameCVars.h"
