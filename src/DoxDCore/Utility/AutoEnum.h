@@ -14,8 +14,6 @@
 
 namespace DoxD
 {
-	typedef uint32 TBitfield;
-
 	#define AUTOENUM_PARAM_1_COMMA(a, ...)                                            a,
 	#define AUTOENUM_PARAM_1_AS_STRING_COMMA(a, ...)                                  #a,
 	#define AUTOENUM_DO_BITINDEX(name, ...)                                           BITINDEX_ ## name,

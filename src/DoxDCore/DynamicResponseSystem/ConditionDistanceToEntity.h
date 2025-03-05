@@ -8,13 +8,12 @@ namespace DoxD
 	struct DRS::IResponseActor;
 	struct DRS::IVariableCollection;
 
-
 	class CConditionDistanceToEntity final : public DRS::IResponseCondition
 	{
 	public:
 		CConditionDistanceToEntity();
 		CConditionDistanceToEntity(const string& actorName);
-		virtual ~CConditionDistanceToEntity();
+		virtual ~CConditionDistanceToEntity() = default;
 
 		// IResponseCondition
 		virtual bool IsMet(DRS::IResponseInstance* pResponseInstance) override;

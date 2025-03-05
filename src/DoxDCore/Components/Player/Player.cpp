@@ -19,7 +19,7 @@
 
 namespace
 {
-	static void RegisterPlayerComponent(Schematyc::IEnvRegistrar& registrar)
+	static void RegisterPlayerComponentOld(Schematyc::IEnvRegistrar& registrar)
 	{
 		Schematyc::CEnvRegistrationScope scope = registrar.Scope(IEntity::GetEntityScopeGUID());
 		{
@@ -27,7 +27,7 @@ namespace
 		}
 	}
 
-	CRY_STATIC_AUTO_REGISTER_FUNCTION(&RegisterPlayerComponent);
+	CRY_STATIC_AUTO_REGISTER_FUNCTION(&RegisterPlayerComponentOld);
 }
 
 namespace DoxD

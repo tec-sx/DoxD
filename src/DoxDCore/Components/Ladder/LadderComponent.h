@@ -1,6 +1,5 @@
 #pragma once
 
-#include <CryEntitySystem/IEntityComponent.h>
 #include <DefaultComponents/Geometry/StaticMeshComponent.h>
 
 const char* CUBE_PATH = "%ENGINE%/EngineAssets/Objects/primitive_cube.cgf";

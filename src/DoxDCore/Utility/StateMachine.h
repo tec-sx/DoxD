@@ -21,8 +21,7 @@ History:
 #include <CryCore/Containers/CryFixedArray.h>
 #include <CryRenderer/IRenderAuxGeom.h>
 #include <CryString/StringUtils.h>
-//#include <Utility/AutoEnum.h>
-//#include <Utility/CryHash.h>
+#include <Utility/CryHash.h>
 
 
 namespace DoxD
@@ -319,9 +318,9 @@ namespace DoxD
 
 	enum EState
 	{
-		STATE_DONE = 0,
-		STATE_CONTINUE = 1,
-		STATE_FIRST = 100,
+		eState_Done = 0,
+		eState_Continue = 1,
+		eState_First = 100,
 	};
 
 
@@ -381,7 +380,7 @@ namespace DoxD
 
 		void RegisterState(typename CStateProxy<HOST>::CreateStatePtr createPtr, typename CStateProxy<HOST>::DeleteStatePtr deletePtr, const uint stateID)
 		{
-			const uint trueStateID = stateID - STATE_FIRST;
+			const uint trueStateID = stateID - eState_First;
 
 			if ((trueStateID + 1) > m_factories.size())
 			{
@@ -397,7 +396,7 @@ namespace DoxD
 
 		CStateHierarchy<HOST>* CreateState(const uint stateID)
 		{
-			const uint trueStateID = stateID - STATE_FIRST;
+			const uint trueStateID = stateID - eState_First;
 			if (trueStateID < m_factories.size())
 			{
 				return CALL_STATE_CREATE_FN(trueStateID)(*this);
@@ -407,7 +406,7 @@ namespace DoxD
 
 		void DeleteState(CStateHierarchy<HOST>*& pState)
 		{
-			const uint trueStateID = pState->GetStateID() - STATE_FIRST;
+			const uint trueStateID = pState->GetStateID() - eState_First;
 			if (trueStateID < m_factories.size())
 			{
 				CALL_STATE_DELETE_FN(trueStateID)(pState);
@@ -568,7 +567,7 @@ namespace DoxD
 			StateInit(host, stateMachineReg, pActiveState);
 
 			// dispatch the transition event!
-			if (pendingEvent.GetEventId() != EVENT_NONE)
+			if (pendingEvent.GetEventId() != eSE_None)
 			{
 				StateMachineHandleEventForState(host, stateMachineReg, pActiveState, pendingEvent, 0);
 			}
@@ -637,7 +636,7 @@ namespace DoxD
 			STATE_DEBUG_LOG(pState, "HandleEvent: Name: <%s> Event: <%d>", pState->m_currentState.m_pDebugName, event.GetEventId());
 
 			typename STATE::TStateIndex currentState = pState->m_currentState;
-			typename STATE::TStateIndex stateResult = STATE_DONE;
+			typename STATE::TStateIndex stateResult = eState_Done;
 			if (commonID != currentState.m_stateID)
 			{
 				stateResult = CALL_SUBSTATE_FN(pState, currentState)(host, event);
@@ -649,9 +648,9 @@ namespace DoxD
 
 				switch (stateResult.m_name)
 				{
-				case STATE_DONE:
+				case eState_Done:
 					break;
-				case STATE_CONTINUE:
+				case eState_Continue:
 					if (currentState.m_parent != nullptr && currentState.m_parent->m_stateID != commonID)
 					{
 						stateResult = CALL_SUBSTATE_PARENT_FN(pState, currentState)(host, event);
@@ -660,7 +659,7 @@ namespace DoxD
 					}
 					else
 					{
-						stateResult = STATE_DONE;
+						stateResult = eState_Done;
 					}
 					break;
 				default:
@@ -685,11 +684,11 @@ namespace DoxD
 					}
 					else
 					{
-						stateResult = STATE_DONE;
+						stateResult = eState_Done;
 					}
 					break;
 				}
-			} while (stateResult.m_name != STATE_DONE && (currentState.m_parent != nullptr || stateResult.m_func != nullptr));
+			} while (stateResult.m_name != eState_Done && (currentState.m_parent != nullptr || stateResult.m_func != nullptr));
 
 			if (pState->m_pTransitionStateHierarchy)
 			{
@@ -745,7 +744,7 @@ namespace DoxD
 		{
 			CRY_ASSERT(!m_pTransitionStateHierarchy);
 
-			RequestTransitionState(host, stateTransition, EVENT_NONE);
+			RequestTransitionState(host, stateTransition, eSE_None);
 		}
 
 #ifdef STATE_DEBUG
@@ -779,8 +778,8 @@ namespace DoxD
 #endif
 
 		CStateHierarchy(int stateID, const SStateIndex<HOST>& defaultState, CStateMachineRegistration<HOST>& stateMachineReg)
-			: State_Done(CryHash(STATE_DONE))
-			, State_Continue(CryHash(STATE_CONTINUE))
+			: State_Done(CryHash(eState_Done))
+			, State_Continue(CryHash(eState_Continue))
 			, m_stateID(stateID)
 			, m_pTransitionStateHierarchy(nullptr)
 			, m_currentState(State_Done)
@@ -880,7 +879,7 @@ namespace DoxD
 		void StateMachineInit(HOST& host, CStateMachineRegistration<HOST>& stateMachineReg)
 		{
 			CRY_ASSERT(!m_pCurrentStateHierarchy);
-			m_pCurrentStateHierarchy = STATE_HELPER::StateNew(host, stateMachineReg, STATE_FIRST);
+			m_pCurrentStateHierarchy = STATE_HELPER::StateNew(host, stateMachineReg, eState_First);
 
 			STATE_HELPER::StateInit(host, stateMachineReg, m_pCurrentStateHierarchy);
 		}
@@ -1036,7 +1035,7 @@ namespace DoxD
 			m_pCurrentStateHierarchy->m_flags.ClearAllFlags();
 
 			// We must correctly follow the transition rules to reset the state machine.
-			m_pCurrentStateHierarchy->m_pTransitionStateHierarchy = STATE_HELPER::StateNew(host, stateMachineReg, STATE_FIRST);
+			m_pCurrentStateHierarchy->m_pTransitionStateHierarchy = STATE_HELPER::StateNew(host, stateMachineReg, eState_First);
 
 			STATE_HELPER::StateTransition(host, stateMachineReg, m_pCurrentStateHierarchy);
 		}
@@ -1087,7 +1086,7 @@ namespace DoxD
 		event.AddDebugContext(debugContext);
 		if (stateEvent.GetEventId() < eSE_Custom)
 		{
-			AUTOENUM_BUILDNAMEARRAY(events, eStateEvents);
+			const char* events[] = { "Enter", "Exit", "Init", "Release", "Serialize", "NetSerialize", "Debug" };
 			STATE_DEBUG_EVENT_LOG_TO_HISTORY(pState, state_white, "State: %s; Event: %s", stateName, events[stateEvent.GetEventId() - 1]);
 		}
 		else

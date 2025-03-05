@@ -3,7 +3,6 @@
 #include "ConditionDistanceToEntity.h"
 #include <CrySerialization/IArchive.h>
 
-
 namespace DoxD
 {
 	CConditionDistanceToEntity::CConditionDistanceToEntity()
@@ -12,14 +11,7 @@ namespace DoxD
 
 	CConditionDistanceToEntity::CConditionDistanceToEntity(const string& actorName)
 		: m_entityName(actorName)
-	{
-	}
-
-
-	CConditionDistanceToEntity::~CConditionDistanceToEntity()
-	{
-	}
-
+	{ }
 
 	bool CConditionDistanceToEntity::IsMet(DRS::IResponseInstance* pResponseInstance)
 	{

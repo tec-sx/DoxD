@@ -4,7 +4,7 @@
 	"info": { "name": "DoxD.Game", "guid": "e3865104-7321-f784-b95f-43e034a4e34b" },
 	"content": {
 		"assets": [ "Assets" ],
-		"code": [ "src" ],
+		"code": [ "src/DoxDCore" ],
 		"libs": [
 			{
 				"name": "DoxD.Game",

@@ -14,7 +14,6 @@ development. */
 
 #include <CryMath/Random.h>
 
-
 namespace DoxD
 {
 	class CFate
