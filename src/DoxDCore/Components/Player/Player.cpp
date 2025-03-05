@@ -23,7 +23,7 @@ namespace
 	{
 		Schematyc::CEnvRegistrationScope scope = registrar.Scope(IEntity::GetEntityScopeGUID());
 		{
-			Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(DoxD::CPlayerComponent));
+			Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(DoxD::CPlayerComponentOld));
 		}
 	}
 
@@ -78,7 +78,7 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////
 
-	CPlayerComponent::CPlayerComponent()
+	CPlayerComponentOld::CPlayerComponentOld()
 		: m_pInputComponent(nullptr)
 		, m_pCharacterController(nullptr)
 		, m_pAnimationComponent(nullptr)
@@ -93,12 +93,12 @@ namespace DoxD
 		m_pPlayerCamera = new CPlayerCamera(this);
 	}
 
-	CPlayerComponent::~CPlayerComponent()
+	CPlayerComponentOld::~CPlayerComponentOld()
 	{
 		SAFE_DELETE(m_pPlayerCamera);
 	}
 
-	void CPlayerComponent::Initialize()
+	void CPlayerComponentOld::Initialize()
 	{
 		// Initialize Components
 		//----------------------
@@ -138,7 +138,7 @@ namespace DoxD
 		m_pEntity->SetWorldTM(CSpawnPointComponent::GetFirstSpawnPointTransform());
 	}
 
-	Cry::Entity::EventFlags CPlayerComponent::GetEventMask() const
+	Cry::Entity::EventFlags CPlayerComponentOld::GetEventMask() const
 	{
 		return Cry::Entity::EEvent::GameplayStarted
 			| Cry::Entity::EEvent::Update
@@ -147,7 +147,7 @@ namespace DoxD
 			| Cry::Entity::EEvent::PhysicalTypeChanged;
 	}
 
-	void CPlayerComponent::ProcessEvent(const SEntityEvent& event)
+	void CPlayerComponentOld::ProcessEvent(const SEntityEvent& event)
 	{
 		switch (event.event)
 		{
@@ -185,7 +185,7 @@ namespace DoxD
 		}
 	}
 
-	SPlayerRotationParams::EAimType CPlayerComponent::GetCurrentAimType() const
+	SPlayerRotationParams::EAimType CPlayerComponentOld::GetCurrentAimType() const
 	{
 		//EStance playerStance = GetStance();
 
@@ -213,12 +213,12 @@ namespace DoxD
 		return SPlayerRotationParams::EAimType_NORMAL;
 	}
 
-	Vec3 CPlayerComponent::GetStanceViewOffset(EStance stance, const float* pLeanAmt, bool withY, const bool useWhileLeanedOffsets) const
+	Vec3 CPlayerComponentOld::GetStanceViewOffset(EStance stance, const float* pLeanAmt, bool withY, const bool useWhileLeanedOffsets) const
 	{
 		return Vec3();
 	}
 
-	void CPlayerComponent::Reset()
+	void CPlayerComponentOld::Reset()
 	{
 		InitializeInput();
 
@@ -247,7 +247,7 @@ namespace DoxD
 		m_stance = STANCE_NULL;
 	}
 
-	void CPlayerComponent::RecenterCollider()
+	void CPlayerComponentOld::RecenterCollider()
 	{
 		static bool skip = false;
 		if (skip)
@@ -277,7 +277,7 @@ namespace DoxD
 		pCharacterController->Physicalize();
 	}
 
-	void CPlayerComponent::InitializeInput()
+	void CPlayerComponentOld::InitializeInput()
 	{
 		// Keyboard
 		m_pInputComponent->RegisterAction("player", "moveforward", [this](int activationMode, float value) { m_movementDelta.y = value; });
@@ -335,7 +335,7 @@ namespace DoxD
 		m_pInputComponent->BindAction("player", "pitch", eAID_KeyboardMouse, eKI_MouseX);
 	}
 
-	void CPlayerComponent::UpdateLookDirectionRequest(float frameTime)
+	void CPlayerComponentOld::UpdateLookDirectionRequest(float frameTime)
 	{
 		const float rotationSpeed = 0.002f;
 		const float rotationLimitsMinPitch = -0.84f;
@@ -370,7 +370,7 @@ namespace DoxD
 		}
 	}
 
-	void CPlayerComponent::UpdateMovement(float frameTime)
+	void CPlayerComponentOld::UpdateMovement(float frameTime)
 	{
 		if (!m_pCharacterController->IsOnGround())
 			return;
@@ -381,7 +381,7 @@ namespace DoxD
 		m_pCharacterController->AddVelocity(m_pEntity->GetWorldRotation() * velocity * playerMoveSpeed * frameTime);
 	}
 
-	void CPlayerComponent::UpdateAnimation(float frameTime)
+	void CPlayerComponentOld::UpdateAnimation(float frameTime)
 	{
 		const float angularVelocityTurningThreshold = 0.174; // [rad/s]
 
@@ -425,7 +425,7 @@ namespace DoxD
 		}
 	}
 
-	void CPlayerComponent::TryUpdateStance()
+	void CPlayerComponentOld::TryUpdateStance()
 	{
 		if (m_desiredStance == m_currentStance)
 			return;
@@ -480,7 +480,7 @@ namespace DoxD
 		pPhysEnt->SetParams(&playerDimensions);
 	}
 
-	bool CPlayerComponent::IsCapsuleIntersectingGeometry(const primitives::capsule& capsule) const
+	bool CPlayerComponentOld::IsCapsuleIntersectingGeometry(const primitives::capsule& capsule) const
 	{
 		IPhysicalEntity* pPhysEnt = m_pEntity->GetPhysicalEntity();
 
@@ -503,7 +503,7 @@ namespace DoxD
 		return contactCount > 0;
 	}
 
-	int CPlayerComponent::GetPhysicalSkipEntities(IPhysicalEntity** pSkipList, const int maxSkipSize) const
+	int CPlayerComponentOld::GetPhysicalSkipEntities(IPhysicalEntity** pSkipList, const int maxSkipSize) const
 	{
 		int skipCount = 0;
 

@@ -12,9 +12,7 @@
 #include "Utility/CryWatch.h"
 
 #include "GamePlugin.h"
-#include "GameCVars.h"
-
-extern struct SCVars* g_pGameCVars;
+#include "Console/GameCVars.h"
 
 #ifdef USE_PCH
 	#include <algorithm>

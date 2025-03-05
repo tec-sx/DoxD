@@ -4,7 +4,7 @@
 
 namespace DoxD
 {
-	class CPlayerComponent;
+	class CPlayerComponentOld;
 }
 
 namespace Cry::DefaultComponents
@@ -45,10 +45,10 @@ namespace DoxD
 		ICameraMode(Cry::DefaultComponents::CCameraComponent* camera);
 		virtual ~ICameraMode() {};
 
-		void ActivateMode(const CPlayerComponent& player);
-		void DeactivateMode(const CPlayerComponent& player);
+		void ActivateMode(const CPlayerComponentOld& player);
+		void DeactivateMode(const CPlayerComponentOld& player);
 
-		virtual void Update(const CPlayerComponent& player, float frameTime) = 0;
+		virtual void Update(const CPlayerComponentOld& player, float frameTime) = 0;
 
 		virtual bool CanTransition();
 		virtual void SetCameraAnimationFactor(const AnimationSettings& animationSettings);
@@ -62,8 +62,8 @@ namespace DoxD
 		inline Cry::DefaultComponents::CCameraComponent* GetCamera() { return m_pCamera; }
 
 	protected:
-		virtual void Activate(const CPlayerComponent& player);
-		virtual void Deactivate(const CPlayerComponent& player);
+		virtual void Activate(const CPlayerComponentOld& player);
+		virtual void Deactivate(const CPlayerComponentOld& player);
 
 		bool m_isBlendingOff;
 		

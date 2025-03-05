@@ -14,9 +14,10 @@ History:
 
 *************************************************************************/
 
-#ifndef __CRYWATCH_H__
-#define __CRYWATCH_H__
+#pragma once
 
+namespace DoxD
+{
 #if !defined(_RELEASE)
 #define CRY_WATCH_ENABLED			 (1)
 #else
@@ -28,11 +29,11 @@ History:
 
 #if CRY_WATCH_ENABLED
 
-int CryWatchFunc(const char* message);
-int CryWatchLogFunc(const char* message);
-void CryWatch3DAdd(const char* text, const Vec3& posIn, float lifetime = 2.f, const Vec3* velocity = NULL, float gravity = 3.f);
-void CryWatch3DReset();
-void CryWatch3DTick(float dt);
+	int CryWatchFunc(const char* message);
+	int CryWatchLogFunc(const char* message);
+	void CryWatch3DAdd(const char* text, const Vec3& posIn, float lifetime = 2.f, const Vec3* velocity = NULL, float gravity = 3.f);
+	void CryWatch3DReset();
+	void CryWatch3DTick(float dt);
 
 #else
 
@@ -43,5 +44,4 @@ void CryWatch3DTick(float dt);
 #define CryWatch3DTick(dt)             ((void)0)
 
 #endif // CRY_WATCH_ENABLED
-
-#endif // __CRYWATCH_H__
+}

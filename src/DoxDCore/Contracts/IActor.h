@@ -2,14 +2,12 @@
 
 #include <CrySchematyc/Reflection/TypeDesc.h>
 
-struct IActionController;
-struct SActorMannequinParams;
-class IAction;
-struct ICharacterInstance;
-
-
 namespace DoxD
 {
+	struct IActionController;
+	struct SActorMannequinParams;
+	class IAction;
+	struct ICharacterInstance;
 	class CPlayerComponent;
 	struct IInteraction;
 
@@ -54,7 +52,7 @@ namespace DoxD
 		virtual IActionController* GetActionController() const = 0;
 		virtual const SActorMannequinParams* GetMannequinParams() const = 0;
 
-		virtual void OnPlayerPossess(CPlayerComponent& player) = 0;
+		virtual void OnPlayerPossess(CPlayerComponentOld& player) = 0;
 		virtual void OnPlayerUnpossess() = 0;
 
 

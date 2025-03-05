@@ -17,8 +17,8 @@ namespace DoxD
 {
 #if !defined(_RELEASE)
 
-#define PLAYER_CAMERA_WATCH(...)  do { if (g_pGameCVars->pl_debug_watch_camera_mode)       CryWatch    ("[PlayerCamera] " __VA_ARGS__); } while(0)
-#define PLAYER_CAMERA_LOG(...)    do { if (g_pGameCVars->pl_debug_log_camera_mode_changes) CryLogAlways("[PlayerCamera] " __VA_ARGS__); } while(0)
+#define PLAYER_CAMERA_WATCH(...)  do { if (g_pCVars->pl_debug_watch_camera_mode)       CryWatch    ("[PlayerCamera] " __VA_ARGS__); } while(0)
+#define PLAYER_CAMERA_LOG(...)    do { if (g_pCVars->pl_debug_log_camera_mode_changes) CryLogAlways("[PlayerCamera] " __VA_ARGS__); } while(0)
 
 #else
 
@@ -27,7 +27,7 @@ namespace DoxD
 
 #endif
 
-	CPlayerCamera::CPlayerCamera(CPlayerComponent* targetPlayer)
+	CPlayerCamera::CPlayerCamera(CPlayerComponentOld* targetPlayer)
 		: m_pTargetPlayer(targetPlayer)
 		, m_pCameraComponent(nullptr)
 		, m_transitionTime(0.0f)
@@ -292,7 +292,7 @@ namespace DoxD
 
 		//if (!alreadySetTotalTransitionTime)
 		//{
-			m_totalTransitionTime = g_pGameCVars->pl_cameraTransitionTime;
+			m_totalTransitionTime = g_pCVars->pl_cameraTransitionTime;
 		//}
 	}
 }

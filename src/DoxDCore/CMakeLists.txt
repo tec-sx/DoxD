@@ -17,10 +17,8 @@ sources_platform(ALL)
 add_sources("DoxDCore_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Root"
-		"GameCVars.cpp"
 		"GamePlugin.cpp"
 		"StdAfx.cpp"
-		"GameCVars.h"
 		"GamePlugin.h"
 		"StdAfx.h"
 )
@@ -47,8 +45,10 @@ add_sources("Actor_uber.cpp"
     SOURCE_GROUP "Components\\\\Actor"
 		"Components/Actor/Actor.cpp"
 		"Components/Actor/ActorComponent.cpp"
+		"Components/Actor/ActorControllerComponent.cpp"
 		"Components/Actor/Actor.h"
 		"Components/Actor/ActorComponent.h"
+		"Components/Actor/ActorControllerComponent.h"
 		"Components/Actor/ActorDefinitions.h"
 )
 add_sources("Attachments_uber.cpp"
@@ -77,7 +77,21 @@ add_sources("Player_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components\\\\Player"
 		"Components/Player/Player.cpp"
+		"Components/Player/PlayerComponent.cpp"
 		"Components/Player/Player.h"
+		"Components/Player/PlayerComponent.h"
+)
+add_sources("Input_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Components\\\\Player\\\\Input"
+		"Components/Player/Input/PlayerInputComponent.cpp"
+		"Components/Player/Input/PlayerInputComponent.h"
+)
+add_sources("Console_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Console"
+		"Console/GameCVars.cpp"
+		"Console/GameCVars.h"
 )
 add_sources("Contracts_uber.cpp"
     PROJECTS DoxD.Game
@@ -85,15 +99,27 @@ add_sources("Contracts_uber.cpp"
 		"Contracts/IActor.h"
 		"Contracts/IItem.h"
 )
+add_sources("DynamicResponseSystem_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "DynamicResponseSystem"
+		"DynamicResponseSystem/ConditionDistanceToEntity.cpp"
+		"DynamicResponseSystem/ConditionDistanceToEntity.h"
+)
 add_sources("Utility_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Utility"
+		"Utility/AutoEnum.cpp"
+		"Utility/CryHash.cpp"
 		"Utility/CryWatch.cpp"
 		"Utility/EnumUtils.cpp"
+		"Utility/LocalizationUtility.cpp"
 		"Utility/StringUtils.cpp"
+		"Utility/AutoEnum.h"
+		"Utility/CryHash.h"
 		"Utility/CryWatch.h"
 		"Utility/EnumUtils.h"
-		"Utility/GameUtils.h"
+		"Utility/LocalizationUtility.h"
+		"Utility/StateMachine.h"
 		"Utility/StringUtils.h"
 )
 

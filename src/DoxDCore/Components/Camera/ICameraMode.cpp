@@ -19,14 +19,14 @@ namespace DoxD
 		, m_lastFrameDesiredRotation(IDENTITY)
 	{ }
 
-	void ICameraMode::ActivateMode(const CPlayerComponent& player)
+	void ICameraMode::ActivateMode(const CPlayerComponentOld& player)
 	{
 		m_isBlendingOff = false;
 
 		Activate(player);
 	}
 
-	void ICameraMode::DeactivateMode(const CPlayerComponent& player)
+	void ICameraMode::DeactivateMode(const CPlayerComponentOld& player)
 	{
 		m_isBlendingOff = true;
 
@@ -47,11 +47,11 @@ namespace DoxD
 		rot = 0.0f;
 	}
 
-	void ICameraMode::Activate(const CPlayerComponent& player)
+	void ICameraMode::Activate(const CPlayerComponentOld& player)
 	{
 	}
 
-	void ICameraMode::Deactivate(const CPlayerComponent& player)
+	void ICameraMode::Deactivate(const CPlayerComponentOld& player)
 	{
 	}
 }

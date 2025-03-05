@@ -12,13 +12,13 @@ namespace Cry::DefaultComponents
 
 namespace DoxD
 {
-	class CPlayerComponent;
+	class CPlayerComponentOld;
 
 	class CPlayerCamera
 	{
 	public:
 
-		CPlayerCamera(CPlayerComponent* targetPlayer);
+		CPlayerCamera(CPlayerComponentOld* targetPlayer);
 		~CPlayerCamera();
 
 		void Initialize();
@@ -32,14 +32,14 @@ namespace DoxD
 
 		inline bool IsTransitioning() const { return (m_transitionTime > 0.0f); }
 
-		inline const CPlayerComponent* GetPlayer() const { return m_pTargetPlayer; }
+		inline const CPlayerComponentOld* GetPlayer() const { return m_pTargetPlayer; }
 		inline Cry::DefaultComponents::CCameraComponent* GetCamera() const { return m_pCameraComponent; }
 	protected:
 
 	private:
 		// Component references
 		Cry::DefaultComponents::CCameraComponent* m_pCameraComponent;
-		CPlayerComponent* m_pTargetPlayer;
+		CPlayerComponentOld* m_pTargetPlayer;
 
 		void Reset();
 

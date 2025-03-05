@@ -6,77 +6,60 @@
 #include <CryPhysics/RayCastQueue.h>
 #include <CryPhysics/IntersectionTestQueue.h>
 #include <CryEntitySystem/IEntityClass.h>
+#include <CryNetwork/INetwork.h>
+#include <CryExtension/ClassWeaver.h>
 
-struct SCVars;
-
-//////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-
-class CCountdownTimer
+namespace DoxD
 {
-public:
-	typedef void (*FN_COMPLETION_CALLBACK)();
+	struct SCVars;
 
-private:
-	float                  m_timeLeft;
-	FN_COMPLETION_CALLBACK m_fnCompleted;
-
-public:
-	CCountdownTimer(FN_COMPLETION_CALLBACK fnComplete);
-	void  Start(float countdownDurationSeconds);
-	void  Advance(float dt);
-	bool  IsActive();
-	void  Abort();
-	float ToSeconds();
-};
-
-//////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-
-
-// The entry-point of the application
-// An instance of CGamePlugin is automatically created when the library is loaded
-// We then construct the local player entity and CPlayerComponent instance when OnClientConnectionReceived is first called.
-class CGamePlugin 
-	: public Cry::IEnginePlugin
-	, public ISystemEventListener
-{
-public:
-	CRYINTERFACE_SIMPLE(Cry::IEnginePlugin)
-	CRYGENERATE_SINGLETONCLASS_GUID(CGamePlugin, "DoxD", "{0900F201-49F3-4B3C-81D1-0C91CF3C8FDA}"_cry_guid)
-
-	CGamePlugin();
-	virtual ~CGamePlugin();
-	
-	// Cry::IEnginePlugin
-	virtual const char* GetCategory() const override { return "Game"; }
-	virtual bool Initialize(SSystemGlobalEnvironment& env, const SSystemInitParams& initParams) override;
-	// ~Cry::IEnginePlugin
-
-	// ISystemEventListener
-	virtual void OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lparam) override;
-	// ~ISystemEventListener
-
-	// Helper function to get the CGamePlugin instance
-	// Note that CGamePlugin is declared as a singleton, so the CreateClassInstance will always return the same pointer
-	static CGamePlugin* GetInstance()
+	// The entry-point of the application
+	// An instance of CGamePlugin is automatically created when the library is loaded
+	// We then construct the local player entity and CPlayerComponent instance when OnClientConnectionReceived is first called.
+	class CGamePlugin
+		: public Cry::IEnginePlugin
+		, public ISystemEventListener
+		, public IGameFrameworkListener
 	{
-		return cryinterface_cast<CGamePlugin>(CGamePlugin::s_factory.CreateClassInstance().get());
-	}
+	public:
+		CRYINTERFACE_SIMPLE(Cry::IEnginePlugin)
+			CRYGENERATE_SINGLETONCLASS_GUID(CGamePlugin, "DoxD", "{0900F201-49F3-4B3C-81D1-0C91CF3C8FDA}"_cry_guid)
 
-	virtual void RegisterConsoleVars();
-	virtual void RegisterConsoleCommands();
-	virtual void UnregisterConsoleCommands();
+			CGamePlugin();
+		virtual ~CGamePlugin();
 
-	inline SCVars* GetCVars() { return m_pCVars; }
-	float GetFOV() const;
+		// Cry::IEnginePlugin
+		virtual const char* GetName() const override { return "DoxDCore"; }
+		virtual const char* GetCategory() const override { return "Game"; }
+		virtual bool Initialize(SSystemGlobalEnvironment& env, const SSystemInitParams& initParams) override;
+		// ~Cry::IEnginePlugin
 
-private:
-	SCVars* m_pCVars;
-	IConsole* m_pConsole;
+		// ISystemEventListener
+		virtual void OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lparam) override;
+		// ~ISystemEventListener
 
-private:
-	void CreatePlayer();
-};
+		// IGameFrameworkListener
+		virtual void OnPostUpdate(float fDeltaTime) override {};
+		virtual void OnSaveGame(ISaveGame* pSaveGame) override {};
+		virtual void OnLoadGame(ILoadGame* pLoadGame) override {};
+		virtual void OnLevelEnd(const char* nextLevel) override {};
+		virtual void OnActionEvent(const SActionEvent& event) override {};
+		// ~IGameFrameworkListener
 
-extern CGamePlugin* g_pGame;
+		// Helper function to get the CGamePlugin instance
+		// Note that CGamePlugin is declared as a singleton, so the CreateClassInstance will always return the same pointer
+		static CGamePlugin* GetInstance()
+		{
+			return cryinterface_cast<CGamePlugin>(CGamePlugin::s_factory.CreateClassInstance().get());
+		}
+
+		inline SCVars* GetCVars() { return m_pCVars; }
+		float GetFOV() const;
+
+	private:
+		SCVars* m_pCVars;
+		IConsole* m_pConsole;
+	};
+
+	extern CGamePlugin* g_pGame;
+} // namespace DoxD

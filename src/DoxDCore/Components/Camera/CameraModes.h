@@ -70,7 +70,7 @@ namespace DoxD
 			pos = rot = 1.0f;
 		}
 
-		virtual void Update(const CPlayerComponent& player, float frameTime) override;
+		virtual void Update(const CPlayerComponentOld& player, float frameTime) override;
 
 	private:
 		float m_lastTpvDistance;
@@ -88,7 +88,7 @@ namespace DoxD
 	public:
 		CAnimationControlledCameraMode(Cry::DefaultComponents::CCameraComponent* camera);
 		virtual ~CAnimationControlledCameraMode() {};
-		virtual void Update(const CPlayerComponent& player, float frameTime) override;
+		virtual void Update(const CPlayerComponentOld& player, float frameTime) override;
 		virtual bool CanTransition() { return true; }
 
 		virtual void GetCameraAnimationFactor(float& pos, float& rot)
@@ -105,16 +105,16 @@ namespace DoxD
 	public:
 		CFocusCameraMode(Cry::DefaultComponents::CCameraComponent* camera);
 		virtual ~CFocusCameraMode();
-		virtual void Update(const CPlayerComponent& player, float frameTime) override;
-		virtual void  Activate(const CPlayerComponent& player);
-		virtual void  Deactivate(const CPlayerComponent& player);
+		virtual void Update(const CPlayerComponentOld& player, float frameTime) override;
+		virtual void  Activate(const CPlayerComponentOld& player);
+		virtual void  Deactivate(const CPlayerComponentOld& player);
 
 	private:
 		typedef CAnimationControlledCameraMode ParentMode;
 
-		bool	IsEntityInFrustrum(EntityId entityId, const CPlayerComponent& player) const;
+		bool	IsEntityInFrustrum(EntityId entityId, const CPlayerComponentOld& player) const;
 
-		void  Init(const CPlayerComponent* subject, const EntityId killerEid);
+		void  Init(const CPlayerComponentOld* subject, const EntityId killerEid);
 
 	private:
 		float	 m_fFocusDistance;
@@ -130,7 +130,7 @@ namespace DoxD
 	{
 	public:
 		CVehicleCameraMode(Cry::DefaultComponents::CCameraComponent* camera);
-		virtual void Update(const CPlayerComponent& player, float frameTime) override;
+		virtual void Update(const CPlayerComponentOld& player, float frameTime) override;
 	};
 
 	//////////////////////////////////////////////////////////////////////////

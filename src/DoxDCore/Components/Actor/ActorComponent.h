@@ -1,10 +1,17 @@
 #pragma once
 #include "Actor/Fate.h"
-#include "Attachments/Attachment.h"
+#include <CryAISystem/IAgent.h>
+#include <DefaultComponents/Physics/CharacterControllerComponent.h>
+#include <DefaultComponents/Audio/ListenerComponent.h>
+#include <Components/Player/Input/PlayerInputComponent.h>
 #include "Contracts/IActor.h"
+#include "Attachments/Attachment.h"
 
 namespace DoxD
 {
+	class CPlayerComponent;
+	class CAttachmentComponent;
+
 	/** Equipment slots **/
 	DECLARE_ATTACHMENT_TYPE(SLOT_ACTOR_HEAD, "Actor Head", 0x617985533E2A4E5D, 0xB43CD7D2CFC60571)
 	DECLARE_ATTACHMENT_TYPE(SLOT_ACTOR_FACE, "Actor Face", 0x10BA29FEA6F14F48, 0xAC475D386AD3637D)
@@ -30,19 +37,14 @@ namespace DoxD
 		EACT_PET,
 	};
 
-	class CActorComponent : public IEntityComponent , public IActor
+	class CActorComponent : public IEntityComponent, public IActor, public CPlayerInputComponent::IInputEventListener
 	{
-			// CPlayerInputComponent::IInputEventListener
-		//virtual void OnInputEscape(int activationMode) override;
-		//virtual void OnInputInteraction(int activationMode) override;
-		//virtual void OnInputActionBarUse(int activationMode, int buttonId) override;
-		//virtual void OnInputFunctionBarUse(int activationMode, int buttonId) override;
+		// CPlayerInputComponent::IInputEventListener
+		virtual void OnInputEscape(int activationMode) override;
+		virtual void OnInputInteraction(int activationMode) override;
 		// ~CPlayerInputComponent::IInputEventListener
 
 
-	public:
-		CActorComponent() {};
-		virtual ~CActorComponent() = default;
 
 		// IEntityComponent
 		virtual void Initialize() override;
@@ -50,7 +52,12 @@ namespace DoxD
 		virtual Cry::Entity::EventFlags GetEventMask() const override { return EEntityEvent::Initialize | EEntityEvent::Update | EEntityEvent::Remove; }
 		// ~IEntityComponent
 		
-		// Reflect type to set a unique identifier for this component
+		virtual void Update(SEntityUpdateContext* pCtx);
+
+	public:
+		CActorComponent() {};
+		virtual ~CActorComponent() = default;
+		
 		static void ReflectType(Schematyc::CTypeDesc<CActorComponent>& desc)
 		{
 			desc.SetGUID(CActorComponent::IID());
@@ -69,11 +76,10 @@ namespace DoxD
 			return id;
 		}
 		
-		virtual void Update(SEntityUpdateContext* pCtx);
-
-		// IActor
+		const Vec3& GetVelocity() const { return m_pCharacterControllerComponent->GetVelocity(); }
+		Vec3 GetMoveDirection() const { return m_pCharacterControllerComponent->GetMoveDirection(); }
 		virtual const bool IsPlayer() const override;
-		virtual CPlayerComponent* GetPlayer() const override;
+		virtual CPlayerComponent* GetPlayer() const override { return m_pPlayer; };
 		virtual ICharacterInstance* GetCharacter() const override;
 
 		virtual const Vec3 GetLocalEyePos() const { return { 0.0f, 0.0f, 1.82f }; };
@@ -111,7 +117,7 @@ namespace DoxD
 		virtual IActionController* GetActionController() const override;
 		virtual const SActorMannequinParams* GetMannequinParams() const override;
 
-		virtual void OnPlayerPossess(CPlayerComponent& player) override;
+		virtual void OnPlayerPossess(CPlayerComponentOld& player) override;
 		virtual void OnPlayerUnpossess() override;
 
 
@@ -131,7 +137,23 @@ namespace DoxD
 		virtual void OnItemDropped(EntityId itemId) override;
 
 		virtual void OnSprintStaminaChanged(float newStamina) override;
-		// ~IActor
+
+		protected:
+			Cry::DefaultComponents::CCharacterControllerComponent* m_pCharacterControllerComponent{ nullptr };
+
+			Schematyc::CharacterFileName m_charcterGeometry;
+
+			virtual void OnResetState();
+
+			void SetIK() const;
+			bool SetLookingIK(const bool isLooking, const Vec3& lookTarget) const;
+
+		private:	
+			CPlayerComponent* m_pPlayer{ nullptr };
+			CAttachmentComponent* m_pAttachmentComponent{ nullptr };
+			Cry::Audio::DefaultComponents::CListenerComponent* m_pAudioListenerComponent{ nullptr };
+
+			CFate m_fate;
 	};
 }
 

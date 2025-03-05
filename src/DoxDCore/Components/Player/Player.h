@@ -137,7 +137,7 @@ namespace DoxD
 	////////////////////////////////////////////////////////
 	// Represents a player participating in gameplay
 	////////////////////////////////////////////////////////
-	class CPlayerComponent final : public IEntityComponent, public CActor
+	class CPlayerComponentOld final : public IEntityComponent, public CActor
 	{
 	public:
 		enum class EPlayerState
@@ -164,8 +164,8 @@ namespace DoxD
 		static constexpr float DEFAULT_ROTATION_SPEED_RUN = 3;
 
 	public:
-		CPlayerComponent();
-		virtual ~CPlayerComponent() override;
+		CPlayerComponentOld();
+		virtual ~CPlayerComponentOld() override;
 
 		virtual void Initialize() override;
 
@@ -175,20 +175,20 @@ namespace DoxD
 		int GetPhysicalSkipEntities(IPhysicalEntity** pSkipList, const int maxSkipSize) const;
 
 		// Reflect type to set a unique identifier for this component
-		static void ReflectType(Schematyc::CTypeDesc<CPlayerComponent>& desc)
+		static void ReflectType(Schematyc::CTypeDesc<CPlayerComponentOld>& desc)
 		{
 			desc.SetGUID("{63F4C0C6-32AF-4ACB-8FB0-57D45DD14725}"_cry_guid);
 			desc.SetComponentFlags(IEntityComponent::EFlags::Singleton);
 			desc.SetLabel("Third Person Character");
 
-			desc.AddMember(&CPlayerComponent::m_walkSpeed, 'pws', "playerwalkspeed", "Player Walk Speed", "Sets the Player Walking Speed", DEFAULT_SPEED_WALKING);
-			desc.AddMember(&CPlayerComponent::m_runSpeed, 'prs', "playerrunspeed", "Player Run Speed", "Sets the Player Running Speed", DEFAULT_SPEED_RUNNING);
-			desc.AddMember(&CPlayerComponent::m_jumpHeight, 'pjh', "playerjumpheight", "Player Jump Height", "Sets the Player Jump Height", DEFAULT_JUMP_ENERGY);
-			desc.AddMember(&CPlayerComponent::m_rotationSpeedWalking, 'rspw', "playerrotationspeedwalking", "Player Walking Rotation Speed", "Sets the player rotation speed when walking", DEFAULT_ROTATION_SPEED_WALK);
-			desc.AddMember(&CPlayerComponent::m_rotationSpeedRunning, 'rspr', "playerrotationspeedrunning", "Player Running Rotation Speed", "Sets the player rotation speed when running", DEFAULT_ROTATION_SPEED_RUN);
-			desc.AddMember(&CPlayerComponent::m_capsuleHeightCrouching, 'capc', "capsuleheightcrouching", "Capsule Crouching Height", "Height of collision capsule while crouching", DEFAULT_CAPSULE_HEIGHT_CROUCHING);
-			desc.AddMember(&CPlayerComponent::m_capsuleHeightStanding, 'caps', "capsuleheightstanding", "Capsule Standing Height", "Height of collision capsule while standing", DEFAULT_CAPSULE_HEIGHT_STANDING);
-			desc.AddMember(&CPlayerComponent::m_capsuleGroundOffset, 'capo', "capsulegroundoffset", "Capsule Ground Offset", "Offset of the capsule from the entity floor", DEFAULT_CAPSULE_GROUND_OFFSET);
+			desc.AddMember(&CPlayerComponentOld::m_walkSpeed, 'pws', "playerwalkspeed", "Player Walk Speed", "Sets the Player Walking Speed", DEFAULT_SPEED_WALKING);
+			desc.AddMember(&CPlayerComponentOld::m_runSpeed, 'prs', "playerrunspeed", "Player Run Speed", "Sets the Player Running Speed", DEFAULT_SPEED_RUNNING);
+			desc.AddMember(&CPlayerComponentOld::m_jumpHeight, 'pjh', "playerjumpheight", "Player Jump Height", "Sets the Player Jump Height", DEFAULT_JUMP_ENERGY);
+			desc.AddMember(&CPlayerComponentOld::m_rotationSpeedWalking, 'rspw', "playerrotationspeedwalking", "Player Walking Rotation Speed", "Sets the player rotation speed when walking", DEFAULT_ROTATION_SPEED_WALK);
+			desc.AddMember(&CPlayerComponentOld::m_rotationSpeedRunning, 'rspr', "playerrotationspeedrunning", "Player Running Rotation Speed", "Sets the player rotation speed when running", DEFAULT_ROTATION_SPEED_RUN);
+			desc.AddMember(&CPlayerComponentOld::m_capsuleHeightCrouching, 'capc', "capsuleheightcrouching", "Capsule Crouching Height", "Height of collision capsule while crouching", DEFAULT_CAPSULE_HEIGHT_CROUCHING);
+			desc.AddMember(&CPlayerComponentOld::m_capsuleHeightStanding, 'caps', "capsuleheightstanding", "Capsule Standing Height", "Height of collision capsule while standing", DEFAULT_CAPSULE_HEIGHT_STANDING);
+			desc.AddMember(&CPlayerComponentOld::m_capsuleGroundOffset, 'capo', "capsulegroundoffset", "Capsule Ground Offset", "Offset of the capsule from the entity floor", DEFAULT_CAPSULE_GROUND_OFFSET);
 		}
 
 		const Quat& GetLookOrientation() const { return m_lookOrientation; }

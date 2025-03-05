@@ -34,14 +34,14 @@ namespace DoxD
 	CDefaultCameraMode::CDefaultCameraMode(Cry::DefaultComponents::CCameraComponent* camera)
 		: ICameraMode(camera)
 	{
-		m_targetArmLength = g_pGameCVars->cm_tpvDist;
+		m_targetArmLength = g_pCVars->cm_tpvDist;
 		m_lastTpvDistance = m_targetArmLength;
 		m_cameraLagSpeed = 10;
 		m_cameraRotationLagSpeed = 8;
 		m_cameraLagMaxDistance = 0;
 	}
 
-	void CDefaultCameraMode::Update(const CPlayerComponent& player, float frameTime)
+	void CDefaultCameraMode::Update(const CPlayerComponentOld& player, float frameTime)
 	{
 		// Update desired arm location
 		const Quat desiredRotationQuat = Quat::CreateSlerp(m_lastFrameDesiredRotation, player.GetLookOrientation(), m_cameraRotationLagSpeed * frameTime);
@@ -50,7 +50,7 @@ namespace DoxD
 		m_lastFrameDesiredRotation = desiredRotationQuat;
 
 		// Get the spring arm 'origin', the target we want to look at
-		Vec3 armOrigin = player.GetEntity()->GetWorldPos() + Vec3(0, 0, g_pGameCVars->cm_tpvDistVertical);
+		Vec3 armOrigin = player.GetEntity()->GetWorldPos() + Vec3(0, 0, g_pCVars->cm_tpvDistVertical);
 
 		// We lag the target, not the actual camera position, so rotating the camera around does not have lag
 		Vec3 desiredLocation = armOrigin;
@@ -62,7 +62,7 @@ namespace DoxD
 		m_lastFrameDesiredLocation = desiredLocation;
 
 #ifndef _RELEASE
-		if (g_pGameCVars->cm_debugCamera)
+		if (g_pCVars->cm_debugCamera)
 		{
 			IRenderAuxGeom* pRender = gEnv->pRenderer->GetIRenderAuxGeom();
 
@@ -86,14 +86,14 @@ namespace DoxD
 		const Vec3 crosshairPosition = desiredLocation + cameraDirection;
 		
 		// Handle camera collisions
-		if (g_pGameCVars->cm_tpvCameraCollision)
+		if (g_pCVars->cm_tpvCameraCollision)
 		{
 			IPhysicalEntity* pSkipEnts[5];
 			const int nSkipEnts = player.GetPhysicalSkipEntities(pSkipEnts, CRY_ARRAY_COUNT(pSkipEnts));
 
 			primitives::sphere spherePrim;
 			spherePrim.center = crosshairPosition;
-			spherePrim.r = g_pGameCVars->cm_tpvCameraCollisionOffset;
+			spherePrim.r = g_pCVars->cm_tpvCameraCollisionOffset;
 
 			float fDist = gEnv->pPhysicalWorld->PrimitiveWorldIntersection(
 				spherePrim.type, &spherePrim, -cameraDirection, ent_all, nullptr, 0, geom_colltype0, nullptr, nullptr, 0, pSkipEnts, nSkipEnts);
@@ -103,9 +103,9 @@ namespace DoxD
 				fDist = m_targetArmLength;
 			}
 
-			fDist = max(g_pGameCVars->cm_tpvMinDist, fDist);
+			fDist = max(g_pCVars->cm_tpvMinDist, fDist);
 
-			Interpolate(m_lastTpvDistance, fDist, g_pGameCVars->cm_tpvInterpolationSpeed, frameTime);
+			Interpolate(m_lastTpvDistance, fDist, g_pCVars->cm_tpvInterpolationSpeed, frameTime);
 			desiredLocation = crosshairPosition - (cameraDirection.GetNormalized() * m_lastTpvDistance);
 		}	
 
@@ -126,7 +126,7 @@ namespace DoxD
 		: ICameraMode(camera)
 	{}
 
-	void CAnimationControlledCameraMode::Update(const CPlayerComponent& player, float frameTime)
+	void CAnimationControlledCameraMode::Update(const CPlayerComponentOld& player, float frameTime)
 	{
 	}
 
@@ -145,24 +145,24 @@ namespace DoxD
 	{
 	}
 
-	void CFocusCameraMode::Update(const CPlayerComponent& player, float frameTime)
+	void CFocusCameraMode::Update(const CPlayerComponentOld& player, float frameTime)
 	{
 	}
 
-	void CFocusCameraMode::Activate(const CPlayerComponent& player)
+	void CFocusCameraMode::Activate(const CPlayerComponentOld& player)
 	{
 	}
 
-	void CFocusCameraMode::Deactivate(const CPlayerComponent& player)
+	void CFocusCameraMode::Deactivate(const CPlayerComponentOld& player)
 	{
 	}
 
-	bool CFocusCameraMode::IsEntityInFrustrum(EntityId entityId, const CPlayerComponent& player) const
+	bool CFocusCameraMode::IsEntityInFrustrum(EntityId entityId, const CPlayerComponentOld& player) const
 	{
 		return false;
 	}
 
-	void CFocusCameraMode::Init(const CPlayerComponent* subject, const EntityId killerEid)
+	void CFocusCameraMode::Init(const CPlayerComponentOld* subject, const EntityId killerEid)
 	{
 	}
 
@@ -176,7 +176,7 @@ namespace DoxD
 	{
 	}
 
-	void CVehicleCameraMode::Update(const CPlayerComponent& player, float frameTime)
+	void CVehicleCameraMode::Update(const CPlayerComponentOld& player, float frameTime)
 	{
 	}
 }
