@@ -5,6 +5,8 @@
 namespace DoxD
 {
 	class CActorComponent;
+	class CPlayerInputComponent;
+	class CCameraManagerComponent;
 
 	class CPlayerComponent : public IEntityComponent
 	{
@@ -35,6 +37,67 @@ namespace DoxD
 			return id;
 		}
 
+		struct SInteractionState
+		{
+			enum class EInteractionMode
+			{
+				/** No special states apply. */
+				eNoMode,
+				/** The player is handling an item in their hands. */
+				eHandlingEntity,
+				/** The player is zoomed into an entity, examining / using it in some special way e.g. security pad, computer system. */
+				eExamineZoom
+			};
+
+
+			bool IsCharacterMovementAllowed() const { return m_allowCharacterMovement; }
+			bool IsCharacterRotationAllowed() const { return m_allowCharacterRotation; }
+			bool IsCameraMovementAllowed() const { return m_allowCameraMovement; }
+
+			void SetInteractionMode(EInteractionMode playerInteractionMode)
+			{
+				m_playerInteractionMode = playerInteractionMode;
+
+				switch (m_playerInteractionMode)
+				{
+				case EInteractionMode::eNoMode:
+					m_allowCharacterMovement = true;
+					m_allowCharacterRotation = true;
+					m_allowCameraMovement = true;
+					break;
+
+				case EInteractionMode::eHandlingEntity:
+					m_allowCharacterMovement = false;
+					m_allowCharacterRotation = false;
+					m_allowCameraMovement = false;
+					break;
+
+				case EInteractionMode::eExamineZoom:
+					m_allowCharacterMovement = false;
+					m_allowCharacterRotation = false;
+					m_allowCameraMovement = true;
+					break;
+				}
+			}
+
+		private:
+			EInteractionMode m_playerInteractionMode{ EInteractionMode::eNoMode };
+
+			void SetAllowCharacterMovement(bool val) { m_allowCharacterMovement = val; }
+			void SetAllowCharacterRotation(bool val) { m_allowCharacterRotation = val; }
+			void SetAllowCameraMovement(bool val) { m_allowCameraMovement = val; }
+
+			/** Is the player allowed to move their character? */
+			bool m_allowCharacterMovement{ true };
+
+			/** Is the player allowed to rotate their character? */
+			bool m_allowCharacterRotation{ true };
+
+			/** Is the player allowed to move the camera? */
+			bool m_allowCameraMovement{ true };
+		};
+
+		CPlayerInputComponent* GetPlayerInput() const { return m_pPlayerInput; }
 		IEntity* GetAttachedEntity() const;
 		CActorComponent* GetAttachedActor() const;
 
@@ -47,8 +110,16 @@ namespace DoxD
 			return pActor->GetComponent<CPlayerComponent>();
 		}
 
+		SInteractionState& GetInteractionState() { return m_playerInteractionState; }
+
 	private:
+		CCameraManagerComponent* m_pCameraManager{ nullptr };
+		CPlayerInputComponent* m_pPlayerInput{ nullptr };
+
 		EntityId m_attachedCharacterId{ INVALID_ENTITYID };
+		EntityId m_cameraTargetId{ INVALID_ENTITYID };
+
+		SInteractionState m_playerInteractionState;
 	};
 }
 

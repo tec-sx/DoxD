@@ -24,8 +24,8 @@ namespace DoxD
 		void Initialize();
 
 		// Methods
-		void SetCameraMode(ECameraMode newMode, const char* why);
-		void SetCameraModeWithAnimationBlendFactors(ECameraMode newMode, const ICameraMode::AnimationSettings& animationSettings, const char* why);
+		void SetCameraMode(ECameraModeOld newMode, const char* why);
+		void SetCameraModeWithAnimationBlendFactors(ECameraModeOld newMode, const ICameraModeOld::AnimationSettings& animationSettings, const char* why);
 
 		void Update(float frameTime);
 		//void PostUpdate(const QuatT& camDelta);
@@ -43,19 +43,19 @@ namespace DoxD
 
 		void Reset();
 
-		ECameraMode GetCurrentCameraMode();
+		ECameraModeOld GetCurrentCameraMode();
 		void FilterGroundOnlyShakes(SViewParams& viewParams);
 
 		void UpdateTotalTransitionTime();
 
 		// Runtime Variables
-		ICameraMode* m_cameraModes[(int)ECameraMode::Last];
-		ECameraMode m_currentCameraMode;
-		ECameraMode m_previousCameraMode;
+		ICameraModeOld* m_cameraModes[(int)ECameraModeOld::Last];
+		ECameraModeOld m_currentCameraMode;
+		ECameraModeOld m_previousCameraMode;
 
 		float		m_transitionTime;
 		float		m_totalTransitionTime;
-		ECameraMode m_transitionCameraMode;
+		ECameraModeOld m_transitionCameraMode;
 
 		bool m_enteredPartialAnimControlledCameraOnLedge;
 	};

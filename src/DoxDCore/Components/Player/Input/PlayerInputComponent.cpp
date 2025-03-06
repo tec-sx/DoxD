@@ -184,8 +184,6 @@ namespace DoxD
 		Quat quatRelativeDirection;
 		Vec3 vecMovement = Vec3(ZERO);
 
-		// Take the mask and turn it into a vector to indicate the direction we need to pan independent of the present
-		// camera direction. 
 		switch (m_inputFlags)
 		{
 		case (TInputFlags)EInputFlag::Forward:

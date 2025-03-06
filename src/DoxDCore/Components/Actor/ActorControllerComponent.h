@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Utility/StateMachine.h>
-//#include "Actor/Animation/ActorAnimation.h"
+#include "Actor/Animation/ActorAnimation.h"
 #include "Components/Player/Input/PlayerInputComponent.h"
 #include "DefaultComponents/Physics/CharacterControllerComponent.h"
 //#include <Components/Animation/ActorAnimationComponent.h>
@@ -9,6 +9,24 @@
 namespace DoxD
 {
 	class CActorComponent;
+
+	struct SActorStance
+	{
+	public:
+		EActorStance GetStance() const { return m_stance; }
+		void SetStance(EActorStance stance) { m_stance = stance; }
+		EActorPosture GetPosture() const { return m_posture; }
+		void SetPosture(EActorPosture posture) { m_posture = posture; }
+
+	private:
+
+		/** The actor is currently in this stance, or moving into this stance. */
+		EActorStance m_stance{ EActorStance::standing };
+
+		/** The actor's posture, which should indicate their state of mind, or game conditions they presently have e.g. sapped. */
+		EActorPosture m_posture{ EActorPosture::neutral };
+	};
+
 
 	class CActorControllerComponent : public IEntityComponent
 	{
@@ -66,9 +84,27 @@ namespace DoxD
 
 		float virtual GetMovementBaseSpeed(TInputFlags movementDirectionFlags) const;
 
+		bool GetShouldJump() { return m_shouldJump; };
+		void SetShouldJump(bool shouldJump) { m_shouldJump = shouldJump; };
+
+		EActorStance GetStance() const { return m_actorStance.GetStance(); }
+		void SetStance(EActorStance stance) { m_actorStance.SetStance(stance); }
+		EActorPosture GetPosture() const { return m_actorStance.GetPosture(); }
+		void SetPosture(EActorPosture posture) { m_actorStance.SetPosture(posture); }
+
+		void OnActionCrouchToggle();
+		void OnActionCrawlToggle();
+		void OnActionSitToggle();
+		void OnActionJogToggle() { m_isJogging = !m_isJogging; };
+		void OnActionSprintStart() { m_isSprinting = true; };
+		void OnActionSprintStop() { m_isSprinting = false; };
+		bool IsSprinting() const { return m_isSprinting; }
+		bool IsJogging() const { return m_isJogging; }
+
+		const CActorComponent* GetActor() { return m_pActorComponent; };
+
 	private:
 		Cry::DefaultComponents::CCharacterControllerComponent* m_pCharacterControllerComponent{ nullptr };
-
 		CActorComponent* m_pActorComponent{ nullptr };
 
 		bool m_isAIControlled{ false };
@@ -79,6 +115,16 @@ namespace DoxD
 		bool m_useAimIK{ true };
 		bool m_shouldJump{ false };
 		bool m_canJump{ false };
+		TagID m_rotateTagId{ TAG_ID_INVALID };
+		Vec3 m_movementRequest{ ZERO };
+		Quat m_lookOrientation{ IDENTITY };
+		float m_yawAngularVelocity{ 0.0f };
+		float m_movingDuration{ 0.0f };
+		bool m_isSprinting{ false };
+		bool m_isJogging{ false };
+		SActorStance m_actorStance;
+		TagState m_mannequinTagsClear{ TAG_STATE_EMPTY };
+		TagState m_mannequinTagsSet{ TAG_STATE_EMPTY };
 	};
 }
 

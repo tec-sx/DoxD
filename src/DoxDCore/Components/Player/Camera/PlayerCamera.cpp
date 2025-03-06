@@ -8,7 +8,7 @@
 #include <IViewSystem.h>
 
 #include "Components/Player/Player.h"
-#include "Components/Camera/CameraModes.h"
+#include "CameraModes.h"
 #include "Utility/CryWatch.h"
 
 #include <CrySystem/ConsoleRegistration.h>
@@ -32,9 +32,9 @@ namespace DoxD
 		, m_pCameraComponent(nullptr)
 		, m_transitionTime(0.0f)
 		, m_totalTransitionTime(0.0f)
-		, m_previousCameraMode(ECameraMode::Invalid)
-		, m_transitionCameraMode(ECameraMode::Invalid)
-		, m_currentCameraMode(ECameraMode::Default)
+		, m_previousCameraMode(ECameraModeOld::Invalid)
+		, m_transitionCameraMode(ECameraModeOld::Invalid)
+		, m_currentCameraMode(ECameraModeOld::Default)
 		, m_enteredPartialAnimControlledCameraOnLedge(false)
 	{
 		memset(m_cameraModes, 0, sizeof(m_cameraModes));
@@ -44,7 +44,7 @@ namespace DoxD
 	{
 		PLAYER_CAMERA_LOG("Destroying PlayerCamera instance %p", this);
 
-		for (unsigned int i = 0; i < (int)ECameraMode::Last; ++i)
+		for (unsigned int i = 0; i < (int)ECameraModeOld::Last; ++i)
 		{
 			SAFE_DELETE(m_cameraModes[i]);
 		}
@@ -56,27 +56,27 @@ namespace DoxD
 		camera.SetMatrix(m_pTargetPlayer->GetEntity()->GetWorldTM());
 		gEnv->pSystem->SetViewCamera(camera);
 
-		m_cameraModes[(int)ECameraMode::Default] = new CDefaultCameraMode(m_pCameraComponent);
-		m_cameraModes[(int)ECameraMode::Focus] = new CFocusCameraMode(m_pCameraComponent);
-		m_cameraModes[(int)ECameraMode::Vehicle] = new CVehicleCameraMode(m_pCameraComponent);
-		m_cameraModes[(int)ECameraMode::AnimationControlled] = new CAnimationControlledCameraMode(m_pCameraComponent);
+		m_cameraModes[(int)ECameraModeOld::Default] = new CDefaultCameraMode(m_pCameraComponent);
+		m_cameraModes[(int)ECameraModeOld::Examine] = new CFocusCameraMode(m_pCameraComponent);
+		m_cameraModes[(int)ECameraModeOld::Vehicle] = new CVehicleCameraMode(m_pCameraComponent);
+		m_cameraModes[(int)ECameraModeOld::AnimationControlled] = new CAnimationControlledCameraMode(m_pCameraComponent);
 
 		PLAYER_CAMERA_LOG("Creating PlayerCamera instance %p", this);
 	}
 
 	void CPlayerCamera::Reset()
 	{
-		m_previousCameraMode = ECameraMode::Invalid;
-		m_transitionCameraMode = ECameraMode::Invalid;
-		m_currentCameraMode = ECameraMode::Default;
+		m_previousCameraMode = ECameraModeOld::Invalid;
+		m_transitionCameraMode = ECameraModeOld::Invalid;
+		m_currentCameraMode = ECameraModeOld::Default;
 	}
 
-	void CPlayerCamera::SetCameraMode(ECameraMode newMode, const char* why)
+	void CPlayerCamera::SetCameraMode(ECameraModeOld newMode, const char* why)
 	{
 		m_currentCameraMode = newMode;
 	}
 
-	void CPlayerCamera::SetCameraModeWithAnimationBlendFactors(ECameraMode newMode, const ICameraMode::AnimationSettings& animationSettings, const char* why)
+	void CPlayerCamera::SetCameraModeWithAnimationBlendFactors(ECameraModeOld newMode, const ICameraModeOld::AnimationSettings& animationSettings, const char* why)
 	{
 		SetCameraMode(newMode, why);
 
@@ -86,8 +86,8 @@ namespace DoxD
 
 	void CPlayerCamera::Update(float frameTime)
 	{
-		ECameraMode currentCameraMode = GetCurrentCameraMode();
-		assert((currentCameraMode >= ECameraMode::Default) && (currentCameraMode < ECameraMode::Last));
+		ECameraModeOld currentCameraMode = GetCurrentCameraMode();
+		assert((currentCameraMode >= ECameraModeOld::Default) && (currentCameraMode < ECameraModeOld::Last));
 
 		if (m_currentCameraMode != currentCameraMode)
 		{
@@ -96,10 +96,10 @@ namespace DoxD
 
 		if (m_previousCameraMode != m_currentCameraMode)
 		{
-			assert(m_previousCameraMode >= ECameraMode::Invalid && m_previousCameraMode < ECameraMode::Last);
-			assert(m_currentCameraMode >= ECameraMode::Invalid && m_currentCameraMode < ECameraMode::Last);
+			assert(m_previousCameraMode >= ECameraModeOld::Invalid && m_previousCameraMode < ECameraModeOld::Last);
+			assert(m_currentCameraMode >= ECameraModeOld::Invalid && m_currentCameraMode < ECameraModeOld::Last);
 
-			if (m_previousCameraMode != ECameraMode::Invalid)
+			if (m_previousCameraMode != ECameraModeOld::Invalid)
 			{
 				m_cameraModes[(int)m_previousCameraMode]->DeactivateMode(*m_pTargetPlayer);
 
@@ -122,14 +122,14 @@ namespace DoxD
 				{
 					m_totalTransitionTime = 0.0f;
 					m_transitionTime = 0.0f;
-					m_transitionCameraMode = ECameraMode::Invalid;
+					m_transitionCameraMode = ECameraModeOld::Invalid;
 				}
 			}
 			m_cameraModes[(int)m_currentCameraMode]->ActivateMode(*m_pTargetPlayer);
 			m_previousCameraMode = m_currentCameraMode;
 		}
 
-		assert(currentCameraMode >= ECameraMode::Invalid);
+		assert(currentCameraMode >= ECameraModeOld::Invalid);
 		assert(m_cameraModes[(int)currentCameraMode]);
 
 		m_transitionTime = max(m_transitionTime - frameTime, 0.0f);
@@ -143,7 +143,7 @@ namespace DoxD
 
 	//	//const bool playerIsSliding = m_targetPlayer.IsSliding();
 
-	//	//ECameraMode camMode = GetCurrentCameraMode();
+	//	//ECameraModeOld camMode = GetCurrentCameraMode();
 
 	//	float blendFactorTran = 0.0f;
 	//	float blendFactorRot = 0.0f;
@@ -202,7 +202,7 @@ namespace DoxD
 	//	}
 	//}
 
-	ECameraMode CPlayerCamera::GetCurrentCameraMode()
+	ECameraModeOld CPlayerCamera::GetCurrentCameraMode()
 	{
 		//Benito
 		//Note: Perhaps the mode should be set instead from the current player state, instead of checking stats every frame
@@ -214,28 +214,28 @@ namespace DoxD
 		////if (g_pGameCVars->g_deathCamSP.enable && m_ownerPlayer.IsDead() && !pPlayerStats->isRagDoll && !pPlayerStats->isThirdPerson
 		////	&& m_ownerPlayer.GetHitDeathReactions() && !m_ownerPlayer.GetHitDeathReactions()->IsInReaction())
 		////{
-		////	return eCameraMode_Death;
+		////	return ECameraModeOld_Death;
 		////}
 
 		//if (pPlayerStats->isRagDoll)
 		//{
-		//	return ECameraMode::AnimationControlled;
+		//	return ECameraModeOld::AnimationControlled;
 		//}
 
 		//if (m_targetPlayer.GetLinkedVehicle())
 		//{
-		//	return ECameraMode::Vehicle;
+		//	return ECameraModeOld::Vehicle;
 		//}
 
 		//// TEMP: Any camera mode selected by the above code also needs to be turned OFF by this function.
 		////
 		//switch (m_currentCameraMode)
 		//{
-		//case ECameraMode::AnimationControlled:
-		////case ECameraMode::Death:
-		//case ECameraMode::Vehicle:
+		//case ECameraModeOld::AnimationControlled:
+		////case ECameraModeOld::Death:
+		//case ECameraModeOld::Vehicle:
 		//{
-			return ECameraMode::Default;
+			return ECameraModeOld::Default;
 		//}
 		//}
 
@@ -265,7 +265,7 @@ namespace DoxD
 	{
 		//bool alreadySetTotalTransitionTime = false;
 
-		//if (m_currentCameraMode == eCameraMode_PartialAnimationControlled)
+		//if (m_currentCameraMode == ECameraModeOld_PartialAnimationControlled)
 		//{
 		//	if (m_targetPlayer.IsOnLedge())
 		//	{
@@ -280,7 +280,7 @@ namespace DoxD
 		//		m_enteredPartialAnimControlledCameraOnLedge = false;
 		//	}
 		//}
-		//else if (m_previousCameraMode == eCameraMode_PartialAnimationControlled)
+		//else if (m_previousCameraMode == ECameraModeOld_PartialAnimationControlled)
 		//{
 		//	if (m_enteredPartialAnimControlledCameraOnLedge)
 		//	{

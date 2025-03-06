@@ -27,6 +27,24 @@ add_sources("Actor_uber.cpp"
     SOURCE_GROUP "Actor"
 		"Actor/Fate.h"
 )
+add_sources("Animation_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Actor\\\\Animation"
+		"Actor/Animation/ActorAnimation.cpp"
+		"Actor/Animation/ActorAnimationEvents.cpp"
+		"Actor/Animation/ActorAnimation.h"
+		"Actor/Animation/ActorAnimationEvents.h"
+)
+add_sources("Movement_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Actor\\\\Movement"
+		"Actor/Movement/ActorStateEvents.h"
+)
+add_sources("Animation_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Animation"
+		"Animation/Animation.h"
+)
 add_sources("Attachments_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Attachments"
@@ -37,7 +55,6 @@ add_sources("Components_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components"
 		"Components/SpawnPoint.cpp"
-		"Components/Bullet.h"
 		"Components/SpawnPoint.h"
 )
 add_sources("Actor_uber.cpp"
@@ -57,16 +74,6 @@ add_sources("Attachments_uber.cpp"
 		"Components/Attachments/AttachmentComponent.cpp"
 		"Components/Attachments/AttachmentComponent.h"
 )
-add_sources("Camera_uber.cpp"
-    PROJECTS DoxD.Game
-    SOURCE_GROUP "Components\\\\Camera"
-		"Components/Camera/CameraModes.cpp"
-		"Components/Camera/ICameraMode.cpp"
-		"Components/Camera/PlayerCamera.cpp"
-		"Components/Camera/CameraModes.h"
-		"Components/Camera/ICameraMode.h"
-		"Components/Camera/PlayerCamera.h"
-)
 add_sources("Ladder_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components\\\\Ladder"
@@ -80,6 +87,16 @@ add_sources("Player_uber.cpp"
 		"Components/Player/PlayerComponent.cpp"
 		"Components/Player/Player.h"
 		"Components/Player/PlayerComponent.h"
+)
+add_sources("Camera_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Components\\\\Player\\\\Camera"
+		"Components/Player/Camera/CameraModes.cpp"
+		"Components/Player/Camera/ICameraMode.cpp"
+		"Components/Player/Camera/PlayerCamera.cpp"
+		"Components/Player/Camera/CameraModes.h"
+		"Components/Player/Camera/ICameraMode.h"
+		"Components/Player/Camera/PlayerCamera.h"
 )
 add_sources("Input_uber.cpp"
     PROJECTS DoxD.Game

@@ -4,7 +4,7 @@
 
 namespace DoxD
 {
-	ICameraMode::ICameraMode(Cry::DefaultComponents::CCameraComponent* camera)
+	ICameraModeOld::ICameraModeOld(Cry::DefaultComponents::CCameraComponent* camera)
 		: m_pCamera(camera)
 		, m_isBlendingOff(false)
 		, m_targetArmLength(0)
@@ -19,39 +19,39 @@ namespace DoxD
 		, m_lastFrameDesiredRotation(IDENTITY)
 	{ }
 
-	void ICameraMode::ActivateMode(const CPlayerComponentOld& player)
+	void ICameraModeOld::ActivateMode(const CPlayerComponentOld& player)
 	{
 		m_isBlendingOff = false;
 
 		Activate(player);
 	}
 
-	void ICameraMode::DeactivateMode(const CPlayerComponentOld& player)
+	void ICameraModeOld::DeactivateMode(const CPlayerComponentOld& player)
 	{
 		m_isBlendingOff = true;
 
 		Deactivate(player);
 	}
 
-	bool ICameraMode::CanTransition()
+	bool ICameraModeOld::CanTransition()
 	{
 		return false;
 	}
 
-	void ICameraMode::SetCameraAnimationFactor(const AnimationSettings& animationSettings)
+	void ICameraModeOld::SetCameraAnimationFactor(const AnimationSettings& animationSettings)
 	{ }
 
-	void ICameraMode::GetCameraAnimationFactor(float& pos, float& rot)
+	void ICameraModeOld::GetCameraAnimationFactor(float& pos, float& rot)
 	{
 		pos = 0.0f;
 		rot = 0.0f;
 	}
 
-	void ICameraMode::Activate(const CPlayerComponentOld& player)
+	void ICameraModeOld::Activate(const CPlayerComponentOld& player)
 	{
 	}
 
-	void ICameraMode::Deactivate(const CPlayerComponentOld& player)
+	void ICameraModeOld::Deactivate(const CPlayerComponentOld& player)
 	{
 	}
 }

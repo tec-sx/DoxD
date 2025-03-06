@@ -85,6 +85,14 @@ namespace DoxD
 		virtual const Vec3 GetLocalEyePos() const { return { 0.0f, 0.0f, 1.82f }; };
 		virtual Vec3 GetLocalLeftHandPos() const { return Vec3(ZERO); };
 		virtual Vec3 GetLocalRightHandPos() const { return Vec3(ZERO); };
+		static CActorComponent* GetActor(EntityId entityId)
+		{
+			auto pActor = gEnv->pEntitySystem->GetEntity(entityId);
+			if (pActor)
+				return pActor->GetComponent<CActorComponent>();
+
+			return nullptr;
+		};
 
 		virtual void OnActionItemUse() override;
 		virtual void OnActionItemPickup() override;

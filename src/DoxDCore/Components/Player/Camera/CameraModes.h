@@ -58,7 +58,7 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////
 
-	class CDefaultCameraMode : public ICameraMode
+	class CDefaultCameraMode : public ICameraModeOld
 	{
 	public:
 		CDefaultCameraMode(Cry::DefaultComponents::CCameraComponent* camera);
@@ -83,7 +83,7 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////
 
-	class CAnimationControlledCameraMode : public ICameraMode
+	class CAnimationControlledCameraMode : public ICameraModeOld
 	{
 	public:
 		CAnimationControlledCameraMode(Cry::DefaultComponents::CCameraComponent* camera);
@@ -126,7 +126,7 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////
 
-	class CVehicleCameraMode : public ICameraMode
+	class CVehicleCameraMode : public ICameraModeOld
 	{
 	public:
 		CVehicleCameraMode(Cry::DefaultComponents::CCameraComponent* camera);

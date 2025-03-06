@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "GamePlugin.h"
 
+#include <CryEntitySystem/IEntityComponent.h>
 #include <DefaultComponents/Input/InputComponent.h>
 #include <DefaultComponents/Physics/CharacterControllerComponent.h>
 #include <DefaultComponents/Geometry/AdvancedAnimationComponent.h>
@@ -10,7 +11,7 @@
 #include <DefaultComponents/Cameras/CameraComponent.h>
 #include <CryGame/GameUtils.h>
 
-#include "Components/Camera/PlayerCamera.h"
+#include "Components/Player/Camera/PlayerCamera.h"
 #include "Components/SpawnPoint.h"
 
 #include <CrySchematyc/Env/IEnvRegistrar.h>

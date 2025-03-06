@@ -14,18 +14,18 @@ namespace Cry::DefaultComponents
 
 namespace DoxD
 {
-	enum class ECameraMode
+	enum ECameraModeOld
 	{
-		Invalid,
-		Default,
-		Focus,
+		Invalid = -1,
+		Default = 0,
+		Examine,
 		Vehicle,
 		AnimationControlled,
 		Last
 	};
 
 
-	struct ICameraMode
+	struct ICameraModeOld
 	{
 		struct AnimationSettings
 		{
@@ -42,8 +42,8 @@ namespace DoxD
 			bool stableBlendOff;
 		};
 
-		ICameraMode(Cry::DefaultComponents::CCameraComponent* camera);
-		virtual ~ICameraMode() {};
+		ICameraModeOld(Cry::DefaultComponents::CCameraComponent* camera);
+		virtual ~ICameraModeOld() {};
 
 		void ActivateMode(const CPlayerComponentOld& player);
 		void DeactivateMode(const CPlayerComponentOld& player);

@@ -45,7 +45,7 @@ namespace DoxD
 		static void ReflectType(Schematyc::CTypeDesc<CPlayerInputComponent>& desc)
 		{
 			desc.SetGUID(CPlayerInputComponent::IID());
-			desc.SetEditorCategory("Player");
+			desc.SetEditorCategory("Hidden");
 			desc.SetLabel("Player Input");
 			desc.SetDescription("No description.");
 			desc.SetIcon("icons:ObjectTypes/light.ico");
@@ -68,7 +68,6 @@ namespace DoxD
 		float GetMouseYawDelta() { return m_mouseYawDelta; };
 		TInputFlags GetMovementDirectionFlags() const { return m_inputFlags; };
 
-
 		/** Listen for important keys and be notified when they are input e.g. ESC, interact, spellcast. */
 		struct IInputEventListener
 		{
@@ -86,6 +85,7 @@ namespace DoxD
 		{
 			m_listeners.remove(pListener);
 		}
+
 
 	protected:
 		void OnActionRotateYaw(int activationMode, float value);

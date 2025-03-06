@@ -152,7 +152,6 @@ namespace DoxD
 	f( Spellcasting ) \
 	f( SittingChair ) \
 	f( SittingFloor ) \
-	f( Kneeling ) \
 	f( Sleeping ) \
 	f( Unaware )  /* Posture. */ \
 	f( Distracted ) \

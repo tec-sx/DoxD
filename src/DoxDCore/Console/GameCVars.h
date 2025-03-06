@@ -184,19 +184,43 @@ namespace DoxD
 		int	  pl_debug_energyConsumption;
 		int	  pl_debug_pickable_items;
 
-		// Camera
+		// Camera General TODO: Remove after update
 		float cm_fov;
-		int   cm_tpvCameraCollision;
-		float cm_tpvCameraCollisionOffset;
-		int   cm_tpvDebugAim;
-		float cm_tpvDist;
-		float cm_tpvDistHorizontal;
-		float cm_tpvDistVertical;
-		float cm_tpvInterpolationSpeed;
-		float cm_tpvMaxAimDist;
-		float cm_tpvMinDist;
-		float cm_tpvYaw;
+		int   cm_tpCameraCollision;
+		float cm_tpCameraCollisionOffset;
+		int   cm_tpDebugAim;
+		float cm_tpCameraDistance;
+		float cm_tpCameraDistanceHorizontal;
+		float cm_tpCameraDistanceVertical;
+		float cm_tpMaxAimDist;
+		float cm_tpMinDist;
+		float cm_tpYaw;
 		int   cm_debugCamera;
+		float m_cameraInterpolationSpeed;
+
+		// Camera manager.
+		ICVar* m_cameraManagerDebugViewOffset{ nullptr };
+
+		// Third person camera
+		int m_actionRPGCameraDebug;
+		float m_actionRPGCameraPitchMin;
+		float m_actionRPGCameraPitchMax;
+		float m_actionRPGCameraTargetDistance;
+		float m_actionRPGCameraReversePitchTilt;
+		float m_actionRPGCameraSlerpSpeed;
+		float m_actionRPGCameraZoomMin;
+		float m_actionRPGCameraZoomMax;
+		float m_actionRPGCameraZoomStep;
+		float m_actionRPGCameraZoomSpeed;
+		ICVar* m_actionRPGCameraViewPositionOffset;
+		ICVar* m_actionRPGCameraAimPositionOffset;
+
+		// Examine Camera.
+		int m_examineCameraDebug{ 0 };
+		float m_examineCameraYawMin{ -85.0f };
+		float m_examineCameraYawMax{ 85.0f };
+		float m_examineCameraPitchMin{ -85.0f };
+		float m_examineCameraPitchMax{ 85.0f };
 
 		//Interactive Entity Highlighting
 		float g_highlightingMaxDistanceToHighlightSquared;

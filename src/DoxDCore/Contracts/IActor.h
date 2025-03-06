@@ -2,12 +2,13 @@
 
 #include <CrySchematyc/Reflection/TypeDesc.h>
 
+struct ICharacterInstance;
+
 namespace DoxD
 {
 	struct IActionController;
 	struct SActorMannequinParams;
 	class IAction;
-	struct ICharacterInstance;
 	class CPlayerComponent;
 	struct IInteraction;
 

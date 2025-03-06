@@ -1,7 +1,7 @@
 #include "CameraModes.h"
 
 #include "Components/Player/Player.h"
-#include "Components/Camera/PlayerCamera.h"
+#include "Components/Player/Camera/PlayerCamera.h"
 #include "Utility/CryWatch.h"
 
 #include <CryMath/Angle.h>
@@ -32,9 +32,9 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 
 	CDefaultCameraMode::CDefaultCameraMode(Cry::DefaultComponents::CCameraComponent* camera)
-		: ICameraMode(camera)
+		: ICameraModeOld(camera)
 	{
-		m_targetArmLength = g_pCVars->cm_tpvDist;
+		m_targetArmLength = g_pCVars->cm_tpCameraDistance;
 		m_lastTpvDistance = m_targetArmLength;
 		m_cameraLagSpeed = 10;
 		m_cameraRotationLagSpeed = 8;
@@ -50,7 +50,7 @@ namespace DoxD
 		m_lastFrameDesiredRotation = desiredRotationQuat;
 
 		// Get the spring arm 'origin', the target we want to look at
-		Vec3 armOrigin = player.GetEntity()->GetWorldPos() + Vec3(0, 0, g_pCVars->cm_tpvDistVertical);
+		Vec3 armOrigin = player.GetEntity()->GetWorldPos() + Vec3(0, 0, g_pCVars->cm_tpCameraDistanceVertical);
 
 		// We lag the target, not the actual camera position, so rotating the camera around does not have lag
 		Vec3 desiredLocation = armOrigin;
@@ -86,14 +86,14 @@ namespace DoxD
 		const Vec3 crosshairPosition = desiredLocation + cameraDirection;
 		
 		// Handle camera collisions
-		if (g_pCVars->cm_tpvCameraCollision)
+		if (g_pCVars->cm_tpCameraCollision)
 		{
 			IPhysicalEntity* pSkipEnts[5];
 			const int nSkipEnts = player.GetPhysicalSkipEntities(pSkipEnts, CRY_ARRAY_COUNT(pSkipEnts));
 
 			primitives::sphere spherePrim;
 			spherePrim.center = crosshairPosition;
-			spherePrim.r = g_pCVars->cm_tpvCameraCollisionOffset;
+			spherePrim.r = g_pCVars->cm_tpCameraCollisionOffset;
 
 			float fDist = gEnv->pPhysicalWorld->PrimitiveWorldIntersection(
 				spherePrim.type, &spherePrim, -cameraDirection, ent_all, nullptr, 0, geom_colltype0, nullptr, nullptr, 0, pSkipEnts, nSkipEnts);
@@ -103,9 +103,9 @@ namespace DoxD
 				fDist = m_targetArmLength;
 			}
 
-			fDist = max(g_pCVars->cm_tpvMinDist, fDist);
+			fDist = max(g_pCVars->cm_tpMinDist, fDist);
 
-			Interpolate(m_lastTpvDistance, fDist, g_pCVars->cm_tpvInterpolationSpeed, frameTime);
+			Interpolate(m_lastTpvDistance, fDist, g_pCVars->m_cameraInterpolationSpeed, frameTime);
 			desiredLocation = crosshairPosition - (cameraDirection.GetNormalized() * m_lastTpvDistance);
 		}	
 
@@ -123,7 +123,7 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 
 	CAnimationControlledCameraMode::CAnimationControlledCameraMode(Cry::DefaultComponents::CCameraComponent* camera)
-		: ICameraMode(camera)
+		: ICameraModeOld(camera)
 	{}
 
 	void CAnimationControlledCameraMode::Update(const CPlayerComponentOld& player, float frameTime)
@@ -172,7 +172,7 @@ namespace DoxD
 	//////////////////////////////////////////////////////////////////////////
 
 	CVehicleCameraMode::CVehicleCameraMode(Cry::DefaultComponents::CCameraComponent* camera)
-		: ICameraMode(camera)
+		: ICameraModeOld(camera)
 	{
 	}
 
