@@ -1,8 +1,7 @@
-#include "StdAfx.h"
+#include <StdAfx.h>
 
 #include "ActorControllerComponent.h"
 #include "Components/Player/PlayerComponent.h"
-
 #include <CrySchematyc/Env/IEnvRegistrar.h>
 #include <CrySchematyc/Env/Elements/EnvComponent.h>
 #include <CryCore/StaticInstanceList.h>

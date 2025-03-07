@@ -1,7 +1,7 @@
 #include "ActorComponent.h"
 
 #include <Actor/Movement/ActorStateEvents.h>
-
+#include <Components/Player/Camera/ICameraComponent.h>
 #include <CrySchematyc/Env/IEnvRegistrar.h>
 #include <CrySchematyc/Env/Elements/EnvComponent.h>
 #include <CryCore/StaticInstanceList.h>

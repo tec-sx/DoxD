@@ -45,12 +45,6 @@ add_sources("Animation_uber.cpp"
     SOURCE_GROUP "Animation"
 		"Animation/Animation.h"
 )
-add_sources("Attachments_uber.cpp"
-    PROJECTS DoxD.Game
-    SOURCE_GROUP "Attachments"
-		"Attachments/Attachment.cpp"
-		"Attachments/Attachment.h"
-)
 add_sources("Components_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components"
@@ -68,11 +62,11 @@ add_sources("Actor_uber.cpp"
 		"Components/Actor/ActorControllerComponent.h"
 		"Components/Actor/ActorDefinitions.h"
 )
-add_sources("Attachments_uber.cpp"
+add_sources("Animation_uber.cpp"
     PROJECTS DoxD.Game
-    SOURCE_GROUP "Components\\\\Attachments"
-		"Components/Attachments/AttachmentComponent.cpp"
-		"Components/Attachments/AttachmentComponent.h"
+    SOURCE_GROUP "Components\\\\Animation"
+		"Components/Animation/ActorAnimationComponent.cpp"
+		"Components/Animation/ActorAnimationComponent.h"
 )
 add_sources("Ladder_uber.cpp"
     PROJECTS DoxD.Game
@@ -91,18 +85,30 @@ add_sources("Player_uber.cpp"
 add_sources("Camera_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components\\\\Player\\\\Camera"
+		"Components/Player/Camera/CameraManagerComponent.cpp"
 		"Components/Player/Camera/CameraModes.cpp"
+		"Components/Player/Camera/ICameraComponent.cpp"
 		"Components/Player/Camera/ICameraMode.cpp"
 		"Components/Player/Camera/PlayerCamera.cpp"
+		"Components/Player/Camera/TPCameraComponent.cpp"
+		"Components/Player/Camera/CameraManagerComponent.h"
 		"Components/Player/Camera/CameraModes.h"
+		"Components/Player/Camera/ICameraComponent.h"
 		"Components/Player/Camera/ICameraMode.h"
 		"Components/Player/Camera/PlayerCamera.h"
+		"Components/Player/Camera/TPCameraComponent.h"
 )
 add_sources("Input_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Components\\\\Player\\\\Input"
 		"Components/Player/Input/PlayerInputComponent.cpp"
 		"Components/Player/Input/PlayerInputComponent.h"
+)
+add_sources("Snaplocks_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Components\\\\Snaplocks"
+		"Components/Snaplocks/SnaplockComponent.cpp"
+		"Components/Snaplocks/SnaplockComponent.h"
 )
 add_sources("Console_uber.cpp"
     PROJECTS DoxD.Game
@@ -121,6 +127,18 @@ add_sources("DynamicResponseSystem_uber.cpp"
     SOURCE_GROUP "DynamicResponseSystem"
 		"DynamicResponseSystem/ConditionDistanceToEntity.cpp"
 		"DynamicResponseSystem/ConditionDistanceToEntity.h"
+)
+add_sources("Entities_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Entities"
+		"Entities/EntityEffects.cpp"
+		"Entities/EntityEffects.h"
+)
+add_sources("Snaplocks_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Snaplocks"
+		"Snaplocks/Snaplock.cpp"
+		"Snaplocks/Snaplock.h"
 )
 add_sources("Utility_uber.cpp"
     PROJECTS DoxD.Game

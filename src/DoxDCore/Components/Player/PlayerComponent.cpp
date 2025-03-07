@@ -47,4 +47,10 @@ namespace DoxD
 
 		return nullptr;
 	}
+
+	ICameraComponent* CPlayerComponent::GetCamera() const
+	{
+		CRY_ASSERT_MESSAGE(m_pCameraManager, "A camera manager is critical when the level contains actors.");
+		return m_pCameraManager->GetCamera();
+	}
 }

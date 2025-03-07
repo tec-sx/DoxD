@@ -4,6 +4,7 @@
 
 namespace DoxD
 {
+	class ICameraComponent;
 	class CActorComponent;
 	class CPlayerInputComponent;
 	class CCameraManagerComponent;
@@ -96,7 +97,7 @@ namespace DoxD
 			/** Is the player allowed to move the camera? */
 			bool m_allowCameraMovement{ true };
 		};
-
+	public:
 		CPlayerInputComponent* GetPlayerInput() const { return m_pPlayerInput; }
 		IEntity* GetAttachedEntity() const;
 		CActorComponent* GetAttachedActor() const;
@@ -109,6 +110,10 @@ namespace DoxD
 
 			return pActor->GetComponent<CPlayerComponent>();
 		}
+
+		EntityId GetCameraTargetId() const { return m_cameraTargetId; }
+		CCameraManagerComponent* GetCameraManager() const { return m_pCameraManager; }
+		ICameraComponent* GetCamera() const;
 
 		SInteractionState& GetInteractionState() { return m_playerInteractionState; }
 

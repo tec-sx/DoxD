@@ -1,24 +1,24 @@
 #pragma once
 
-#include "Attachments/Attachment.h"
+#include "Snaplocks/Snaplock.h"
 
 namespace DoxD
 {
-	class CAttachmentComponent : public IEntityComponent
+	class CSnaplockComponent : public IEntityComponent
 	{
 	protected:
 		// IEntityComponent
 		void Initialize() override;
 		// ~IEntityComponent
 	public:
-		CAttachmentComponent() = default;
-		virtual ~CAttachmentComponent() = default;
+		CSnaplockComponent() = default;
+		virtual ~CSnaplockComponent() = default;
 
-		static void ReflectType(Schematyc::CTypeDesc<CAttachmentComponent>& desc)
+		static void ReflectType(Schematyc::CTypeDesc<CSnaplockComponent>& desc)
 		{
-			desc.SetGUID(CAttachmentComponent::IID());
-			desc.SetEditorCategory("Attachments");
-			desc.SetLabel("Attachment");
+			desc.SetGUID(CSnaplockComponent::IID());
+			desc.SetEditorCategory("Snaplocks");
+			desc.SetLabel("Snaplocks");
 			desc.SetIcon("icons:ObjectTypes/light.ico");
 			desc.SetComponentFlags(IEntityComponent::EFlags::Transform);
 		}
@@ -31,10 +31,10 @@ namespace DoxD
 
 		virtual void OnResetState();
 
-		void AddAttachment(IAttachment attachment);
+		void AddSnaplock(ISnaplock snaplock);
 
 	private:
-		IAttachment m_attachment{ SLOT_ROOT, false };
+		ISnaplock m_snaplock{ SLOT_ROOT, false };
 		string m_definitionFile;
 	};
 } // namespace DoxD

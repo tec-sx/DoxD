@@ -5,12 +5,12 @@
 #include <DefaultComponents/Audio/ListenerComponent.h>
 #include <Components/Player/Input/PlayerInputComponent.h>
 #include "Contracts/IActor.h"
-#include "Attachments/Attachment.h"
+#include "Snaplocks/Snaplock.h"
 
 namespace DoxD
 {
 	class CPlayerComponent;
-	class CAttachmentComponent;
+	class CSnaplockComponent;
 
 	/** Equipment slots **/
 	DECLARE_ATTACHMENT_TYPE(SLOT_ACTOR_HEAD, "Actor Head", 0x617985533E2A4E5D, 0xB43CD7D2CFC60571)
@@ -158,7 +158,7 @@ namespace DoxD
 
 		private:	
 			CPlayerComponent* m_pPlayer{ nullptr };
-			CAttachmentComponent* m_pAttachmentComponent{ nullptr };
+			CSnaplockComponent* m_pSnaplockComponent{ nullptr };
 			Cry::Audio::DefaultComponents::CListenerComponent* m_pAudioListenerComponent{ nullptr };
 
 			CFate m_fate;
