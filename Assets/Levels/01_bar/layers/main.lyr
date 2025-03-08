@@ -1,5 +1,5 @@
 <ObjectLayer>
- <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1740867025">
+ <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1741384127">
   <LayerObjects>
    <Object Type="Brush" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="8a7d7df0-2a53-090e-c1b4-5c1b07911dac" Name="pipe_detail-1" Pos="459.43378,692.82574,31.999758" Rotate="0.70710671,0,0,-0.70710683" Scale="1,1,1" ColorRGB="16777215" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" Prefab="Objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/pipe_detail.cgf" IgnoreVisareas="0" CastShadowMaps="1" GIMode="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistRatio="100" ExcludeFromNavigation="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" IgnoreTerrainLayerBlend="0" IgnoreDecalBlend="0" RndFlags="180060000408">
     <CollisionFiltering />
@@ -188,67 +188,6 @@
      </Object>
     </Objects>
    </Object>
-   <Object Type="EmptyEntity" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="2e4561f7-fb87-991b-461e-090d3fe652a1" Name="Player" Pos="440.76114,787.77826,32.079498" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
-    <Properties />
-    <Components>
-     <Component CryXmlVersion="2" TypeGUID="63f4c0c6-32af-4acb-8fb0-57d45dd14725" TypeName="DoxD::CPlayerComponent" GUID="a364451d-fdb2-8822-12f4-86acec26b907" Name="" UserAdded="true">
-      <properties playerwalkspeed="12" playerrunspeed="39" playerjumpheight="3" playerrotationspeedwalking="6" playerrotationspeedrunning="3" capsuleheightcrouching="0.75" capsuleheightstanding="1.6" capsulegroundoffset="0.2"/>
-     </Component>
-     <Component CryXmlVersion="2" TypeGUID="98183f31-a685-43cd-92a9-815274f0a81c" TypeName="Cry::DefaultComponents::CCharacterControllerComponent" GUID="c9c0859a-31de-25a0-9533-74b429fe893d" Name="" UserAdded="false">
-      <Transform>
-       <translation>
-        <position>
-         <element element="0"/>
-         <element element="0"/>
-         <element element="0.46375"/>
-        </position>
-       </translation>
-       <rotation x="0" y="-0" z="0"/>
-       <scale>
-        <element element="1"/>
-        <element element="1"/>
-        <element element="1"/>
-       </scale>
-      </Transform>
-      <properties Networked="false">
-       <Physics Mass="80" Radius="0.44999999" Height="0.935" Capsule="true" GroundContactEps="0.0040000002" SendCollisionSignal="false"/>
-       <Movement AirControl="0" AirResistance="0.2" Inertia="8" InertiaAcc="8" MaxClimb="0.87266463" MaxJump="0.87266463" MinSlide="1.2217305" MinFall="1.3962634" MaxGroundVelocity="16"/>
-      </properties>
-     </Component>
-     <Component CryXmlVersion="2" TypeGUID="183e3c84-2e08-4506-95fa-b362f7e735e9" TypeName="Cry::DefaultComponents::CInputComponent" GUID="804f1b9b-41ca-6ffd-6b79-f4bc6dabcb95" Name="" UserAdded="false">
-      <properties />
-     </Component>
-     <Component CryXmlVersion="2" TypeGUID="bae91d5c-8cfb-40b2-8397-f5a9eedb9ac4" TypeName="Cry::Audio::DefaultComponents::CListenerComponent" GUID="7802b793-72f0-2880-48fe-9381e1ed0454" Name="" UserAdded="false">
-      <properties>
-       <listener name="Default Listener">
-        <offset x="440.76111" y="785.77832" z="33.579494"/>
-       </listener>
-      </properties>
-     </Component>
-     <Component CryXmlVersion="2" TypeGUID="3cd5ddc5-ee15-437f-a997-79c2391537fe" TypeName="Cry::DefaultComponents::CAdvancedAnimationComponent" GUID="633f96d1-263b-712f-4fbd-8c207e91b220" Name="" UserAdded="false">
-      <Transform>
-       <translation>
-        <position>
-         <element element="0"/>
-         <element element="0"/>
-         <element element="0"/>
-        </position>
-       </translation>
-       <rotation x="0" y="-0" z="0"/>
-       <scale>
-        <element element="1"/>
-        <element element="1"/>
-        <element element="1"/>
-       </scale>
-      </Transform>
-      <properties Type="RenderAndCollider" Character="Objects/Characters/PuffyDelite/puffydelite.cdf" Material="Objects/Characters/PuffyDelite/materials/m_puffydelite.mtl" DatabasePath="Animations/Mannequin/ADB/FirstPerson.adb" ControllerDefPath="Animations/Mannequin/ADB/FirstPersonControllerDefinition.xml" DefaultScope="ThirdPersonCharacter" DefaultFragment="Idle" AnimDriven="true" GroundAlign="false">
-       <IEditorEntityComponent />
-       <Render ShadowSpec="Low" IgnoreVisArea="false" IgnoreTerrainLayerBlend="false" IgnoreDecalBlend="false" ViewDistRatio="100" LODDistance="100" GIMode="None"/>
-       <Physics WeightType="EWeightType::Mass" Density="9.9999997e-05" Mass="10"/>
-      </properties>
-     </Component>
-    </Components>
-   </Object>
    <Object Type="Road" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="02fa605e-1030-8476-ebaf-018700ea0fd1" Name="Road-2" Pos="276.47711,712.42065,31.959164" Rotate="0.70710647,0,0,0.70710713" Scale="1,1,1" ColorRGB="16763904" UseCustomLevelLayerColor="0" Material="Materials/terrain/asphalt/m_three_lane_road" MinSpec="2" Width="14" BorderWidth="6" EraseVegWidth="3" EraseVegWidthVar="0" StepSize="8" ViewDistRatio="100" TileLength="28" SortPriority="0" IgnoreTerrainHoles="0" Physicalize="0">
     <Points>
      <Point Pos="0,0,0" Back="0,0,0" Forw="0.2380778,-108.09338,2.2645988" Angle="0" Width="0" IsDefaultWidth="1"/>
@@ -285,7 +224,7 @@
         <element element="1"/>
        </scale>
       </Transform>
-      <properties Type="RenderAndCollider" FilePath="Objects/Characters/m_biker_fat_01.cdf" Material="Default" IsUsingRawAnimationName="false" Animation="Animations/human/male/fat/locomotion/Fat_M_Idle.caf" Loop="true" AnimSpeed="1">
+      <properties Type="RenderAndCollider" FilePath="Objects/Characters/m_biker_fat_01.cdf" Material="Objects/Characters/base/male/tall/fat/materials/m_m_fat.mtl" IsUsingRawAnimationName="false" Animation="Animations/human/male/fat/locomotion/Fat_M_Idle.caf" Loop="true" AnimSpeed="1">
        <IEditorEntityComponent />
        <Render ShadowSpec="Low" IgnoreVisArea="false" IgnoreTerrainLayerBlend="false" IgnoreDecalBlend="false" ViewDistRatio="100" LODDistance="100" GIMode="None"/>
        <Physics WeightType="EWeightType::Mass" Density="9.9999997e-05" Mass="10"/>

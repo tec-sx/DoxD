@@ -1,6 +1,6 @@
 <AssetMetadata version="0" type="Texture" guid="a418e042-57f9-278f-2e10-f264b5d33f55" source="m_fat_body_01_spec.tif">
  <Files>
-  <File path="m_fat_body_spec_01.dds"/>
+  <File path="m_fat_body_01_spec.dds"/>
  </Files>
  <Details>
   <Detail name="width">4096</Detail>

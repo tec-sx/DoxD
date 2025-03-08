@@ -4,11 +4,15 @@
 	"info": { "name": "DoxD.Game", "guid": "e3865104-7321-f784-b95f-43e034a4e34b" },
 	"content": {
 		"assets": [ "Assets" ],
-		"code": [ "src/DoxDCore" ],
+		"code": [ "src" ],
 		"libs": [
 			{
 				"name": "DoxD.Game",
-				"shared": { "any": "", "win_x64": "", "win_x86": "" }
+				"shared": {
+					"any": "",
+					"win_x64": "bin/win_x64/DoxD.Game.dll",
+					"win_x86": ""
+				}
 			}
 		]
 	},

@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1740867025">
+<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741384127">
  <Files>
   <File path="01_bar/01_bar.level"/>
  </Files>
@@ -16,6 +16,7 @@
   <Path>%engine%/engineassets/materials/lens_optics.mtl</Path>
   <Path>%engine%/engineassets/materials/material_terrain_default.mtl</Path>
   <Path>%engine%/engineassets/materials/water/ocean_default.mtl</Path>
+  <Path>%engine%/engineassets/objects/primitive_sphere.cgf</Path>
   <Path>%engine%/engineassets/texturemsg/defaultnouvs.dds</Path>
   <Path>%engine%/engineassets/texturemsg/defaultsolids.mtl</Path>
   <Path>%engine%/engineassets/textures/grey.dds</Path>
@@ -24,6 +25,8 @@
   <Path>%engine%/engineassets/textures/white.dds</Path>
   <Path usageCount="1">Libs/environmentpresets/env_preset_pack/magic_hour_low_clouds.env</Path>
   <Path>animations/human/male/fat/locomotion/fat_m_idle.caf</Path>
+  <Path>animations/human/male/fat/locomotion/fat_m_walk_f.caf</Path>
+  <Path>animations/human/male/fat/locomotion/fat_m_walk_start.caf</Path>
   <Path>animations/mannequin/adb/firstpersoncontrollerdefinition.xml</Path>
   <Path>animations/mannequin/adb/playerfragmentids.xml</Path>
   <Path>animations/mannequin/adb/playertags.xml</Path>
@@ -32,28 +35,23 @@
   <Path>animations/puffydelite/locomotion/walk.caf</Path>
   <Path>animations/puffydelite/locomotion/walk_arc_left.caf</Path>
   <Path>animations/puffydelite/locomotion/walk_arc_right.caf</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_body_ddna.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_body_diff.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_body_spec.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_head_ddna.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_head_diff.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_head_spec.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_cornea_ddn.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_ddn.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_diff.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_displ.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_water_spec.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_ddna.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_diff.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_spec.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_ddna.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_diff.dds</Path>
+  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_spec.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_01_ddna.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_01_diff.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_01_spec.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_ddna.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_diff.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_spec.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_body_spec_01.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_head_01_ddna.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_head_01_diff.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_head_01_spec.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/t_m_fat_body_ddna.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/t_m_fat_body_diff.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/t_m_fat_body_spec.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/t_m_fat_head_ddna.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/t_m_fat_head_diff.dds</Path>
-  <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/t_m_fat_head_spec.dds</Path>
   <Path>editor/resourcecache/objects/characters/puffydelite/materials/chocomint_4096.dds</Path>
   <Path>editor/resourcecache/textures/cubemaps/01_bar/entity-3_cm.dds</Path>
   <Path>editor/resourcecache/textures/cubemaps/01_bar/entity-3_cm_diff.dds</Path>
@@ -63,13 +61,6 @@
   <Path>editor/resourcecache/textures/three_lane_road/threelaneroadpatches01_4k_ddna.dds</Path>
   <Path>editor/resourcecache/textures/three_lane_road/threelaneroadpatches01_4k_height.dds</Path>
   <Path>editor/resourcecache/textures/three_lane_road/threelaneroadpatches01_4k_spec.dds</Path>
-  <Path>materials/characters/fat/m_m_fat.mtl</Path>
-  <Path>materials/characters/fat/t_m_fat_body_ddna.dds</Path>
-  <Path>materials/characters/fat/t_m_fat_body_diff.dds</Path>
-  <Path>materials/characters/fat/t_m_fat_body_spec.dds</Path>
-  <Path>materials/characters/fat/t_m_fat_head_ddna.dds</Path>
-  <Path>materials/characters/fat/t_m_fat_head_diff.dds</Path>
-  <Path>materials/characters/fat/t_m_fat_head_spec.dds</Path>
   <Path>materials/dev/dev_danger.mtl</Path>
   <Path>materials/dev/dev_info.mtl</Path>
   <Path>materials/terrain/asphalt/m_three_lane_road.mtl</Path>
@@ -101,34 +92,16 @@
   <Path>objects/characters/base/male/tall/fat/anatomy/textures/eye_diff.dds</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/textures/eye_displ.dds</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/textures/eye_water_spec.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_ddna.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_diff.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/anatomy/textures/t_mouth_spec.dds</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/tongue.skin</Path>
   <Path>objects/characters/base/male/tall/fat/m_fat_tall.chr</Path>
   <Path>objects/characters/base/male/tall/fat/m_tall_fat_body.skin</Path>
   <Path>objects/characters/base/male/tall/fat/m_tall_fat_head.skin</Path>
   <Path>objects/characters/base/male/tall/fat/materials/m_m_fat.mtl</Path>
-  <Path>objects/characters/base/male/tall/fat/materials/m_m_fat.mtl</Path>
   <Path>objects/characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_ddna.dds</Path>
   <Path>objects/characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_diff.dds</Path>
   <Path>objects/characters/base/male/tall/fat/outfits/footware/textures/sp_wb_shoe_spec.dds</Path>
   <Path>objects/characters/base/male/tall/fat/outfits/footware/worker_boots_m_fat.skin</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_body_ddna.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_body_diff.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_body_spec.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_head_ddna.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_head_diff.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/base_m_fat_lowpoly_npc_base_fat_head_spec.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/m_fat_body_ddna.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/m_fat_body_spec_01.dds</Path>
   <Path>objects/characters/base/male/tall/fat/textures/m_fat_head_01_spec.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/t_m_fat_body_ddna.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/t_m_fat_body_diff.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/t_m_fat_body_spec.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/t_m_fat_head_ddna.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/t_m_fat_head_diff.dds</Path>
-  <Path>objects/characters/base/male/tall/fat/textures/t_m_fat_head_spec.dds</Path>
   <Path>objects/characters/m_biker_fat_01.cdf</Path>
   <Path>objects/characters/puffydelite/materials/chocomint_4096.dds</Path>
   <Path>objects/characters/puffydelite/materials/m_puffydelite.mtl</Path>
@@ -151,7 +124,6 @@
   <Path usageCount="1">prefabs/toilet_lowdispenser.prefab</Path>
   <Path usageCount="8">prefabs/trainstation/trs01_roundpillar.prefab</Path>
   <Path usageCount="4">prefabs/trainstation/trst01_stairs.prefab</Path>
-  <Path>scripts/ai/factions.xml</Path>
   <Path>textures/cubemaps/01_bar/entity-3_cm.dds</Path>
   <Path>textures/cubemaps/01_bar/entity-3_cm_diff.dds</Path>
   <Path>textures/cubemaps/01_bar/lp_global_cm.dds</Path>

@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="4dee8228-8bdb-8453-1fbf-17be03e254b9">
+ <Files>
+  <File path="m_fat_tall_hitmaterial.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">8</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>
