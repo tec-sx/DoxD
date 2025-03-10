@@ -20,6 +20,7 @@ namespace DoxD
 		: public Cry::IEnginePlugin
 		, public ISystemEventListener
 		, public IGameFrameworkListener
+		, public INetworkedClientListener
 	{
 	public:
 		CRYINTERFACE_SIMPLE(Cry::IEnginePlugin)
@@ -46,6 +47,14 @@ namespace DoxD
 		virtual void OnActionEvent(const SActionEvent& event) override {};
 		// ~IGameFrameworkListener
 
+		// INetworkedClientListener
+		virtual void OnLocalClientDisconnected(EDisconnectionCause cause, const char* description) override {}
+		virtual bool OnClientConnectionReceived(int channelId, bool bIsReset) override;
+		virtual bool OnClientReadyForGameplay(int channelId, bool bIsReset) override { return true; };
+		virtual void OnClientDisconnected(int channelId, EDisconnectionCause cause, const char* description, bool bKeepClient) override {};
+		virtual bool OnClientTimingOut(int channelId, EDisconnectionCause cause, const char* description) override { return true; }
+		// ~INetworkedClientListener
+		
 		// Helper function to get the CGamePlugin instance
 		// Note that CGamePlugin is declared as a singleton, so the CreateClassInstance will always return the same pointer
 		static CGamePlugin* GetInstance()
@@ -54,7 +63,6 @@ namespace DoxD
 		}
 
 		inline SCVars* GetCVars() { return m_pCVars; }
-		float GetFOV() const;
 
 	private:
 		SCVars* m_pCVars;

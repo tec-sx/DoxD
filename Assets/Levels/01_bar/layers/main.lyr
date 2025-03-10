@@ -1,5 +1,5 @@
 <ObjectLayer>
- <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1741384127">
+ <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1741600406">
   <LayerObjects>
    <Object Type="Brush" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="8a7d7df0-2a53-090e-c1b4-5c1b07911dac" Name="pipe_detail-1" Pos="459.43378,692.82574,31.999758" Rotate="0.70710671,0,0,-0.70710683" Scale="1,1,1" ColorRGB="16777215" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" Prefab="Objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/pipe_detail.cgf" IgnoreVisareas="0" CastShadowMaps="1" GIMode="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistRatio="100" ExcludeFromNavigation="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" IgnoreTerrainLayerBlend="0" IgnoreDecalBlend="0" RndFlags="180060000408">
     <CollisionFiltering />

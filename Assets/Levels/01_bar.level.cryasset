@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741384127">
+<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741600406">
  <Files>
   <File path="01_bar/01_bar.level"/>
  </Files>
@@ -27,14 +27,6 @@
   <Path>animations/human/male/fat/locomotion/fat_m_idle.caf</Path>
   <Path>animations/human/male/fat/locomotion/fat_m_walk_f.caf</Path>
   <Path>animations/human/male/fat/locomotion/fat_m_walk_start.caf</Path>
-  <Path>animations/mannequin/adb/firstpersoncontrollerdefinition.xml</Path>
-  <Path>animations/mannequin/adb/playerfragmentids.xml</Path>
-  <Path>animations/mannequin/adb/playertags.xml</Path>
-  <Path>animations/puffydelite/locomotion/idle.caf</Path>
-  <Path>animations/puffydelite/locomotion/run.caf</Path>
-  <Path>animations/puffydelite/locomotion/walk.caf</Path>
-  <Path>animations/puffydelite/locomotion/walk_arc_left.caf</Path>
-  <Path>animations/puffydelite/locomotion/walk_arc_right.caf</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_cornea_ddn.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_ddn.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_diff.dds</Path>
@@ -52,7 +44,6 @@
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_head_01_ddna.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_head_01_diff.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/textures/m_fat_head_01_spec.dds</Path>
-  <Path>editor/resourcecache/objects/characters/puffydelite/materials/chocomint_4096.dds</Path>
   <Path>editor/resourcecache/textures/cubemaps/01_bar/entity-3_cm.dds</Path>
   <Path>editor/resourcecache/textures/cubemaps/01_bar/entity-3_cm_diff.dds</Path>
   <Path>editor/resourcecache/textures/cubemaps/01_bar/lp_global_cm.dds</Path>
@@ -103,12 +94,6 @@
   <Path>objects/characters/base/male/tall/fat/outfits/footware/worker_boots_m_fat.skin</Path>
   <Path>objects/characters/base/male/tall/fat/textures/m_fat_head_01_spec.dds</Path>
   <Path>objects/characters/m_biker_fat_01.cdf</Path>
-  <Path>objects/characters/puffydelite/materials/chocomint_4096.dds</Path>
-  <Path>objects/characters/puffydelite/materials/m_puffydelite.mtl</Path>
-  <Path>objects/characters/puffydelite/materials/sk_puffydelite_hitmaterial.mtl</Path>
-  <Path>objects/characters/puffydelite/puffydelite.cdf</Path>
-  <Path>objects/characters/puffydelite/sk_puffydelite.chr</Path>
-  <Path>objects/characters/puffydelite/skm_puffydelite.skin</Path>
   <Path>objects/debug/clue.cgf</Path>
   <Path>objects/vehicles/cyber_marica/cyber_marica.cgf</Path>
   <Path usageCount="6">prefabs/barlamphanging.prefab</Path>

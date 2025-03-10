@@ -88,25 +88,22 @@ namespace DoxD
 		auto localPlayer = CPlayerComponent::GetLocalPlayer();
 
 		// #HACK: It should never come back null, but it does right now so we need this test.
-		if (localPlayer)
-		{
 			// HACK: We should get the actor instead, do this when patching for 5.4.
-			if (auto pActorComponent = CPlayerComponent::GetLocalActor())
+		if (auto pActorComponent = CPlayerComponent::GetLocalActor())
+		{
+			// Is this entity under local control?
+			if (pActorComponent->GetEntityId() == GetEntityId())
 			{
-				// Is this entity under local control?
-				if (pActorComponent->GetEntityId() == GetEntityId())
-				{
-					// If we're playing as this character, we should use the camera as the eye direction for ray casting, etc.
-					auto camera = localPlayer->GetCamera();
-					m_eyeDirection = camera->GetRotation();
-				}
-				else
-				{
-					// HACK: we can't use the camera, but we also don't have access to the eye direction from the actor (if there even
-					// is one). After 5.4 we should have refactored enough to get an eye direction when possible from all entities that
-					// support it. For now, we will take the direction the entity is facing. 
-					m_eyeDirection = Quat::CreateRotationVDir(GetEntity()->GetForwardDir());
-				}
+				// If we're playing as this character, we should use the camera as the eye direction for ray casting, etc.
+				auto camera = localPlayer->GetCamera();
+				m_eyeDirection = camera->GetRotation();
+			}
+			else
+			{
+				// HACK: we can't use the camera, but we also don't have access to the eye direction from the actor (if there even
+				// is one). After 5.4 we should have refactored enough to get an eye direction when possible from all entities that
+				// support it. For now, we will take the direction the entity is facing. 
+				m_eyeDirection = Quat::CreateRotationVDir(GetEntity()->GetForwardDir());
 			}
 		}
 

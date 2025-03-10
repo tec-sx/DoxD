@@ -20,6 +20,8 @@ namespace DoxD
 
 	void CPlayerComponent::Initialize()
 	{
+		CryLogAlways("The player Id is %d - should be 30583.", GetEntityId());
+
 		m_pCameraManager = m_pEntity->CreateComponent<CCameraManagerComponent>();
 		m_pPlayerInput = m_pEntity->CreateComponent<CPlayerInputComponent>();
 	}

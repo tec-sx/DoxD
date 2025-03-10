@@ -39,8 +39,7 @@ namespace DoxD
 
 		m_pDrsComponent = crycomponent_cast<IEntityDynamicResponseComponent*> (m_pEntity->CreateProxy(ENTITY_PROXY_DYNAMICRESPONSE));
 		m_pSnaplockComponent = m_pEntity->GetOrCreateComponent<CSnaplockComponent>();
-
-		//m_pAwarenessComponent = m_pEntity->GetOrCreateComponent<CEntityAwarenessComponent>();
+		m_pAwarenessComponent = m_pEntity->GetOrCreateComponent<CEntityAwarenessComponent>();
 
 		m_pSnaplockComponent->AddSnaplock(ISnaplock(SLOT_ACTOR_HEAD, false));
 		m_pSnaplockComponent->AddSnaplock(ISnaplock(SLOT_ACTOR_FACE, false));

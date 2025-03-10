@@ -34,7 +34,7 @@ namespace DoxD
 
 		static CryGUID& IID()
 		{
-			static CryGUID id = "{B3309FD2-F8D4-4171-8BA9-31206ADC020F}"_cry_guid;
+			static CryGUID id = "{58A26B16-EC1D-4700-A76D-38CBB7B2B400}"_cry_guid;
 			return id;
 		}
 
@@ -88,13 +88,8 @@ namespace DoxD
 			void SetAllowCharacterRotation(bool val) { m_allowCharacterRotation = val; }
 			void SetAllowCameraMovement(bool val) { m_allowCameraMovement = val; }
 
-			/** Is the player allowed to move their character? */
 			bool m_allowCharacterMovement{ true };
-
-			/** Is the player allowed to rotate their character? */
 			bool m_allowCharacterRotation{ true };
-
-			/** Is the player allowed to move the camera? */
 			bool m_allowCameraMovement{ true };
 		};
 	public:
@@ -110,11 +105,9 @@ namespace DoxD
 
 		ILINE static CPlayerComponent* GetLocalPlayer()
 		{
-			auto actorId = gEnv->pGameFramework->GetClientActorId();
-			auto pActor = gEnv->pEntitySystem->GetEntity(actorId);
-			CRY_ASSERT_MESSAGE(pActor, "The local actor Id %d did not return an entity.", actorId);
+			auto pActor = gEnv->pGameFramework->GetClientEntity();
 
-			return pActor->GetComponent<CPlayerComponent>();
+			return pActor ? pActor->GetComponent<CPlayerComponent>() : nullptr;
 		}
 
 		EntityId GetCameraTargetId() const { return m_cameraTargetId; }

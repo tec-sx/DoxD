@@ -1,7 +1,6 @@
 // Copyright 2016-2019 Crytek GmbH / Crytek Group. All rights reserved.
 #include "StdAfx.h"
 #include "GamePlugin.h"
-
 #include <CrySchematyc/Env/IEnvRegistry.h>
 #include <CrySchematyc/Env/EnvPackage.h>
 #include <CrySchematyc/Utils/SharedString.h>
@@ -9,6 +8,7 @@
 #include <CrySystem/ISystem.h>
 #include <IGameObjectSystem.h>
 #include <IGameObject.h>
+#include "Components/Player/PlayerComponent.h"
 #include "DynamicResponseSystem/ConditionDistanceToEntity.h"
 
 // Included only once per DLL module.
@@ -86,6 +86,7 @@ namespace DoxD
 		case ESYSTEM_EVENT_GAME_POST_INIT:
 		{
 			gEnv->pGameFramework->RegisterListener(this, "CGame", FRAMEWORKLISTENERPRIORITY_GAME);
+			gEnv->pGameFramework->AddNetworkedClientListener(*this);
 
 			// We need to register the procedural contexts.
 			//IProceduralClipFactory& proceduralClipFactory = gEnv->pGameFramework->GetMannequinInterface().GetProceduralClipFactory();
@@ -108,11 +109,10 @@ namespace DoxD
 			if (!gEnv->IsEditor())
 			{
 				// Load the example map in client server mode
-				gEnv->pConsole->ExecuteString("map lv_sandbox", false, true);
+				gEnv->pConsole->ExecuteString("map 01_bar", false, true);
 			}
 		}
 		break;
-
 		case ESYSTEM_EVENT_LEVEL_UNLOAD:
 		{
 
@@ -121,9 +121,27 @@ namespace DoxD
 		}
 	}
 
-	float CGamePlugin::GetFOV() const
+	bool CGamePlugin::OnClientConnectionReceived(int channelId, bool bIsReset)
 	{
-		return g_pCVars->cm_fov;
+		// Connection received from a client, create a player entity and component
+		SEntitySpawnParams spawnParams;
+		spawnParams.pClass = gEnv->pEntitySystem->GetClassRegistry()->GetDefaultClass();
+		spawnParams.sName = "Player";
+		spawnParams.id = LOCAL_PLAYER_ENTITY_ID;
+		spawnParams.nFlags |= ENTITY_FLAG_LOCAL_PLAYER;
+
+		// Spawn the player entity
+		if (IEntity* pPlayerEntity = gEnv->pEntitySystem->SpawnEntity(spawnParams))
+		{
+			// Set the local player entity channel id, and bind it to the network so that it can support Multiplayer contexts
+			pPlayerEntity->GetNetEntity()->SetChannelId(channelId);
+			pPlayerEntity->GetNetEntity()->BindToNetwork();
+
+			// Create the player component instance
+			pPlayerEntity->GetOrCreateComponent<CPlayerComponent>();
+		}
+
+		return true;
 	}
 
 	CRYREGISTER_SINGLETON_CLASS(CGamePlugin)
