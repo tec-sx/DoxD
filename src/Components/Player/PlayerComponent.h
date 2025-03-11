@@ -93,10 +93,12 @@ namespace DoxD
 			bool m_allowCameraMovement{ true };
 		};
 	public:
-		CPlayerInputComponent* GetPlayerInput() const { return m_pPlayerInput; }
 		IEntity* GetAttachedEntity() const;
 		CActorComponent* GetAttachedActor() const;
 		static CActorComponent* GetLocalActor();
+		void AttachToCharacter(EntityId characterId);
+		void AttachToHero();
+		CPlayerInputComponent* GetPlayerInput() const { return m_pPlayerInput; }
 
 		ILINE bool IsLocalPlayer()
 		{
@@ -110,12 +112,13 @@ namespace DoxD
 			return pActor ? pActor->GetComponent<CPlayerComponent>() : nullptr;
 		}
 
+		ICameraComponent* GetCamera() const;
 		EntityId GetCameraTargetId() const { return m_cameraTargetId; }
 		CCameraManagerComponent* GetCameraManager() const { return m_pCameraManager; }
-		ICameraComponent* GetCamera() const;
-
 		SInteractionState& GetInteractionState() { return m_playerInteractionState; }
 
+		void OnRevive();
+		void OnClientConnect();
 	private:
 		CCameraManagerComponent* m_pCameraManager{ nullptr };
 		CPlayerInputComponent* m_pPlayerInput{ nullptr };

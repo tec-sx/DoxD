@@ -64,8 +64,8 @@ namespace DoxD
 
 		Vec3 GetMovementDirection(const Quat& baseRotation);
 		Ang3 GetRotationDelta() { return Ang3(m_mousePitchDelta, 0.0f, m_mouseYawDelta); }
-		float GetMousePitchDelta() { return m_mousePitchDelta; }
-		float GetMouseYawDelta() { return m_mouseYawDelta; };
+		float GetMousePitchDelta() { return m_lastMousePitchDelta; }
+		float GetMouseYawDelta() { return m_lastMouseYawDelta; };
 		TInputFlags GetMovementDirectionFlags() const { return m_inputFlags; };
 
 		/** Listen for important keys and be notified when they are input e.g. ESC, interact, spellcast. */
@@ -127,7 +127,10 @@ namespace DoxD
 		float m_mousePitchYawSensitivity{ 1.0f };
 
 		float m_mousePitchDelta{ 0.0f };
+		float m_lastMousePitchDelta{ 0.0f };
+
 		float m_mouseYawDelta{ 0.0f };
+		float m_lastMouseYawDelta{ 0.0f };
 
 		float m_pitchFilter{ 0.0001f };
 		float m_yawFilter{ 0.0001f };

@@ -1,5 +1,5 @@
 <ObjectLayer>
- <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1741600406">
+ <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1741621290">
   <LayerObjects>
    <Object Type="Brush" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="8a7d7df0-2a53-090e-c1b4-5c1b07911dac" Name="pipe_detail-1" Pos="459.43378,692.82574,31.999758" Rotate="0.70710671,0,0,-0.70710683" Scale="1,1,1" ColorRGB="16777215" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" Prefab="Objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/pipe_detail.cgf" IgnoreVisareas="0" CastShadowMaps="1" GIMode="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistRatio="100" ExcludeFromNavigation="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" IgnoreTerrainLayerBlend="0" IgnoreDecalBlend="0" RndFlags="180060000408">
     <CollisionFiltering />
@@ -205,7 +205,7 @@
     </Points>
    </Object>
    <Object Type="Prefab" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="3cb8b373-9812-f663-6c76-d7f607c17987" Name="cyber_marica-1" Pos="429.94269,815.57324,32.999512" Rotate="0.9238795,0,0,-0.38268346" Scale="1,1,1" ColorRGB="56575" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" PrefabGUID="d743ca24-88ab-1786-a735-f5ae040b67bd" PrefabName="prefabs/cyber_marica.cyber_marica"/>
-   <Object Type="EntityWithAnimatedMeshComponent" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="1d35aefe-ce88-c841-384c-0439f38aabae" Name="Entity-17" Pos="444.20056,806.55597,31.975601" Rotate="0.70982111,0,0,0.704382" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+   <Object Type="EntityWithAnimatedMeshComponent" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="1d35aefe-ce88-c841-384c-0439f38aabae" Name="Hero" Pos="444.20056,806.55597,31.975601" Rotate="0.70982111,0,0,0.704382" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
     <Properties />
     <Components>
      <Component CryXmlVersion="2" TypeGUID="5f543092-53ea-46d7-9376-266e778317d7" TypeName="Cry::DefaultComponents::CAnimatedMeshComponent" GUID="b67432fc-5aad-fe46-cda5-9a30ab352903" Name="" UserAdded="true">
@@ -235,6 +235,26 @@
        <Buoyancy Damping="0" Density="1000" Resistance="1000"/>
        <Simulation MaxTimeStep="0.02" SleepSpeed="0.039999999" Damping="0"/>
       </properties>
+     </Component>
+    </Components>
+   </Object>
+   <Object Type="EmptyEntity" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="61f8d8b8-6b94-bf59-b2f1-9daa48f8231f" Name="Entity-19" Pos="440.67606,804.09045,31.999754" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="58a26b16-ec1d-4700-a76d-38cbb7b2b400" TypeName="DoxD::CPlayerComponent" GUID="550c787f-ba5c-7534-4977-6e8c6a78c959" Name="" UserAdded="true">
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="681aa5b4-9746-4f2c-b19e-ae1b47688ad2" TypeName="DoxD::CCameraManagerComponent" GUID="b5b1387e-1a38-087b-44cb-29fb2d7b2562" Name="" UserAdded="false">
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="183e3c84-2e08-4506-95fa-b362f7e735e9" TypeName="Cry::DefaultComponents::CInputComponent" GUID="b3c51d9b-05ed-dda3-f675-931f39c12c84" Name="" UserAdded="false">
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="89124ba1-6830-4552-b983-2b9fcfff107b" TypeName="DoxD::CTPCameraComponent" GUID="c7a01ac2-a48b-282b-3691-dde3428190b1" Name="" UserAdded="false">
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="83b1a049-99a7-4860-86a5-3ff83834636f" TypeName="DoxD::CPlayerInputComponent" GUID="fd667cf0-91c8-1a36-561e-ac4e79b4ccfc" Name="" UserAdded="false">
+      <properties />
      </Component>
     </Components>
    </Object>

@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741600406">
+<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741621290">
  <Files>
   <File path="01_bar/01_bar.level"/>
  </Files>
@@ -109,6 +109,7 @@
   <Path usageCount="1">prefabs/toilet_lowdispenser.prefab</Path>
   <Path usageCount="8">prefabs/trainstation/trs01_roundpillar.prefab</Path>
   <Path usageCount="4">prefabs/trainstation/trst01_stairs.prefab</Path>
+  <Path>scripts/ai/factions.xml</Path>
   <Path>textures/cubemaps/01_bar/entity-3_cm.dds</Path>
   <Path>textures/cubemaps/01_bar/entity-3_cm_diff.dds</Path>
   <Path>textures/cubemaps/01_bar/lp_global_cm.dds</Path>

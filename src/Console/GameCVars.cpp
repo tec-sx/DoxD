@@ -16,7 +16,7 @@ namespace DoxD
 	void SCVars::RegisterCVars(IConsole* pConsole)
 	{
 		// Controls
-		REGISTER_CVAR(ctl_mouseSensitivity, 30.0f, VF_DUMPTODISK, "Set mouse sensitivity!");
+		REGISTER_CVAR(ctl_mouseSensitivity, 1.0f, VF_DUMPTODISK, "Set mouse sensitivity!");
 		REGISTER_CVAR(ctl_invertMouse, 0, VF_DUMPTODISK, "mouse invert?");
 		REGISTER_CVAR(ctl_zoomToggle, 0, VF_DUMPTODISK, "To make the zoom key work as a toggle");
 		REGISTER_CVAR(ctl_crouchToggle, 1, VF_DUMPTODISK, "To make the crouch key work as a toggle");

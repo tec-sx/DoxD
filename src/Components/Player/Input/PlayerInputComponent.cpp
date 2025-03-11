@@ -175,8 +175,10 @@ namespace DoxD
 
 	void CPlayerInputComponent::Update()
 	{
-		m_mousePitchDelta = std::abs(m_mousePitchDelta) >= m_pitchFilter ? m_mousePitchDelta : 0.0f;
-		m_mouseYawDelta = std::abs(m_mouseYawDelta) >= m_yawFilter ? m_mouseYawDelta : 0.0f;
+		m_lastMousePitchDelta = std::abs(m_mousePitchDelta) >= m_pitchFilter ? m_mousePitchDelta : 0.0f;
+		m_lastMouseYawDelta = std::abs(m_mouseYawDelta) >= m_yawFilter ? m_mouseYawDelta : 0.0f;
+
+		m_mousePitchDelta = m_mouseYawDelta = 0.0f;
 	}
 
 	Vec3 CPlayerInputComponent::GetMovementDirection(const Quat& baseRotation)

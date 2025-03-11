@@ -113,9 +113,20 @@ namespace DoxD
 			}
 		}
 		break;
+		case ESYSTEM_EVENT_LEVEL_LOAD_END:
+			// HACK: TEST: I need a convenient time to write back the Simulation so I can examine it. This will do for now.
+			//ECS::Simulation.SavePrototypeData();
+
+			// In the editor, we wait until now before attempting to connect to the local player. This is to ensure all the
+			// entities are already loaded and initialised. It works differently in game mode. 
+			if (gEnv->IsEditor())
+			{
+				if (auto pPlayer = CPlayerComponent::GetLocalPlayer())
+					pPlayer->OnClientConnect();
+			}
+			break;
 		case ESYSTEM_EVENT_LEVEL_UNLOAD:
 		{
-
 		}
 		break;
 		}
@@ -139,6 +150,19 @@ namespace DoxD
 
 			// Create the player component instance
 			pPlayerEntity->GetOrCreateComponent<CPlayerComponent>();
+		}
+
+		return true;
+	}
+
+	bool CGamePlugin::OnClientReadyForGameplay(int channelId, bool bIsReset)
+	{
+		// In game mode, we can attempt to connect to the local player at this point. This is because all the entities
+		// should already be loaded and initialised by now. It works differently in the editor. 
+		if (!gEnv->IsEditor())
+		{
+			if (auto pPlayer = CPlayerComponent::GetLocalPlayer())
+				pPlayer->OnClientConnect();
 		}
 
 		return true;

@@ -50,7 +50,7 @@ namespace DoxD
 		// INetworkedClientListener
 		virtual void OnLocalClientDisconnected(EDisconnectionCause cause, const char* description) override {}
 		virtual bool OnClientConnectionReceived(int channelId, bool bIsReset) override;
-		virtual bool OnClientReadyForGameplay(int channelId, bool bIsReset) override { return true; };
+		virtual bool OnClientReadyForGameplay(int channelId, bool bIsReset) override;
 		virtual void OnClientDisconnected(int channelId, EDisconnectionCause cause, const char* description, bool bKeepClient) override {};
 		virtual bool OnClientTimingOut(int channelId, EDisconnectionCause cause, const char* description) override { return true; }
 		// ~INetworkedClientListener
