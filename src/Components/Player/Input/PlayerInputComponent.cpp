@@ -71,7 +71,7 @@ namespace DoxD
 		m_pInputComponent->BindAction("player", "move_backward", eAID_KeyboardMouse, EKeyId::eKI_S);
 
 		// Mouse yaw and pitch handlers.
-		m_pInputComponent->RegisterAction("player", "rota_teyaw", [this](int activationMode, float value) { OnActionRotateYaw(activationMode, value); });
+		m_pInputComponent->RegisterAction("player", "rotate_yaw", [this](int activationMode, float value) { OnActionRotateYaw(activationMode, value); });
 		m_pInputComponent->BindAction("player", "rotate_yaw", eAID_KeyboardMouse, EKeyId::eKI_MouseX);
 
 		m_pInputComponent->RegisterAction("player", "rotate_pitch", [this](int activationMode, float value) { OnActionRotatePitch(activationMode, value); });
