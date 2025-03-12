@@ -96,7 +96,9 @@ namespace DoxD
 		{
 			auto pActor = gEnv->pEntitySystem->GetEntity(entityId);
 			if (pActor)
+			{
 				return pActor->GetComponent<CActorComponent>();
+			}
 
 			return nullptr;
 		};
@@ -128,9 +130,9 @@ namespace DoxD
 		virtual void InteractionTick(IInteraction* pInteraction) override;
 		virtual void InteractionEnd(IInteraction* pInteraction) override;
 
-		virtual void QueueAction(IAction& pAction) override;
-		virtual IActionController* GetActionController() const override;
-		virtual const SActorMannequinParams* GetMannequinParams() const override;
+		virtual IActionController* GetActionController() const override { return m_pActorAnimationComponent->GetActionController(); }
+		virtual void QueueAction(IAction& pAction) override { m_pActorAnimationComponent->QueueAction(pAction); }
+		virtual const SActorMannequinParams* GetMannequinParams() const override { return m_actorMannequinParams; }
 
 		virtual void OnPlayerAttach(CPlayerComponent& player) override;
 		virtual void OnPlayerDetach() override;
@@ -171,6 +173,10 @@ namespace DoxD
 			CSnaplockComponent* m_pSnaplockComponent{ nullptr };
 			CEntityAwarenessComponent* m_pAwarenessComponent{ nullptr };
 			Cry::Audio::DefaultComponents::CListenerComponent* m_pAudioListenerComponent{ nullptr };
+
+			const SActorMannequinParams* m_actorMannequinParams{ nullptr };
+			class CProceduralContextAim* m_pProceduralContextAim{ nullptr };
+			class CProceduralContextLook* m_pProceduralContextLook{ nullptr };
 
 			CFate m_fate;
 	};

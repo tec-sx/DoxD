@@ -301,16 +301,6 @@ namespace DoxD
 		return false;
 	}
 
-	IActionController* CActorComponent::GetActionController() const
-	{
-		return nullptr;
-	}
-
-	const SActorMannequinParams* CActorComponent::GetMannequinParams() const
-	{
-		return nullptr;
-	}
-
 	void CActorComponent::OnInputInteraction(int activationMode)
 	{
 	}
@@ -389,10 +379,6 @@ namespace DoxD
 	{
 	}
 
-	void CActorComponent::QueueAction(IAction& pAction)
-	{
-	}
-
 	void CActorComponent::OnKill()
 	{
 	}
@@ -445,6 +431,57 @@ namespace DoxD
 
 	void CActorComponent::OnResetState()
 	{
+		// HACK: This prevents a weird crash when getting the context a second time.
+		m_pProceduralContextLook = nullptr;
+
+		if (m_pActorAnimationComponent && m_pActorAnimationComponent->HasActionController())
+		{
+			// The actor animation component is responsible for maintaining the context.
+			const auto& pContext = m_pActorAnimationComponent->GetContext();
+
+			// The mannequin tags for an actor will need to be loaded. Because these are found in the controller definition,
+			// they are potentially different for every actor. 
+			m_actorMannequinParams = GetMannequinUserParams<SActorMannequinParams>(pContext);
+
+			// It's a good idea to flush out any current actions, then resume processing.
+			m_pActorAnimationComponent->FlushActions();
+			m_pActorAnimationComponent->ResumeActions();
+
+			// Select a character definition based on first / third person mode. Hard coding the default scope isn't a great
+			// idea, but it's good enough for now. 
+			m_pActorAnimationComponent->SetDefaultScopeContextName("Char3P");
+			//m_pActorAnimationComponent->SetCharacterFile(m_geometryThirdPerson.value);
+
+			// Queue the locomotion action, which switches fragments and tags as needed for actor locomotion.
+			//auto locomotionAction = new CActorAnimationActionLocomotion();
+			//QueueAction(*locomotionAction);
+
+			// Third person views allow a little extra control.
+
+				// Aim actions.
+				//if (CActorAnimationActionAimPose::IsSupported(pContext)
+				//	&& CActorAnimationActionAiming::IsSupported(pContext))
+				//{
+				//	m_pProceduralContextAim = static_cast<CProceduralContextAim*>(m_pActorAnimationComponent->FindOrCreateProceduralContext(CProceduralContextAim::GetCID()));
+				//	QueueAction(*new CActorAnimationActionAimPose());
+				//	QueueAction(*new CActorAnimationActionAiming());
+				//}
+
+				//// Set the scope tag for look pose.
+				//auto& animContext = m_pActorAnimationComponent->GetContext();
+				//animContext.state.Set(m_actorMannequinParams->tagIDs.ScopeLookPose, true);
+
+				//// Look actions.
+				////if (CActorAnimationActionLookPose::IsSupported(pContext) // HACK: These tests are causing crashes on the second run through.
+				//	//&& CActorAnimationActionLooking::IsSupported(pContext))
+				//{
+				//	const auto pX = m_pActorAnimationComponent->FindOrCreateProceduralContext(CProceduralContextLook::GetCID());
+				//	m_pProceduralContextLook = static_cast<CProceduralContextLook*>(pX);
+
+				//	QueueAction(*new CActorAnimationActionLookPose());
+				//	QueueAction(*new CActorAnimationActionLooking());
+				//}
+		}
 	}
 
 	CRY_STATIC_AUTO_REGISTER_FUNCTION(&RegisterActorComponent);

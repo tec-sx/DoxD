@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 
 #include <DefaultComponents/Geometry/BaseMeshComponent.h>
 #include <DefaultComponents/Geometry/AdvancedAnimationComponent.h>
