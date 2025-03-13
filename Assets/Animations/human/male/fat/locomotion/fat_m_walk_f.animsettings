@@ -8,6 +8,6 @@
 			"scaleEpsilon": 0.00001,
 			"perJointSettings": [ ]
 		},
-		"tags": [ "NPC" ]
+		"tags": [ "Walk" ]
 	}
 }

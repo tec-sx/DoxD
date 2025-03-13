@@ -67,18 +67,18 @@ namespace DoxD
 		m_pInputComponent->BindAction("camera", "tpv_zoom_out", eAID_KeyboardMouse, EKeyId::eKI_MouseWheelDown);
 
 		// Camera movements.
-		m_pInputComponent->RegisterAction("camera", "camera_shift_up", [this](int activationMode, float value) { OnActionCameraShiftUp(activationMode, value); });
-		m_pInputComponent->BindAction("camera", "camera_shift_up", eAID_KeyboardMouse, EKeyId::eKI_PgUp);
-		m_pInputComponent->RegisterAction("camera", "camera_shift_down", [this](int activationMode, float value) { OnActionCameraShiftDown(activationMode, value); });
-		m_pInputComponent->BindAction("camera", "camera_shift_down", eAID_KeyboardMouse, EKeyId::eKI_PgDn);
-		m_pInputComponent->RegisterAction("camera", "camera_shift_left", [this](int activationMode, float value) { OnActionCameraShiftLeft(activationMode, value); });
-		m_pInputComponent->BindAction("camera", "camera_shift_left", eAID_KeyboardMouse, EKeyId::eKI_Left);
-		m_pInputComponent->RegisterAction("camera", "camera_shift_right", [this](int activationMode, float value) { OnActionCameraShiftRight(activationMode, value); });
-		m_pInputComponent->BindAction("camera", "camera_shift_right", eAID_KeyboardMouse, EKeyId::eKI_Right);
-		m_pInputComponent->RegisterAction("camera", "camera_shift_forward", [this](int activationMode, float value) { OnActionCameraShiftForward(activationMode, value); });
-		m_pInputComponent->BindAction("camera", "camera_shift_forward", eAID_KeyboardMouse, EKeyId::eKI_Up);
-		m_pInputComponent->RegisterAction("camera", "camera_shift_backward", [this](int activationMode, float value) { OnActionCameraShiftBackward(activationMode, value); });
-		m_pInputComponent->BindAction("camera", "camera_shift_backward", eAID_KeyboardMouse, EKeyId::eKI_Down);
+		//m_pInputComponent->RegisterAction("camera", "camera_shift_up", [this](int activationMode, float value) { OnActionCameraShiftUp(activationMode, value); });
+		//m_pInputComponent->BindAction("camera", "camera_shift_up", eAID_KeyboardMouse, EKeyId::eKI_PgUp);
+		//m_pInputComponent->RegisterAction("camera", "camera_shift_down", [this](int activationMode, float value) { OnActionCameraShiftDown(activationMode, value); });
+		//m_pInputComponent->BindAction("camera", "camera_shift_down", eAID_KeyboardMouse, EKeyId::eKI_PgDn);
+		//m_pInputComponent->RegisterAction("camera", "camera_shift_left", [this](int activationMode, float value) { OnActionCameraShiftLeft(activationMode, value); });
+		//m_pInputComponent->BindAction("camera", "camera_shift_left", eAID_KeyboardMouse, EKeyId::eKI_Left);
+		//m_pInputComponent->RegisterAction("camera", "camera_shift_right", [this](int activationMode, float value) { OnActionCameraShiftRight(activationMode, value); });
+		//m_pInputComponent->BindAction("camera", "camera_shift_right", eAID_KeyboardMouse, EKeyId::eKI_Right);
+		//m_pInputComponent->RegisterAction("camera", "camera_shift_forward", [this](int activationMode, float value) { OnActionCameraShiftForward(activationMode, value); });
+		//m_pInputComponent->BindAction("camera", "camera_shift_forward", eAID_KeyboardMouse, EKeyId::eKI_Up);
+		//m_pInputComponent->RegisterAction("camera", "camera_shift_backward", [this](int activationMode, float value) { OnActionCameraShiftBackward(activationMode, value); });
+		//m_pInputComponent->BindAction("camera", "camera_shift_backward", eAID_KeyboardMouse, EKeyId::eKI_Down);
 	}
 
 	bool CCameraManagerComponent::OnActionCameraShiftUp(int activationMode, float value)

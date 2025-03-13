@@ -150,8 +150,8 @@ namespace DoxD
 #if defined(_DEBUG)
 					if (g_pCVars->m_actionRPGCameraDebug)
 					{
-						gEnv->pRenderer->GetIRenderAuxGeom()->DrawSphere(vecTargetAimPosition, 0.04f, ColorB(128, 0, 0));
-						gEnv->pRenderer->GetIRenderAuxGeom()->DrawSphere(vecTargetAimPosition + quatTargetRotation * viewPositionOffset, 0.04f, ColorB(0, 128, 0));
+						gEnv->pRenderer->GetIRenderAuxGeom()->DrawSphere(vecTargetAimPosition, 0.1f, ColorB(128, 0, 0));
+						gEnv->pRenderer->GetIRenderAuxGeom()->DrawSphere(vecTargetAimPosition + quatTargetRotation * viewPositionOffset, 0.1f, ColorB(0, 128, 0));
 					}
 #endif
 

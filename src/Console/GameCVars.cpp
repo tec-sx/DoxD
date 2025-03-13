@@ -7,16 +7,10 @@ namespace DoxD
 {
 	SCVars* g_pCVars;
 
-	static void OnFOVChanged(ICVar* pPass)
-	{
-		g_pCVars->cm_fov = clamp_tpl<float>(g_pCVars->cm_fov, 25.f, 80.f);
-	}
-
-
 	void SCVars::RegisterCVars(IConsole* pConsole)
 	{
 		// Controls
-		REGISTER_CVAR(ctl_mouseSensitivity, 1.0f, VF_DUMPTODISK, "Set mouse sensitivity!");
+		REGISTER_CVAR(ctl_mouseSensitivity, 2.0f, VF_DUMPTODISK, "Set mouse sensitivity!");
 		REGISTER_CVAR(ctl_invertMouse, 0, VF_DUMPTODISK, "mouse invert?");
 		REGISTER_CVAR(ctl_zoomToggle, 0, VF_DUMPTODISK, "To make the zoom key work as a toggle");
 		REGISTER_CVAR(ctl_crouchToggle, 1, VF_DUMPTODISK, "To make the crouch key work as a toggle");
@@ -26,8 +20,6 @@ namespace DoxD
 
 		REGISTER_CVAR(cl_motionBlurVectorScale, 1.5f, VF_CHEAT, "Default motion blur vector scale");
 		REGISTER_CVAR(cl_motionBlurVectorScaleSprint, 3.0f, VF_CHEAT, "Motion blur vector scale while sprinting");
-
-		OnFOVChanged(NULL);
 
 		REGISTER_CVAR(cl_shallowWaterDepthLo, 0.5f, 0, "Shallow water depth low (below has zero slowdown)");
 		REGISTER_CVAR(cl_shallowWaterDepthHi, 1.2f, 0, "Shallow water depth high (above has full slowdown)");
@@ -47,22 +39,6 @@ namespace DoxD
 		REGISTER_CVAR(pl_debug_energyConsumption, 0, VF_CHEAT, "Display debug energy consumption rate info");
 		REGISTER_CVAR(pl_debug_pickable_items, 0, 0, "Display information about pickable item at which the player is about to interact with");
 
-		// Camera General
-		REGISTER_CVAR_CB(cm_fov, 55.0f, 0, "field of view.", OnFOVChanged);
-		REGISTER_CVAR(cm_tpCameraCollision, 1, 0, "enable camera collision in 3rd person view");
-		REGISTER_CVAR(cm_tpCameraCollisionOffset, 0.3f, 0, "offset that is used to move the 3rd person camera out of collisions");
-		REGISTER_CVAR(cm_tpDebugAim, 0, 0, "show aim debug helpers in 3rd person view");
-		REGISTER_CVAR(cm_tpCameraDistance, 2.0f, 0, "camera distance in 3rd person view");
-		REGISTER_CVAR(cm_tpCameraDistanceHorizontal, 0.5f, 0, "horizontal camera distance in 3rd person view");
-		REGISTER_CVAR(cm_tpCameraDistanceVertical, 1.5f, 0, "vertical camera distance in 3rd person view");
-		REGISTER_CVAR(cm_tpMaxAimDist, 1000.0f, 0, "maximum range in which the player can aim at an object");
-		REGISTER_CVAR(cm_tpMinDist, 0.5f, 0, "minimum distance in 3rd person view");
-		REGISTER_CVAR(cm_tpYaw, 0, 0, "camera angle offset in 3rd person view");
-#ifndef _RELEASE
-		REGISTER_CVAR(cm_debugCamera, 0, VF_CHEAT, "Enables camera debug mode.");
-#endif
-		REGISTER_CVAR(m_cameraInterpolationSpeed, 5.0f, 0, "interpolation speed when camera hits an object.");
-		
 		// CameraManager
 		m_cameraManagerDebugViewOffset = REGISTER_STRING("camera_manager_debug_view_offset", "0, 0, 0", VF_CHEAT, "A translation vector which is applied after the camera is initially positioned.");
 		
@@ -70,10 +46,10 @@ namespace DoxD
 		REGISTER_CVAR2("camera_actionrpg_Debug", &m_actionRPGCameraDebug, 0, VF_CHEAT, "Allow debug display.");
 		REGISTER_CVAR2("camera_actionrpg_PitchMin", &m_actionRPGCameraPitchMin, -85.0f, VF_CHEAT, "Minimum pitch angle of the camera (degrees)");
 		REGISTER_CVAR2("camera_actionrpg_PitchMax", &m_actionRPGCameraPitchMax, 85.0f, VF_CHEAT, "Maximum pitch angle of the camera (degrees)");
-		REGISTER_CVAR2("camera_actionrpg_TargetDistance", &m_actionRPGCameraTargetDistance, 5.0f, VF_CHEAT, "Preferred distance in metres from the view camera to the target.");
+		REGISTER_CVAR2("camera_actionrpg_TargetDistance", &m_actionRPGCameraTargetDistance, 2.0f, VF_CHEAT, "Preferred distance in metres from the view camera to the target.");
 		REGISTER_CVAR2("camera_actionrpg_ReversePitchTilt", &m_actionRPGCameraReversePitchTilt, 0.1f, VF_CHEAT, "A factor that applies pitch in the direction the camera is facing. The effect of this is to tilt it towards or away from the orbit centre.");
-		REGISTER_CVAR2("camera_actionrpg_SlerpSpeed", &m_actionRPGCameraSlerpSpeed, 20.0f, VF_CHEAT, "The slerp speed. The speed at which we apply spherical linear interpolation to the camera rotations.");
-		REGISTER_CVAR2("camera_actionrpg_ZoomMin", &m_actionRPGCameraZoomMin, 0.2f, VF_CHEAT, "The minimum value for camera zoom.");
+		REGISTER_CVAR2("camera_actionrpg_SlerpSpeed", &m_actionRPGCameraSlerpSpeed, 25.0f, VF_CHEAT, "The slerp speed. The speed at which we apply spherical linear interpolation to the camera rotations.");
+		REGISTER_CVAR2("camera_actionrpg_ZoomMin", &m_actionRPGCameraZoomMin, 0.5f, VF_CHEAT, "The minimum value for camera zoom.");
 		REGISTER_CVAR2("camera_actionrpg_ZoomMax", &m_actionRPGCameraZoomMax, 1.0f, VF_CHEAT, "The maximum value for camera zoom.");
 		REGISTER_CVAR2("camera_actionrpg_ZoomStep", &m_actionRPGCameraZoomStep, 0.02f, VF_CHEAT, "Each zoom event in or out will alter the zoom factor, m_zoom, by this amount. Use lower values for more steps and higher values to zoom in / out faster with less steps.");
 		REGISTER_CVAR2("camera_actionrpg_ZoomSpeed", &m_actionRPGCameraZoomSpeed, 10.0f, VF_CHEAT, "When the zoom changes we interpolate between it's last value and the goal value. This provides for smoother movement on camera zooms. Higher values will interpolate faster than lower values.");
@@ -293,22 +269,6 @@ namespace DoxD
 		pConsole->UnregisterVariable("pl_debug_energyConsumption", true);
 		pConsole->UnregisterVariable("pl_debug_pickable_items", true);
 
-		// Camera
-		pConsole->UnregisterVariable("cm_fov", true);
-		pConsole->UnregisterVariable("cm_tpCameraCollision", true);
-		pConsole->UnregisterVariable("cm_tpCameraCollisionOffset", true);
-		pConsole->UnregisterVariable("cm_tpDebugAim", true);
-
-		pConsole->UnregisterVariable("cm_tpCameraDistance", true);
-		pConsole->UnregisterVariable("cm_tpCameraDistanceHorizontal", true);
-		pConsole->UnregisterVariable("cm_tpCameraDistanceVertical", true);
-		pConsole->UnregisterVariable("cm_tpMaxAimDistance", true);
-		pConsole->UnregisterVariable("cm_tpMinDistance", true);
-		pConsole->UnregisterVariable("cm_tpYaw", true);
-#ifndef _RELEASE
-		pConsole->UnregisterVariable("cm_debugCamera", true);
-#endif
-		pConsole->UnregisterVariable("m_cameraInterpolationSpeed", true);
 
 		// Camera Manager
 		pConsole->UnregisterVariable("m_cameraManagerDebugViewOffset", true);

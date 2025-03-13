@@ -8,6 +8,6 @@
 			"scaleEpsilon": 0.2,
 			"perJointSettings": [ ]
 		},
-		"tags": [ "NPC" ]
+		"tags": [ "Idle" ]
 	}
 }

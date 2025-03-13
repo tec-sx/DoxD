@@ -9,6 +9,6 @@
   <Detail name="16BitPrecision">false</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">./Cyber_Marica.mtl</Path>
+  <Path usageCount="1">Materials/dev/dev_danger.mtl</Path>
  </Dependencies>
 </AssetMetadata>

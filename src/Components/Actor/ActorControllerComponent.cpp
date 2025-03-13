@@ -23,7 +23,7 @@ namespace DoxD
 	void CActorControllerComponent::Initialize()
 	{
 		// Mesh and animation.
-		//m_pActorAnimationComponent = m_pEntity->GetOrCreateComponent<CActorAnimationComponent>();
+		m_pActorAnimationComponent = m_pEntity->GetOrCreateComponent<CActorAnimationComponent>();
 
 		// Character movement controller.
 		m_pCharacterControllerComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CCharacterControllerComponent>();

@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741782854">
+<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1741867884">
  <Files>
   <File path="01_bar/01_bar.level"/>
  </Files>
@@ -27,6 +27,9 @@
   <Path>animations/human/male/fat/locomotion/fat_m_idle.caf</Path>
   <Path>animations/human/male/fat/locomotion/fat_m_walk_f.caf</Path>
   <Path>animations/human/male/fat/locomotion/fat_m_walk_start.caf</Path>
+  <Path>animations/mannequin/adb/firstpersoncontrollerdefinition.xml</Path>
+  <Path>animations/mannequin/adb/playerfragmentids.xml</Path>
+  <Path>animations/mannequin/adb/playertags.xml</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_cornea_ddn.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_ddn.dds</Path>
   <Path>editor/resourcecache/objects/characters/base/male/tall/fat/anatomy/textures/eye_diff.dds</Path>

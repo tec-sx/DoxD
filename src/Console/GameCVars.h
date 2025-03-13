@@ -184,20 +184,6 @@ namespace DoxD
 		int	  pl_debug_energyConsumption;
 		int	  pl_debug_pickable_items;
 
-		// Camera General TODO: Remove after update
-		float cm_fov;
-		int   cm_tpCameraCollision;
-		float cm_tpCameraCollisionOffset;
-		int   cm_tpDebugAim;
-		float cm_tpCameraDistance;
-		float cm_tpCameraDistanceHorizontal;
-		float cm_tpCameraDistanceVertical;
-		float cm_tpMaxAimDist;
-		float cm_tpMinDist;
-		float cm_tpYaw;
-		int   cm_debugCamera;
-		float m_cameraInterpolationSpeed;
-
 		// Camera manager.
 		ICVar* m_cameraManagerDebugViewOffset{ nullptr };
 

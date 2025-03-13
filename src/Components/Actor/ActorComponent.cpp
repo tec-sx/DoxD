@@ -9,6 +9,7 @@
 #include <ICryMannequin.h>
 #include <IGameObject.h>
 #include <Actor/Animation/ActorAnimation.h>
+#include <Actor/Animation/Actions/ActorAnimationActionLocomotion.h>
 #include <Actor/StateMachine/ActorStateEvents.h>
 #include <Components/Actor/ActorControllerComponent.h>
 #include <Components/Snaplocks/SnaplockComponent.h>
@@ -124,6 +125,122 @@ namespace DoxD
 		CRY_ASSERT(m_pActorAnimationComponent);
 
 		return m_pActorAnimationComponent->GetCharacter();
+	}
+
+	TagID CActorComponent::GetStanceTagId(EActorStance actorStance) const
+	{
+		TagID tagId{ TAG_ID_INVALID };
+
+		switch (actorStance)
+		{
+		case EActorStance::crawling:
+			tagId = m_actorMannequinParams->tagIDs.Crawling;
+			break;
+
+		case EActorStance::prone:
+			tagId = m_actorMannequinParams->tagIDs.Prone;
+			break;
+
+		case EActorStance::crouching:
+			tagId = m_actorMannequinParams->tagIDs.Crouching;
+			break;
+
+		case EActorStance::falling:
+			tagId = m_actorMannequinParams->tagIDs.Falling;
+			break;
+
+		case EActorStance::flying:
+			tagId = m_actorMannequinParams->tagIDs.Flying;
+			break;
+
+		case EActorStance::landing:
+			tagId = m_actorMannequinParams->tagIDs.Landing;
+			break;
+
+		case EActorStance::sittingChair:
+			tagId = m_actorMannequinParams->tagIDs.SittingChair;
+			break;
+
+		case EActorStance::sittingFloor:
+			tagId = m_actorMannequinParams->tagIDs.SittingFloor;
+			break;
+
+		case EActorStance::sleeping:
+			tagId = m_actorMannequinParams->tagIDs.Sleeping;
+			break;
+
+		case EActorStance::spellcasting:
+			tagId = m_actorMannequinParams->tagIDs.Spellcasting;
+			break;
+
+		case EActorStance::standing:
+			tagId = m_actorMannequinParams->tagIDs.Standing;
+			break;
+
+		case EActorStance::swimming:
+			tagId = m_actorMannequinParams->tagIDs.Swimming;
+			break;
+		}
+
+		return tagId;
+	}
+
+	TagID CActorComponent::GetPostureTagId(EActorPosture actorPosture) const
+	{
+		TagID tagId{ TAG_ID_INVALID };
+
+		switch (actorPosture)
+		{
+		case EActorPosture::aggressive:
+			tagId = m_actorMannequinParams->tagIDs.Aggressive;
+			break;
+
+		case EActorPosture::alerted:
+			tagId = m_actorMannequinParams->tagIDs.Alerted;
+			break;
+
+		case EActorPosture::bored:
+			tagId = m_actorMannequinParams->tagIDs.Bored;
+			break;
+
+		case EActorPosture::dazed:
+			tagId = m_actorMannequinParams->tagIDs.Dazed;
+			break;
+
+		case EActorPosture::depressed:
+			tagId = m_actorMannequinParams->tagIDs.Depressed;
+			break;
+
+		case EActorPosture::distracted:
+			tagId = m_actorMannequinParams->tagIDs.Distracted;
+			break;
+
+		case EActorPosture::excited:
+			tagId = m_actorMannequinParams->tagIDs.Excited;
+			break;
+
+		case EActorPosture::interested:
+			tagId = m_actorMannequinParams->tagIDs.Interested;
+			break;
+
+		case EActorPosture::neutral:
+			tagId = m_actorMannequinParams->tagIDs.Neutral;
+			break;
+
+		case EActorPosture::passive:
+			tagId = m_actorMannequinParams->tagIDs.Passive;
+			break;
+
+		case EActorPosture::suspicious:
+			tagId = m_actorMannequinParams->tagIDs.Suspicious;
+			break;
+
+		case EActorPosture::unaware:
+			tagId = m_actorMannequinParams->tagIDs.Unaware;
+			break;
+		}
+
+		return tagId;
 	}
 
 	void CActorComponent::OnPlayerAttach(CPlayerComponent& player)
@@ -434,6 +551,13 @@ namespace DoxD
 		// HACK: This prevents a weird crash when getting the context a second time.
 		m_pProceduralContextLook = nullptr;
 
+		//if (m_pActorAnimationComponent)
+		//{
+		//	m_pActorAnimationComponent->SetControllerDefinitionFile("Animations/Mannequin/ADB/FirstPersonControllerDefinition.xml");
+		//	m_pActorAnimationComponent->SetDefaultScopeContextName("ThirdPersonCharacter");
+		//	m_pActorAnimationComponent->SetDefaultFragmentName("Idle");
+		//}
+
 		if (m_pActorAnimationComponent && m_pActorAnimationComponent->HasActionController())
 		{
 			// The actor animation component is responsible for maintaining the context.
@@ -453,8 +577,8 @@ namespace DoxD
 			//m_pActorAnimationComponent->SetCharacterFile(m_geometryThirdPerson.value);
 
 			// Queue the locomotion action, which switches fragments and tags as needed for actor locomotion.
-			//auto locomotionAction = new CActorAnimationActionLocomotion();
-			//QueueAction(*locomotionAction);
+			auto locomotionAction = new CActorAnimationActionLocomotion();
+			QueueAction(*locomotionAction);
 
 			// Third person views allow a little extra control.
 

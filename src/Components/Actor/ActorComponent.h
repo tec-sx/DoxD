@@ -133,6 +133,8 @@ namespace DoxD
 		virtual IActionController* GetActionController() const override { return m_pActorAnimationComponent->GetActionController(); }
 		virtual void QueueAction(IAction& pAction) override { m_pActorAnimationComponent->QueueAction(pAction); }
 		virtual const SActorMannequinParams* GetMannequinParams() const override { return m_actorMannequinParams; }
+		TagID GetStanceTagId(EActorStance actorStance) const;
+		TagID GetPostureTagId(EActorPosture actorPosture) const;
 
 		virtual void OnPlayerAttach(CPlayerComponent& player) override;
 		virtual void OnPlayerDetach() override;
