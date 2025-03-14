@@ -1,0 +1,7 @@
+<MannequinPreview>
+ <controllerDef filename="Animations/Mannequin/ADB/NPCCharacterControllerDefinition.xml"/>
+ <contexts>
+  <contextData name="NPCCharacter" enabled="1" database="Animations/Mannequin/ADB/npccharacterfat.adb" context="NPCCharacter" model="objects/characters/m_biker_fat_01.cdf"/>
+ </contexts>
+ <History StartTime="0" EndTime="0"/>
+</MannequinPreview>

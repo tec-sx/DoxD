@@ -130,8 +130,8 @@ namespace DoxD
 		virtual void InteractionTick(IInteraction* pInteraction) override;
 		virtual void InteractionEnd(IInteraction* pInteraction) override;
 
-		virtual IActionController* GetActionController() const override { return m_pActorAnimationComponent->GetActionController(); }
-		virtual void QueueAction(IAction& pAction) override { m_pActorAnimationComponent->QueueAction(pAction); }
+		virtual IActionController* GetActionController() const override { return m_pAnimationComponent->GetActionController(); }
+		virtual void QueueAction(IAction& pAction) override { m_pAnimationComponent->GetActionController()->Queue(pAction); }
 		virtual const SActorMannequinParams* GetMannequinParams() const override { return m_actorMannequinParams; }
 		TagID GetStanceTagId(EActorStance actorStance) const;
 		TagID GetPostureTagId(EActorPosture actorPosture) const;
@@ -159,7 +159,7 @@ namespace DoxD
 
 		protected:
 			Cry::DefaultComponents::CCharacterControllerComponent* m_pCharacterControllerComponent{ nullptr };
-			CActorAnimationComponent* m_pActorAnimationComponent{ nullptr };
+			Cry::DefaultComponents::CAdvancedAnimationComponent* m_pAnimationComponent{ nullptr };
 
 			Schematyc::CharacterFileName m_charcterGeometry;
 

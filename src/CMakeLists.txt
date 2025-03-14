@@ -35,6 +35,12 @@ add_sources("Animation_uber.cpp"
 		"Actor/Animation/ActorAnimation.h"
 		"Actor/Animation/ActorAnimationEvents.h"
 )
+add_sources("Actions_uber.cpp"
+    PROJECTS DoxD.Game
+    SOURCE_GROUP "Actor\\\\Animation\\\\Actions"
+		"Actor/Animation/Actions/ActorAnimationActionLocomotion.cpp"
+		"Actor/Animation/Actions/ActorAnimationActionLocomotion.h"
+)
 add_sources("StateMachine_uber.cpp"
     PROJECTS DoxD.Game
     SOURCE_GROUP "Actor\\\\StateMachine"
@@ -80,12 +86,6 @@ add_sources("Actor_uber.cpp"
 		"Components/Actor/ActorControllerComponent.cpp"
 		"Components/Actor/ActorComponent.h"
 		"Components/Actor/ActorControllerComponent.h"
-)
-add_sources("Animation_uber.cpp"
-    PROJECTS DoxD.Game
-    SOURCE_GROUP "Components\\\\Animation"
-		"Components/Animation/ActorAnimationComponent.cpp"
-		"Components/Animation/ActorAnimationComponent.h"
 )
 add_sources("Interaction_uber.cpp"
     PROJECTS DoxD.Game

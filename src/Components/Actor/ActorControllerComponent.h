@@ -108,7 +108,7 @@ namespace DoxD
 		float durationOnGround{ 0.0f };
 
 	private:
-		CActorAnimationComponent* m_pActorAnimationComponent{ nullptr };
+		Cry::DefaultComponents::CAdvancedAnimationComponent* m_pAnimationComponent{ nullptr };
 		Cry::DefaultComponents::CCharacterControllerComponent* m_pCharacterControllerComponent{ nullptr };
 		CActorComponent* m_pActorComponent{ nullptr };
 

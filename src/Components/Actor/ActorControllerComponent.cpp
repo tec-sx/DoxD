@@ -23,7 +23,7 @@ namespace DoxD
 	void CActorControllerComponent::Initialize()
 	{
 		// Mesh and animation.
-		m_pActorAnimationComponent = m_pEntity->GetOrCreateComponent<CActorAnimationComponent>();
+		m_pAnimationComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CAdvancedAnimationComponent>();
 
 		// Character movement controller.
 		m_pCharacterControllerComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CCharacterControllerComponent>();
@@ -207,20 +207,20 @@ namespace DoxD
 
 			// Resolve the animation tags.
 			// HACK: This should be done once on init or on entity changed events or similar. It fails hard if the init order
-			// is switched with CActorAnimationComponent.
-			if ((m_rotateTagId == TAG_ID_INVALID) && (strlen(m_pActorAnimationComponent->GetControllerDefinitionFile()) > 0))
-				m_rotateTagId = m_pActorAnimationComponent->GetTagId("Rotate");
+			// is switched with CAdvancedAnimationComponent.
+			if ((m_rotateTagId == TAG_ID_INVALID) && (strlen(m_pAnimationComponent->GetControllerDefinitionFile()) > 0))
+				m_rotateTagId = m_pAnimationComponent->GetTagId("Rotate");
 
 			// Set the tag, if it exists.
 			if (m_rotateTagId != TAG_ID_INVALID)
-				m_pActorAnimationComponent->SetTagWithId(m_rotateTagId, isTurning);
+				m_pAnimationComponent->SetTagWithId(m_rotateTagId, isTurning);
 
 			if (isTurning)
 			{
 				// Expect the turning motion to take approximately one second.
 				// TODO: Get to work on making this happen more like Blade and Soul.
 				const float turnDuration = 1.0f;
-				m_pActorAnimationComponent->SetMotionParameter(eMotionParamID_TurnAngle, m_yawAngularVelocity * turnDuration);
+				m_pAnimationComponent->SetMotionParameter(eMotionParamID_TurnAngle, m_yawAngularVelocity * turnDuration);
 			}
 
 			// Update entity rotation as the player turns. We only want to affect Z-axis rotation, zero pitch and roll.

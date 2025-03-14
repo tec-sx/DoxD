@@ -31,7 +31,7 @@ namespace DoxD
 
 	void CActorComponent::Initialize()
 	{
-		m_pActorAnimationComponent = m_pEntity->GetOrCreateComponent<CActorAnimationComponent>();
+		m_pAnimationComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CAdvancedAnimationComponent>();
 		m_pCharacterControllerComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CCharacterControllerComponent>();
 		m_pActorControllerComponent = m_pEntity->GetOrCreateComponent<CActorControllerComponent>();
 
@@ -122,9 +122,9 @@ namespace DoxD
 
 	ICharacterInstance* CActorComponent::GetCharacter() const
 	{
-		CRY_ASSERT(m_pActorAnimationComponent);
+		CRY_ASSERT(m_pAnimationComponent);
 
-		return m_pActorAnimationComponent->GetCharacter();
+		return m_pAnimationComponent->GetCharacter();
 	}
 
 	TagID CActorComponent::GetStanceTagId(EActorStance actorStance) const
@@ -282,7 +282,7 @@ namespace DoxD
 	{
 		Vec3 eyePosition{ 0.0f, 0.0f, 1.82f };
 
-		auto pCharacter = m_pActorAnimationComponent->GetCharacter();
+		auto pCharacter = m_pAnimationComponent->GetCharacter();
 		if (!pCharacter)
 			return eyePosition;
 
@@ -347,7 +347,7 @@ namespace DoxD
 	Vec3 CActorComponent::GetLocalLeftHandPos() const
 	{
 		const Vec3 handPosition{ -0.2f, 0.3f, 1.3f };
-		auto pCharacter = m_pActorAnimationComponent->GetCharacter();
+		auto pCharacter = m_pAnimationComponent->GetCharacter();
 
 		if (pCharacter)
 		{
@@ -369,7 +369,7 @@ namespace DoxD
 	Vec3 CActorComponent::GetLocalRightHandPos() const
 	{
 		const Vec3 handPosition{ 0.2f, 0.3f, 1.3f };
-		auto pCharacter = m_pActorAnimationComponent->GetCharacter();
+		auto pCharacter = m_pAnimationComponent->GetCharacter();
 
 		if (pCharacter)
 		{
@@ -558,22 +558,22 @@ namespace DoxD
 		//	m_pActorAnimationComponent->SetDefaultFragmentName("Idle");
 		//}
 
-		if (m_pActorAnimationComponent && m_pActorAnimationComponent->HasActionController())
+		if (m_pAnimationComponent && m_pAnimationComponent->GetActionController() != nullptr)
 		{
 			// The actor animation component is responsible for maintaining the context.
-			const auto& pContext = m_pActorAnimationComponent->GetContext();
+			const auto& pContext = m_pAnimationComponent->GetActionController()->GetContext();
 
 			// The mannequin tags for an actor will need to be loaded. Because these are found in the controller definition,
 			// they are potentially different for every actor. 
 			m_actorMannequinParams = GetMannequinUserParams<SActorMannequinParams>(pContext);
 
 			// It's a good idea to flush out any current actions, then resume processing.
-			m_pActorAnimationComponent->FlushActions();
-			m_pActorAnimationComponent->ResumeActions();
+			m_pAnimationComponent->GetActionController()->Flush();
+			m_pAnimationComponent->GetActionController()->Resume();
 
 			// Select a character definition based on first / third person mode. Hard coding the default scope isn't a great
 			// idea, but it's good enough for now. 
-			m_pActorAnimationComponent->SetDefaultScopeContextName("Char3P");
+			m_pAnimationComponent->SetDefaultScopeContextName("Char3P");
 			//m_pActorAnimationComponent->SetCharacterFile(m_geometryThirdPerson.value);
 
 			// Queue the locomotion action, which switches fragments and tags as needed for actor locomotion.

@@ -1,6 +1,5 @@
 {
 	"entries": [
-		{ "path": "Animations/animations.dba", "condition": { "inFolder": { "path": "animations/motusAnims" } } },
 		{ "path": "Animations/human/human_animations.dba", "condition": { "inFolder": { "path": "animations/human" } } }
 	]
 }
