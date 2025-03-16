@@ -4,7 +4,7 @@
 #include <DefaultComponents/Physics/CharacterControllerComponent.h>
 #include <DefaultComponents/Audio/ListenerComponent.h>
 #include <Components/Player/Input/PlayerInputComponent.h>
-#include <Components/Animation/ActorAnimationComponent.h>
+#include <Actor/Animation/ActorAnimation.h>
 #include "Contracts/IActor.h"
 #include "Snaplocks/Snaplock.h"
 

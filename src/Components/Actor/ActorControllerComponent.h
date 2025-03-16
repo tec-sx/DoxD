@@ -5,7 +5,6 @@
 #include <Actor/Animation/ActorAnimation.h>
 #include <Components/Actor/ActorComponent.h>
 #include <Components/Player/Input/PlayerInputComponent.h>
-#include <Components/Animation/ActorAnimationComponent.h>
 
 namespace DoxD
 {
