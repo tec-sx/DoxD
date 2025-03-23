@@ -3,8 +3,9 @@
 #include <CryAISystem/IAgent.h>
 #include <DefaultComponents/Physics/CharacterControllerComponent.h>
 #include <DefaultComponents/Audio/ListenerComponent.h>
-#include <Components/Player/Input/PlayerInputComponent.h>
-#include <Actor/Animation/ActorAnimation.h>
+#include "Components/Actor/ActorControllerComponent.h"
+#include "Components/Player/Input/PlayerInputComponent.h"
+#include "Actor/Animation/ActorAnimation.h"
 #include "Contracts/IActor.h"
 #include "Snaplocks/Snaplock.h"
 
@@ -61,17 +62,7 @@ namespace DoxD
 		CActorComponent() {};
 		virtual ~CActorComponent() = default;
 		
-		static void ReflectType(Schematyc::CTypeDesc<CActorComponent>& desc)
-		{
-			desc.SetGUID(CActorComponent::IID());
-			desc.SetEditorCategory("Actors");
-			desc.SetLabel("Actor");
-			desc.SetDescription("No description.");
-			desc.SetIcon("icons:ObjectTypes/light.ico");
-			desc.SetComponentFlags({ IEntityComponent::EFlags::Singleton });
-
-			//desc.AddMember(&CActorComponent::m_actorGeometry, 'geot', "ActorGeometry", "Actor Geometry", "", "");
-		}
+		static void ReflectType(Schematyc::CTypeDesc<CActorComponent>& desc);
 
 		static CryGUID& IID()
 		{
@@ -116,15 +107,15 @@ namespace DoxD
 		virtual void OnActionInteractionTick() override;
 		virtual void OnActionInteractionEnd() override;
 
-		virtual void OnActionCrouchToggle() override;
-		virtual void OnActionCrawlToggle() override;
-		virtual void OnActionSitToggle() override;
-		virtual void OnActionJogToggle() override;
-		virtual void OnActionSprintStart() override;
-		virtual void OnActionSprintStop() override;
+		virtual void OnActionCrouchToggle() override { m_pActorControllerComponent->OnActionCrouchToggle(); }
+		virtual void OnActionCrawlToggle() override { m_pActorControllerComponent->OnActionCrawlToggle(); }
+		virtual void OnActionSitToggle() override { m_pActorControllerComponent->OnActionSitToggle(); }
+		virtual void OnActionJogToggle() override { m_pActorControllerComponent->OnActionJogToggle(); }
+		virtual void OnActionSprintStart() override { m_pActorControllerComponent->OnActionSprintStart(); }
+		virtual void OnActionSprintStop() override { m_pActorControllerComponent->OnActionSprintStop(); }
 
-		virtual bool IsSprinting() const override;
-		virtual bool IsJogging() const override;
+		virtual bool IsSprinting() const override { return m_pActorControllerComponent->IsSprinting(); }
+		virtual bool IsJogging() const override { return m_pActorControllerComponent->IsJogging(); }
 
 		virtual void InteractionStart(IInteraction* pInteraction) override;
 		virtual void InteractionTick(IInteraction* pInteraction) override;

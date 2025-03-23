@@ -1,5 +1,5 @@
 <ObjectLayer>
- <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1741957398">
+ <Layer Name="Main" FullName="Main" GUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Hidden="0" Frozen="0" Expanded="0" Type="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1" Color="4671303" Timestamp="1742726209">
   <LayerObjects>
    <Object Type="Brush" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="8a7d7df0-2a53-090e-c1b4-5c1b07911dac" Name="pipe_detail-1" Pos="459.43378,692.82574,31.999758" Rotate="0.70710671,0,0,-0.70710683" Scale="1,1,1" ColorRGB="16777215" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" Prefab="Objects/AAA_CRYTEK_ASSETS/props/industrial_structures/pipes/wall_pipe/pipe_detail.cgf" IgnoreVisareas="0" CastShadowMaps="1" GIMode="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistRatio="100" ExcludeFromNavigation="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" IgnoreTerrainLayerBlend="0" IgnoreDecalBlend="0" RndFlags="180060000408">
     <CollisionFiltering />
@@ -205,33 +205,11 @@
     </Points>
    </Object>
    <Object Type="Prefab" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="3cb8b373-9812-f663-6c76-d7f607c17987" Name="cyber_marica-1" Pos="429.94269,815.57324,32.999512" Rotate="0.9238795,0,0,-0.38268346" Scale="1,1,1" ColorRGB="56575" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" PrefabGUID="d743ca24-88ab-1786-a735-f5ae040b67bd" PrefabName="prefabs/cyber_marica.cyber_marica"/>
-   <Object Type="EntityWithComponent" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="7d5896d4-2642-eba5-068e-6a8dc3530f87" Name="Hero" Pos="443.18005,803.38818,31.999756" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+   <Object Type="EntityWithComponent" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="7d5896d4-2642-eba5-068e-6a8dc3530f87" Name="NPC" Pos="443.33682,802.49731,31.999756" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
     <Properties />
     <Components>
      <Component CryXmlVersion="2" TypeGUID="95a26bf9-0ac4-4593-a7cb-c2e0e864bd41" TypeName="DoxD::CActorComponent" GUID="6c3819ba-30a6-2946-e4cf-94f8a81348b2" Name="" UserAdded="true">
       <properties />
-     </Component>
-     <Component CryXmlVersion="2" TypeGUID="b5e7a5e5-4fda-4513-a448-820f834454f4" TypeName="DoxD::CActorAnimationComponent" GUID="c1ffbc8a-1f2c-1685-0aee-1f95a1e63842" Name="" UserAdded="false">
-      <Transform>
-       <translation>
-        <position>
-         <element element="0"/>
-         <element element="0"/>
-         <element element="0"/>
-        </position>
-       </translation>
-       <rotation x="0" y="-0" z="0"/>
-       <scale>
-        <element element="1"/>
-        <element element="1"/>
-        <element element="1"/>
-       </scale>
-      </Transform>
-      <properties Type="RenderAndCollider" Character="Objects/Characters/m_biker_fat_01.cdf" Material="Default" DatabasePath="Animations/Mannequin/ADB/npccharacterfat.adb" AnimDriven="true" GroundAlign="false">
-       <Render ShadowSpec="Low" IgnoreVisArea="false" IgnoreTerrainLayerBlend="false" IgnoreDecalBlend="false" ViewDistRatio="100" LODDistance="100" GIMode="None"/>
-       <DefaultScope ControllerDefPath="Animations/Mannequin/ADB/NPCCharacterControllerDefinition.xml" DefaultScope="NPCCharacter" DefaultFragment="Idle"/>
-       <Physics WeightType="EWeightType::Mass" Density="9.9999997e-05" Mass="10"/>
-      </properties>
      </Component>
      <Component CryXmlVersion="2" TypeGUID="98183f31-a685-43cd-92a9-815274f0a81c" TypeName="Cry::DefaultComponents::CCharacterControllerComponent" GUID="1df732d4-9fa9-ffc3-092d-ba7c3fa15d6c" Name="" UserAdded="false">
       <Transform>
@@ -255,7 +233,7 @@
       </properties>
      </Component>
      <Component CryXmlVersion="2" TypeGUID="d75a8b46-158f-461c-b93e-035217c6b481" TypeName="DoxD::CActorControllerComponent" GUID="e75c41c5-18ce-161c-d897-c3a5ee66aa3b" Name="" UserAdded="false">
-      <properties />
+      <properties WalkBaseSpeed="1.5" JogBaseSpeed="4.1999998" RunBaseSpeed="6.3000002" CrawlBaseSpeed="1.2" CrouchBaseSpeed="1.2"/>
      </Component>
      <Component CryXmlVersion="2" TypeGUID="cd211079-a759-4257-b605-44dc6ab31e20" TypeName="DoxD::CSnaplockComponent" GUID="c7f24003-72ee-57ac-c59d-dc99960fefb6" Name="" UserAdded="false">
       <Transform>
@@ -281,7 +259,111 @@
      <Component CryXmlVersion="2" TypeGUID="bae91d5c-8cfb-40b2-8397-f5a9eedb9ac4" TypeName="Cry::Audio::DefaultComponents::CListenerComponent" GUID="3e9c6b77-26b8-97c4-75ff-cf5a2ad094e4" Name="" UserAdded="false">
       <properties>
        <listener name="Default Listener">
-        <offset x="0.88729858" y="-1.0690918" z="2.3698006"/>
+        <offset x="0" y="0" z="0"/>
+       </listener>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="3cd5ddc5-ee15-437f-a997-79c2391537fe" TypeName="Cry::DefaultComponents::CAdvancedAnimationComponent" GUID="4ff5ecfd-1c02-1008-93fd-f225450f2e41" Name="" UserAdded="false">
+      <Transform>
+       <translation>
+        <position>
+         <element element="0"/>
+         <element element="0"/>
+         <element element="0"/>
+        </position>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale>
+        <element element="1"/>
+        <element element="1"/>
+        <element element="1"/>
+       </scale>
+      </Transform>
+      <properties Type="RenderAndCollider" Character="Objects/Characters/m_biker_fat_01.cdf" Material="Default" DatabasePath="Animations/Mannequin/ADB/npccharacterfat.adb" ControllerDefPath="Animations/Mannequin/ADB/NPCCharacterControllerDefinition.xml" DefaultScope="NPCCharacter" DefaultFragment="Idle" AnimDriven="true" GroundAlign="true">
+       <IEditorEntityComponent />
+       <Render ShadowSpec="Low" IgnoreVisArea="false" IgnoreTerrainLayerBlend="false" IgnoreDecalBlend="false" ViewDistRatio="100" LODDistance="100" GIMode="None"/>
+       <Physics WeightType="EWeightType::Mass" Density="9.9999997e-05" Mass="10"/>
+      </properties>
+     </Component>
+    </Components>
+   </Object>
+   <Object Type="EntityWithComponent" Layer="Main" LayerGUID="794d3253-6be3-c6e3-c316-16ae5c3d1997" Id="aff6b536-4190-1f2d-7f73-1e1737c914ad" Name="Hero" Pos="435.78961,802.99866,31.999756" Rotate="1,0,0,0" Scale="1,1,1" ColorRGB="65535" UseCustomLevelLayerColor="0" MinSpec="0" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="95a26bf9-0ac4-4593-a7cb-c2e0e864bd41" TypeName="DoxD::CActorComponent" GUID="d6079586-ab5b-f2af-992b-8e1886273ac6" Name="" UserAdded="true">
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="3cd5ddc5-ee15-437f-a997-79c2391537fe" TypeName="Cry::DefaultComponents::CAdvancedAnimationComponent" GUID="7b9eadf0-b1fa-f3e6-4f1a-4ae0348a45cf" Name="" UserAdded="false">
+      <Transform>
+       <translation>
+        <position>
+         <element element="0"/>
+         <element element="0"/>
+         <element element="0"/>
+        </position>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale>
+        <element element="1"/>
+        <element element="1"/>
+        <element element="1"/>
+       </scale>
+      </Transform>
+      <properties Type="RenderAndCollider" Character="Objects/Characters/PuffyDelite/puffydelite.cdf" Material="Objects/Characters/PuffyDelite/materials/sk_puffydelite_hitmaterial" DatabasePath="Animations/Mannequin/ADB/FirstPerson.adb" ControllerDefPath="Animations/Mannequin/ADB/FirstPersonControllerDefinition.xml" DefaultScope="ThirdPersonCharacter" DefaultFragment="Idle" AnimDriven="true" GroundAlign="false">
+       <IEditorEntityComponent />
+       <Render ShadowSpec="Low" IgnoreVisArea="false" IgnoreTerrainLayerBlend="false" IgnoreDecalBlend="false" ViewDistRatio="100" LODDistance="100" GIMode="None"/>
+       <Physics WeightType="EWeightType::Mass" Density="9.9999997e-05" Mass="10"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="98183f31-a685-43cd-92a9-815274f0a81c" TypeName="Cry::DefaultComponents::CCharacterControllerComponent" GUID="c55fcbe5-671b-bbdb-9c0a-645ddbc164c9" Name="" UserAdded="false">
+      <Transform>
+       <translation>
+        <position>
+         <element element="0"/>
+         <element element="0"/>
+         <element element="0"/>
+        </position>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale>
+        <element element="1"/>
+        <element element="1"/>
+        <element element="1"/>
+       </scale>
+      </Transform>
+      <properties Networked="false">
+       <Physics Mass="80" Radius="0.44999999" Height="0.935" Capsule="true" GroundContactEps="0.0040000002" SendCollisionSignal="false"/>
+       <Movement AirControl="0" AirResistance="0.2" Inertia="8" InertiaAcc="8" MaxClimb="0.87266463" MaxJump="0.87266463" MinSlide="1.2217305" MinFall="1.3962634" MaxGroundVelocity="16"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="d75a8b46-158f-461c-b93e-035217c6b481" TypeName="DoxD::CActorControllerComponent" GUID="f79a9ad4-b6bd-5123-fcee-8fe378d88173" Name="" UserAdded="false">
+      <properties WalkBaseSpeed="2.0999999" JogBaseSpeed="4.1999998" RunBaseSpeed="6.3000002" CrawlBaseSpeed="1.2" CrouchBaseSpeed="1.2"/>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="cd211079-a759-4257-b605-44dc6ab31e20" TypeName="DoxD::CSnaplockComponent" GUID="059c85b5-939e-892c-18dc-f3cb41636067" Name="" UserAdded="false">
+      <Transform>
+       <translation>
+        <position>
+         <element element="0"/>
+         <element element="0"/>
+         <element element="0"/>
+        </position>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale>
+        <element element="1"/>
+        <element element="1"/>
+        <element element="1"/>
+       </scale>
+      </Transform>
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="dd951bc3-3eb4-478f-8414-f9a5a5cb3437" TypeName="DoxD::CEntityAwarenessComponent" GUID="0e5f02fc-cc28-558e-66c2-1393fa04634a" Name="" UserAdded="false">
+      <properties />
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="bae91d5c-8cfb-40b2-8397-f5a9eedb9ac4" TypeName="Cry::Audio::DefaultComponents::CListenerComponent" GUID="3f6bef04-8276-4a42-ae6c-6e30a2483b98" Name="" UserAdded="false">
+      <properties>
+       <listener name="Default Listener">
+        <offset x="0.49264526" y="-0.8762207" z="2.2583351"/>
        </listener>
       </properties>
      </Component>

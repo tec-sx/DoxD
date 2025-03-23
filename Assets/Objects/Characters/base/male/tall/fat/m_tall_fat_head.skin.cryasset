@@ -10,6 +10,6 @@
   <Detail name="bonesCount">76</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">./Default.mtl</Path>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/materials/m_m_fat.mtl</Path>
  </Dependencies>
 </AssetMetadata>

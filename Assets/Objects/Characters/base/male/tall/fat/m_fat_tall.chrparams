@@ -1,4 +1,40 @@
 <Params>
+    <IK_Definition>
+        <LimbIK_Definition>
+            <IK EndEffector="hand_r" Handle="lowerarm_r" Root="upperarm_r" Solver="2BIK"/>
+            <IK EndEffector="hand_l" Handle="lowerarm_l" Root="upperarm_l" Solver="2BIK"/>
+            <IK EndEffector="foot_r" Handle="calf_r" Root="thigh_r" Solver="2BIK"/>
+            <IK EndEffector="foot_l" Handle="calf_l" Root="thigh_l" Solver="2BIK"/>
+        </LimbIK_Definition>
+
+        <FeetLock_Definition>
+            <RIKHandle Handle="calf_r"/>
+            <LIKHandle Handle="calf_l"/>
+        </FeetLock_Definition>
+
+        <LookIK_Definition>
+            <LEyeAttachment Name="c_eye_l" />
+            <REyeAttachment Name="c_eye_r" />
+            <DirectionalBlends>
+                <Joint AnimToken="Fat_M_LookPose" ParameterJoint="head" StartJoint="Bip01 Look" ReferenceJoint="neck_01"/>
+            </DirectionalBlends>
+            <RotationList>
+                <Rotation Additive="1" Primary="1" JointName="pelvis"/>
+                <Rotation Additive="1" Primary="1" JointName="spine_01"/>
+                <Rotation Additive="1" Primary="1" JointName="spine_02"/>
+                <Rotation Additive="1" Primary="1" JointName="spine_03" />
+                <Rotation Additive="1" Primary="1" JointName="neck_01" />
+                <Rotation Additive="0" Primary="1" JointName="head" />
+                <Rotation Additive="1" Primary="0" JointName="clavicle_r" />
+                <Rotation Additive="1" Primary="0" JointName="upperarm_r" />
+                <Rotation Additive="1" Primary="0" JointName="clavicle_l" />
+                <Rotation Additive="1" Primary="0" JointName="upperarm_l" />
+            </RotationList>
+            <PositionList>
+                <Position Additive="1" JointName="pelvis"/>
+            </PositionList>
+        </LookIK_Definition>
+    </IK_Definition>
  <AnimationList>
   <Animation name="$Include" path="Animations/human/male/fat/anim_m_fat.chrparams"/>
  </AnimationList>

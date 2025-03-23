@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="e8fcaaf3-dca4-a427-7734-670a548baa36" source="model.dae">
+ <Files>
+  <File path="abandoned_security_hut.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">14</Detail>
+  <Detail name="triangleCount">1428</Detail>
+  <Detail name="vertexCount">1741</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">Objects/levels/01_bar/buildings/abandoned_security_hut/m_abandoned_security_hut.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

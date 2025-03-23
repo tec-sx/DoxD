@@ -7,6 +7,7 @@
 #include "Components/Player/PlayerComponent.h"
 #include "Components/Player/Camera/ICameraComponent.h"
 #include "Actor/StateMachine/ActorStateEvents.h"
+#include "Actor/StateMachine/ActorStateUtility.h"
 
 namespace DoxD
 {
@@ -20,13 +21,52 @@ namespace DoxD
 		}
 	}
 
+	void CActorControllerComponent::ReflectType(Schematyc::CTypeDesc<CActorControllerComponent>& desc)
+	{
+		desc.SetGUID(CActorControllerComponent::IID());
+		desc.SetEditorCategory("Actors");
+		desc.SetLabel("Actor Controller");
+		desc.SetDescription("Actor controller.");
+		desc.SetIcon("icons:ObjectTypes/light.ico");
+		desc.SetComponentFlags({ IEntityComponent::EFlags::Singleton });
+
+		desc.AddComponentInteraction(SEntityComponentRequirements::EType::HardDependency, CActorComponent::IID());
+		//desc.AddComponentInteraction(SEntityComponentRequirements::EType::HardDependency, "{3CD5DDC5-EE15-437F-A997-79C2391537FE}"_cry_guid);
+
+		desc.AddMember(&CActorControllerComponent::m_walkBaseSpeed, 'wabs', "WalkBaseSpeed", "Walk Speed", "Default walking speed", 2.1);
+		desc.AddMember(&CActorControllerComponent::m_jogBaseSpeed, 'jobs', "JogBaseSpeed", "Jog Speed", "Default jogging speed", 4.2);
+		desc.AddMember(&CActorControllerComponent::m_runBaseSpeed, 'rubs', "RunBaseSpeed", "Run Speed", "Default running speed", 6.3);
+		desc.AddMember(&CActorControllerComponent::m_crawlBaseSpeed, 'cwbs', "CrawlBaseSpeed", "Crawl Speed", "Default crawling speed", 1.2f);
+		desc.AddMember(&CActorControllerComponent::m_crouchBaseSpeed, 'crbs', "CrouchBaseSpeed", "Crouch Speed", "Default crouching speed", 1.2f);
+	}
+
+	void SActorPhysics::Serialize(TSerialize ser, EEntityAspects aspects)
+	{
+		assert(ser.GetSerializationTarget() != eST_Network);
+		ser.BeginGroup("PlayerStats");
+
+		if (ser.GetSerializationTarget() != eST_Network)
+		{
+			//when reading, reset the structure first.
+			if (ser.IsReading())
+				*this = SActorPhysics();
+
+			ser.Value("gravity", gravity);
+			ser.Value("velocity", velocity);
+			ser.Value("velocityUnconstrained", velocityUnconstrained);
+			ser.Value("groundNormal", groundNormal);
+		}
+
+		ser.EndGroup();
+	}
+
 	void CActorControllerComponent::Initialize()
 	{
 		// Mesh and animation.
 		m_pAnimationComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CAdvancedAnimationComponent>();
 
 		// Character movement controller.
-		m_pCharacterControllerComponent = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CCharacterControllerComponent>();
+		m_pCharacterController = m_pEntity->GetOrCreateComponent<Cry::DefaultComponents::CCharacterControllerComponent>();
 		m_pActorComponent = m_pEntity->GetOrCreateComponent<CActorComponent>();
 		CRY_ASSERT_MESSAGE(m_pActorComponent, "The actor controller component must be paired with an actor component.");
 
@@ -87,34 +127,45 @@ namespace DoxD
 	{
 		// TODO: HACK: BROKEN: This stuff was commented out in the character pre-physics. Some of it might belong here now.
 
-		//	// The routine will need to be rewritten to work with actors only, or we need a new one that does the actor, that
-		//	// is called by a character version of this.
-		//	CActorStateUtility::UpdatePhysicsState(*this, m_actorPhysics, frameTime);
-		
-		//	//#ifdef STATE_DEBUG
-		//	//		if (g_pGameCVars->pl_watchPlayerState >= (bIsClient ? 1 : 2))
-		//	//		{
-		//	//			// NOTE: outputting this info here is 'was happened last frame' not 'what was decided this frame' as it occurs before the prePhysicsEvent is dispatched
-		//	//			// also IsOnGround and IsInAir can possibly both be false e.g. - if you're swimming
-		//	//			// May be able to remove this log now the new HSM debugging is in if it offers the same/improved functionality
-		//	//			CryWatch("%s stance=%s flyMode=%d %s %s%s%s%s", GetEntity()->GetEntityTextDescription(), GetStanceName(GetStance()), m_actorState.flyMode, IsOnGround() ? "ON-GROUND" : "IN-AIR", IsViewFirstPerson() ? "FIRST-PERSON" : "THIRD-PERSON", IsDead() ? "DEAD" : "ALIVE", m_actorState.isScoped ? " SCOPED" : "", m_actorState.isInBlendRagdoll ? " FALLNPLAY" : "");
-		//	//		}
-		//	//#endif
-		
-		//	// Push the pre-physics event down to our state machine.
-		//	const SActorPrePhysicsData prePhysicsData(frameTime);
-		//	const SStateEventActorMovementPrePhysics prePhysicsEvent(&prePhysicsData);
-		//	StateMachineHandleEventMovement(STATE_DEBUG_APPEND_EVENT(prePhysicsEvent));
-		
-		//	// Bring the animation state of the character into line with it's requested state.
-		//	UpdateAnimationState();
+		if (m_pCharacterController)
+		{
+			const float frameTime = gEnv->pTimer->GetFrameTime();
+			IPhysicalEntity* pPhysEnt = GetEntity()->GetPhysics();
+
+			if (pPhysEnt)
+			{
+				pe_player_dynamics pd;
+				if (pPhysEnt->GetParams(&pd))
+					m_actorPhysics.gravity = pd.gravity;
+			}
+
+			// The routine will need to be rewritten to work with actors only, or we need a new one that does the actor, that
+			// is called by a character version of this.
+			CActorStateUtility::UpdatePhysicsState(*this, m_actorPhysics, frameTime);
+
+			const SActorPrePhysicsData prePhysicsData(frameTime);
+			const SStateEventActorMovementPrePhysics prePhysicsEvent(&prePhysicsData);
+			StateMachineHandleEventMovement(STATE_DEBUG_APPEND_EVENT(prePhysicsEvent));
+
+			//#ifdef STATE_DEBUG
+			//		if (g_pGameCVars->pl_watchPlayerState >= (bIsClient ? 1 : 2))
+			//		{
+			//			// NOTE: outputting this info here is 'was happened last frame' not 'what was decided this frame' as it occurs before the prePhysicsEvent is dispatched
+			//			// also IsOnGround and IsInAir can possibly both be false e.g. - if you're swimming
+			//			// May be able to remove this log now the new HSM debugging is in if it offers the same/improved functionality
+			//			CryWatch("%s stance=%s flyMode=%d %s %s%s%s%s", GetEntity()->GetEntityTextDescription(), GetStanceName(GetStance()), m_actorState.flyMode, IsOnGround() ? "ON-GROUND" : "IN-AIR", IsViewFirstPerson() ? "FIRST-PERSON" : "THIRD-PERSON", IsDead() ? "DEAD" : "ALIVE", m_actorState.isScoped ? " SCOPED" : "", m_actorState.isInBlendRagdoll ? " FALLNPLAY" : "");
+			//		}
+			//#endif
+		}
+
+		//UpdateAnimationState();
 	}
 
 	void CActorControllerComponent::UpdateMovementRequest(float frameTime)
 	{
 		m_movementRequest = ZERO;
 
-		if (!m_pCharacterControllerComponent->IsOnGround())
+		if (!m_pCharacterController->IsOnGround())
 		{
 			m_movingDuration = 0.0f;
 			return;
@@ -156,7 +207,7 @@ namespace DoxD
 			// Only allow the character to rotate if they are moving.
 			if (m_movementRequest.len() > FLT_EPSILON)
 			{
-				 Ang3 facingDir = CCamera::CreateAnglesYPR(m_movementRequest.GetNormalizedFast());
+				Ang3 facingDir = CCamera::CreateAnglesYPR(m_movementRequest.GetNormalizedFast());
 
 				// Use their last orientation as their present direction.
 				// NOTE: I tried it with GetEntity()->GetWorldTM() but that caused crazy jitter issues.
@@ -235,14 +286,9 @@ namespace DoxD
 		}
 	}
 
+
 	float CActorControllerComponent::GetMovementBaseSpeed(TInputFlags movementDirectionFlags) const
 	{
-		const static float walkBaseSpeed{ 2.1f };
-		const static float jogBaseSpeed{ 4.2f };
-		const static float runBaseSpeed{ 6.3f };
-		const static float crawlBaseSpeed{ 1.2f };
-		const static float proneBaseSpeed{ 0.4f };
-		const static float crouchBaseSpeed{ 1.2f };
 		float baseSpeed{ 0.0f };
 		float dirScale{ 1.0f };
 
@@ -252,27 +298,27 @@ namespace DoxD
 			// Work out a base for walking, jogging or sprinting.
 			if (IsSprinting())
 			{
-				baseSpeed = runBaseSpeed;
+				baseSpeed = m_runBaseSpeed;
 			}
 			else
 			{
 				if (IsJogging())
-					baseSpeed = jogBaseSpeed;
+					baseSpeed = m_jogBaseSpeed;
 				else
-					baseSpeed = walkBaseSpeed;
+					baseSpeed = m_walkBaseSpeed;
 			}
 			break;
 
 		case EActorStance::crawling:
-			baseSpeed = crawlBaseSpeed;
+			baseSpeed = m_crawlBaseSpeed;
 			break;
 
 		case EActorStance::crouching:
-			baseSpeed = crouchBaseSpeed;
+			baseSpeed = m_crouchBaseSpeed;
 			break;
 
 		case EActorStance::swimming:
-			baseSpeed = walkBaseSpeed;
+			baseSpeed = m_walkBaseSpeed;
 			break;
 
 		default:

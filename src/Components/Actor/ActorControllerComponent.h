@@ -3,8 +3,8 @@
 #include <DefaultComponents/Physics/CharacterControllerComponent.h>
 #include <Utility/StateMachine.h>
 #include <Actor/Animation/ActorAnimation.h>
-#include <Components/Actor/ActorComponent.h>
 #include <Components/Player/Input/PlayerInputComponent.h>
+#include "Actor/ActorDefinitions.h"
 
 namespace DoxD
 {
@@ -51,18 +51,7 @@ namespace DoxD
 		CActorControllerComponent() {}
 		virtual ~CActorControllerComponent() { StateMachineReleaseMovement(); }
 
-		static void ReflectType(Schematyc::CTypeDesc<CActorControllerComponent>& desc)
-		{
-			desc.SetGUID(CActorControllerComponent::IID());
-			desc.SetEditorCategory("Actors");
-			desc.SetLabel("Actor Controller");
-			desc.SetDescription("Actor controller.");
-			desc.SetIcon("icons:ObjectTypes/light.ico");
-			desc.SetComponentFlags({ IEntityComponent::EFlags::Singleton });
-
-			desc.AddComponentInteraction(SEntityComponentRequirements::EType::HardDependency, CActorComponent::IID());
-			//desc.AddComponentInteraction(SEntityComponentRequirements::EType::HardDependency, "{3CD5DDC5-EE15-437F-A997-79C2391537FE}"_cry_guid);
-		}
+		static void ReflectType(Schematyc::CTypeDesc<CActorControllerComponent>& desc);
 
 		static CryGUID& IID()
 		{
@@ -76,11 +65,11 @@ namespace DoxD
 		const bool IsPlayer() const;
 		const virtual Vec3 GetLocalEyePos() const;
 
-		virtual void AddVelocity(const Vec3& velocity) { m_pCharacterControllerComponent->AddVelocity(velocity); }
-		virtual void SetVelocity(const Vec3& velocity) { m_pCharacterControllerComponent->SetVelocity(velocity); }
+		virtual void AddVelocity(const Vec3& velocity) { m_pCharacterController->AddVelocity(velocity); }
+		virtual void SetVelocity(const Vec3& velocity) { m_pCharacterController->SetVelocity(velocity); }
 
-		const Vec3& GetVelocity() const { return m_pCharacterControllerComponent->GetVelocity(); }
-		Vec3 GetMoveDirection() const { return m_pCharacterControllerComponent->GetMoveDirection(); }
+		const Vec3& GetVelocity() const { return m_pCharacterController->GetVelocity(); }
+		Vec3 GetMoveDirection() const { return m_pCharacterController->GetMoveDirection(); }
 
 		float virtual GetMovementBaseSpeed(TInputFlags movementDirectionFlags) const;
 
@@ -91,6 +80,9 @@ namespace DoxD
 		void SetStance(EActorStance stance) { m_actorStance.SetStance(stance); }
 		EActorPosture GetPosture() const { return m_actorStance.GetPosture(); }
 		void SetPosture(EActorPosture posture) { m_actorStance.SetPosture(posture); }
+
+		virtual SActorStats* GetActorStats() { return &m_stats; }
+		virtual const SActorStats* GetActorStats() const { return &m_stats; }
 
 		void OnActionCrouchToggle();
 		void OnActionCrawlToggle();
@@ -108,8 +100,14 @@ namespace DoxD
 
 	private:
 		Cry::DefaultComponents::CAdvancedAnimationComponent* m_pAnimationComponent{ nullptr };
-		Cry::DefaultComponents::CCharacterControllerComponent* m_pCharacterControllerComponent{ nullptr };
+		Cry::DefaultComponents::CCharacterControllerComponent* m_pCharacterController{ nullptr };
 		CActorComponent* m_pActorComponent{ nullptr };
+
+		float m_walkBaseSpeed = 2.1f;
+		float m_jogBaseSpeed = 4.2f;
+		float m_runBaseSpeed = 6.3f;
+		float m_crawlBaseSpeed = 1.2f;
+		float m_crouchBaseSpeed = 1.2f;
 
 		bool m_isAIControlled{ false };
 		Vec3 m_lookTarget{ ZERO };
@@ -129,6 +127,9 @@ namespace DoxD
 		SActorStance m_actorStance;
 		TagState m_mannequinTagsClear{ TAG_STATE_EMPTY };
 		TagState m_mannequinTagsSet{ TAG_STATE_EMPTY };
+		SActorPhysics m_actorPhysics;
+
+		SActorStats m_stats;
 	};
 }
 

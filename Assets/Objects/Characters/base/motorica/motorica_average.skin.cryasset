@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="8cf94e94-5ced-f567-bba8-7ca125442898" source="Motorica_Average.fbx">
+ <Files>
+  <File path="motorica_average.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">4</Detail>
+  <Detail name="triangleCount">28972</Detail>
+  <Detail name="vertexCount">15444</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">68</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">%ENGINE%/EngineAssets/Materials/material_default.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Character" guid="457d8288-6294-88f5-a10f-a567d75b5a21">
+ <Files>
+  <File path="motorica_average.cdf"/>
+ </Files>
+ <Details />
+ <Dependencies>
+  <Path>Objects/Characters/base/motorica/motorica.chr</Path>
+  <Path>Objects/Characters/base/motorica/motorica_average.skin</Path>
+ </Dependencies>
+</AssetMetadata>

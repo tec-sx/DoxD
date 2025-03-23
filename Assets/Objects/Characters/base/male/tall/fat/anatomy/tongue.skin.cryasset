@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="SkinnedMesh" guid="bacb53a2-cebd-3996-114d-c4a4915db232" source="objects/characters/base/male/tall/fat/m_fat_tall.fbx" timestamp="1740517413">
+<AssetMetadata version="0" type="SkinnedMesh" guid="bacb53a2-cebd-3996-114d-c4a4915db232" source="m_fat_tall.fbx" timestamp="1740517413">
  <Files>
   <File path="tongue.skin"/>
  </Files>
@@ -10,6 +10,6 @@
   <Detail name="bonesCount">11</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">objects/characters/base/male/tall/fat/anatomy/material/m_mouth.mtl</Path>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
  </Dependencies>
 </AssetMetadata>

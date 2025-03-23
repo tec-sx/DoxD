@@ -3,7 +3,8 @@
 #include "ActorStateUtility.h"
 #include "ActorStateEvents.h"
 //#include <Actor/Movement/StateMachine/ActorStateJump.h>
-#include <Components/Actor/ActorControllerComponent.h>
+#include "Components/Actor/ActorControllerComponent.h"
+#include "Actor/ActorDefinitions.h"
 /*
 #include <IItem.h>
 #include <IAnimatedCharacter.h>
@@ -253,7 +254,7 @@ namespace DoxD
 
 	void CActorStateUtility::UpdatePhysicsState(CActorControllerComponent& actorControllerComponent, SActorPhysics& actorPhysics, float frameTime)
 	{
-		/*const int currentFrameID = gEnv->pRenderer->GetFrameID();
+	/*	const int currentFrameID = gEnv->pRenderer->GetFrameID();
 
 		if (actorPhysics.lastFrameUpdate < currentFrameID)
 		{
@@ -263,14 +264,14 @@ namespace DoxD
 				return;
 			}
 
-			SActorStats& stats = *actorControllerComponent.GetActorState();
+			SActorStats& stats = *actorControllerComponent.GetActorStats();
 
 			const Vec3 newVelocity = livStat.vel - livStat.velGround;
 			actorPhysics.velocityDelta = newVelocity - actorPhysics.velocity;
 			actorPhysics.velocity = newVelocity;
 			actorPhysics.velocityUnconstrainedLast = actorPhysics.velocityUnconstrained;
 			actorPhysics.velocityUnconstrained = livStat.velUnconstrained;
-			actorPhysics.flags.SetFlags(SActorPhysics:WasFlying, actorPhysics.flags.AreAnyFlagsActive(SActorPhysics::EActorPhysicsFlags::Flying));
+			actorPhysics.flags.SetFlags(SActorPhysics::WasFlying, actorPhysics.flags.AreAnyFlagsActive(SActorPhysics::EActorPhysicsFlags::Flying));
 			actorPhysics.flags.SetFlags(SActorPhysics::EActorPhysicsFlags::Flying, livStat.bFlying > 0);
 			actorPhysics.flags.SetFlags(SActorPhysics::EActorPhysicsFlags::Stuck, livStat.bStuck > 0);
 
@@ -375,26 +376,24 @@ namespace DoxD
 
 	bool CActorStateUtility::IsMovingForward(const CActorControllerComponent& actorControllerComponent)
 	{
-		/*const float fSpeedFlatSelector = actorControllerComponent.GetActorState ()->speedFlat - 0.1f;
-		bool movingForward = (fSpeedFlatSelector > 0.1f);
 
-		if (!gEnv->bMultiCharacter || actorControllerComponent.IsClient ())
-		{
-		// IsMovingForward() doesn't return particularly reliable results for client characters in MP, I think because of
-		// interpolation inaccuracies on the Y velocity. This was causing client characters to incorrectly report that they're
-		// no longer moving forwards, whereas all that had happened was they had stopped sprinting - and this in turn was
-		// messing up the MP sprint stamina regeneration delays. Client characters have also been seen to stop sprinting due to
-		// turning lightly, whereas on their local machine they were still sprinting fine... so I've tried changing it so
-		// IsMovingForward() is only taken into account on local clients (and in SP!).
-		const float thresholdSinAngle = sin_tpl ((3.141592f * 0.5f) - DEG2RAD (g_pGameCVars->pl_power_sprint.foward_angle));
-		const float currentSinAngle = actorControllerComponent.GetVelocity().y;
+		//const float fSpeedFlatSelector = actorControllerComponent.GetActorState().speedFlat - 0.1f;
+		//bool movingForward = (fSpeedFlatSelector > 0.1f);
 
-		movingForward = movingForward && (currentSinAngle > thresholdSinAngle);
-		}
+		//// IsMovingForward() doesn't return particularly reliable results for client characters in MP, I think because of
+		//// interpolation inaccuracies on the Y velocity. This was causing client characters to incorrectly report that they're
+		//// no longer moving forwards, whereas all that had happened was they had stopped sprinting - and this in turn was
+		//// messing up the MP sprint stamina regeneration delays. Client characters have also been seen to stop sprinting due to
+		//// turning lightly, whereas on their local machine they were still sprinting fine... so I've tried changing it so
+		//// IsMovingForward() is only taken into account on local clients (and in SP!).
+		//const float thresholdSinAngle = sin_tpl ((3.141592f * 0.5f) - DEG2RAD (g_pCVars->pl_power_sprint.foward_angle));
+		//const float currentSinAngle = actorControllerComponent.GetVelocity().y;
 
-		return movingForward;*/
+		//movingForward = movingForward && (currentSinAngle > thresholdSinAngle);
 
-		return false;
+		//return movingForward;
+
+		return true;
 	}
 
 

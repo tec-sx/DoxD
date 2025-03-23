@@ -3,7 +3,7 @@
  <Fragments filename="Animations/Mannequin/ADB/PlayerFragmentIds.xml"/>
  <FragmentDefs>
   <Idle scopes="FullBody" flags="Persistent+AutoReinstall"/>
-  <Walk scopes="FullBody"/>
+  <Move scopes="FullBody"/>
  </FragmentDefs>
  <ScopeContextDefs>
   <NPCCharacter />

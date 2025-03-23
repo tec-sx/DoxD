@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="SkinnedMesh" guid="8b1dafe2-541f-7741-8a8d-42cab0074eba" source="objects/characters/base/male/tall/fat/m_fat_tall.fbx" timestamp="1740517406">
+<AssetMetadata version="0" type="SkinnedMesh" guid="8b1dafe2-541f-7741-8a8d-42cab0074eba" source="m_fat_tall.fbx" timestamp="1740517406">
  <Files>
   <File path="teeth_upper.skin"/>
  </Files>

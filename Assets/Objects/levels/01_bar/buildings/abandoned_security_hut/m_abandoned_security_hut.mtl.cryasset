@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="0c7ed247-37ca-3c63-1c8c-da78455f7560">
+ <Files>
+  <File path="m_abandoned_security_hut.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">13</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="13">%ENGINE%/EngineAssets/Textures/white.dds</Path>
+  <Path usageCount="13">%ENGINE%/EngineAssets/Textures/white_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

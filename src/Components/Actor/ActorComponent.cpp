@@ -1,6 +1,18 @@
 #include "StdAfx.h"
 
 #include "ActorComponent.h"
+#include "Actor/ActorDefinitions.h"
+#include "Actor/Animation/ActorAnimation.h"
+#include "Actor/Animation/Actions/ActorAnimationActionLocomotion.h"
+#include "Actor/Animation/Actions/ActorAnimationActionLookPose.h"
+#include "Actor/StateMachine/ActorStateEvents.h"
+#include "Components/Snaplocks/SnaplockComponent.h"
+#include "Components/Player/PlayerComponent.h"
+#include "Components/Player/Camera/ICameraComponent.h"
+#include "Components/Interaction/EntityInteractionComponent.h"
+#include "Components/Interaction/EntityAwarenessComponent.h"
+#include "Animation/ProceduralContext/ProceduralContextLook.h"
+#include <CryDynamicResponseSystem/IDynamicResponseSystem.h>
 #include <CrySchematyc/Env/IEnvRegistrar.h>
 #include <CrySchematyc/Env/Elements/EnvComponent.h>
 #include <CryCore/StaticInstanceList.h>
@@ -8,16 +20,6 @@
 #include <CryCore/Assert/CryAssert.h>
 #include <ICryMannequin.h>
 #include <IGameObject.h>
-#include <Actor/Animation/ActorAnimation.h>
-#include <Actor/Animation/Actions/ActorAnimationActionLocomotion.h>
-#include <Actor/StateMachine/ActorStateEvents.h>
-#include <Components/Actor/ActorControllerComponent.h>
-#include <Components/Snaplocks/SnaplockComponent.h>
-#include <Components/Player/PlayerComponent.h>
-#include <Components/Player/Camera/ICameraComponent.h>
-#include <Components/Interaction/EntityInteractionComponent.h>
-#include <Components/Interaction/EntityAwarenessComponent.h>
-#include <CryDynamicResponseSystem/IDynamicResponseSystem.h>
 
 namespace DoxD
 {
@@ -27,6 +29,18 @@ namespace DoxD
 		{
 			Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CActorComponent));
 		}
+	}
+
+	void CActorComponent::ReflectType(Schematyc::CTypeDesc<CActorComponent>& desc)
+	{
+		desc.SetGUID(CActorComponent::IID());
+		desc.SetEditorCategory("Actors");
+		desc.SetLabel("Actor");
+		desc.SetDescription("No description.");
+		desc.SetIcon("icons:ObjectTypes/light.ico");
+		desc.SetComponentFlags({ IEntityComponent::EFlags::Singleton });
+
+		//desc.AddMember(&CActorComponent::m_actorGeometry, 'geot', "ActorGeometry", "Actor Geometry", "", "");
 	}
 
 	void CActorComponent::Initialize()
@@ -405,17 +419,15 @@ namespace DoxD
 
 	bool CActorComponent::SetLookingIK(const bool isLooking, const Vec3& lookTarget) const
 	{
-		//const bool shouldHandle = (m_pProceduralContextLook != nullptr);
+		const bool shouldHandle = (m_pProceduralContextLook != nullptr);
 
-		//if (shouldHandle)
-		//{
-		//	m_pProceduralContextLook->SetLookTarget(lookTarget);
-		//	m_pProceduralContextLook->SetIsLookingGame(isLooking);
-		//}
+		if (shouldHandle)
+		{
+			m_pProceduralContextLook->SetLookTarget(lookTarget);
+			m_pProceduralContextLook->SetIsLookingGame(isLooking);
+		}
 
-		//return shouldHandle;
-
-		return false;
+		return shouldHandle;
 	}
 
 	void CActorComponent::OnInputInteraction(int activationMode)
@@ -451,37 +463,6 @@ namespace DoxD
 	}
 	void CActorComponent::OnActionInteractionEnd()
 	{
-	}
-	void CActorComponent::OnActionCrouchToggle()
-	{
-	}
-	void CActorComponent::OnActionCrawlToggle()
-	{
-	}
-	void CActorComponent::OnActionSitToggle()
-	{
-	}
-
-	void CActorComponent::OnActionJogToggle()
-	{
-	}
-
-	void CActorComponent::OnActionSprintStart()
-	{
-	}
-
-	void CActorComponent::OnActionSprintStop()
-	{
-	}
-
-	bool CActorComponent::IsSprinting() const
-	{
-		return false;
-	}
-
-	bool CActorComponent::IsJogging() const
-	{
-		return false;
 	}
 
 	void CActorComponent::InteractionStart(IInteraction* pInteraction)
@@ -573,7 +554,7 @@ namespace DoxD
 
 			// Select a character definition based on first / third person mode. Hard coding the default scope isn't a great
 			// idea, but it's good enough for now. 
-			m_pAnimationComponent->SetDefaultScopeContextName("Char3P");
+			m_pAnimationComponent->SetDefaultScopeContextName("NPCCharacter");
 			//m_pActorAnimationComponent->SetCharacterFile(m_geometryThirdPerson.value);
 
 			// Queue the locomotion action, which switches fragments and tags as needed for actor locomotion.
@@ -596,15 +577,15 @@ namespace DoxD
 				//animContext.state.Set(m_actorMannequinParams->tagIDs.ScopeLookPose, true);
 
 				//// Look actions.
-				////if (CActorAnimationActionLookPose::IsSupported(pContext) // HACK: These tests are causing crashes on the second run through.
-				//	//&& CActorAnimationActionLooking::IsSupported(pContext))
-				//{
-				//	const auto pX = m_pActorAnimationComponent->FindOrCreateProceduralContext(CProceduralContextLook::GetCID());
-				//	m_pProceduralContextLook = static_cast<CProceduralContextLook*>(pX);
+				if (CActorAnimationActionLookPose::IsSupported(pContext)) // HACK: These tests are causing crashes on the second run through.
+					//&& CActorAnimationActionLooking::IsSupported(pContext))
+				{
+					const auto pX = m_pAnimationComponent->GetActionController()->FindOrCreateProceduralContext(CProceduralContextLook::GetCID());
+					m_pProceduralContextLook = static_cast<CProceduralContextLook*>(pX);
 
-				//	QueueAction(*new CActorAnimationActionLookPose());
-				//	QueueAction(*new CActorAnimationActionLooking());
-				//}
+					QueueAction(*new CActorAnimationActionLookPose());
+					//QueueAction(*new CActorAnimationActionLooking());
+				}
 		}
 	}
 

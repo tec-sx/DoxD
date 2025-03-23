@@ -1,5 +1,5 @@
 <TagDefinition version="2">
- <Tags>
-  <Tag name="Rotate"/>
- </Tags>
+    <Tags>
+        <Tag name="Rotate" />
+    </Tags>
 </TagDefinition>

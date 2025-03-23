@@ -3,13 +3,13 @@
   <File path="m_tall_feet.skin"/>
  </Files>
  <Details>
-  <Detail name="16BitPrecision">false</Detail>
-  <Detail name="bonesCount">12</Detail>
-  <Detail name="materialCount">8</Detail>
+  <Detail name="materialCount">9</Detail>
   <Detail name="triangleCount">1500</Detail>
   <Detail name="vertexCount">944</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">12</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">Materials/characters/fat/m_m_fat.mtl</Path>
+  <Path usageCount="1">materials/m_m_fat.mtl</Path>
  </Dependencies>
 </AssetMetadata>

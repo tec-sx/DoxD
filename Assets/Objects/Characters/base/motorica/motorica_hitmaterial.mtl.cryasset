@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="f85ba225-4a7f-9175-2b57-4484264c72d6">
+ <Files>
+  <File path="motorica_hitmaterial.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

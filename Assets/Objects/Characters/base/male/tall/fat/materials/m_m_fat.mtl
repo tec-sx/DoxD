@@ -1,6 +1,6 @@
 <Material MtlFlags="524544" vertModifType="0">
  <SubMaterials>
-  <Material Name="Head" MtlFlags="524416" Shader="Humanskin" GenMask="2800000000020" StringGenMask="%NORMAL_MAP%SPECULAR_MAP%TEMP_SKIN" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Opacity="1" Shininess="255" CloakAmount="0" vertModifType="0" LayerAct="1">
+  <Material Name="Head" MtlFlags="524416" Shader="Humanskin" GenMask="2800000000020" StringGenMask="%NORMAL_MAP%SPECULAR_MAP%TEMP_SKIN" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Opacity="1" CloakAmount="0" vertModifType="0" LayerAct="1">
    <Textures>
     <Texture Map="Diffuse" File="objects/characters/base/male/tall/fat/textures/m_fat_head_01_diff.dds" Filter="4">
      <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0"/>

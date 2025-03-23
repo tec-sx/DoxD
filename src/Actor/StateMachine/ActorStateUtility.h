@@ -5,8 +5,8 @@ struct pe_status_living;
 namespace DoxD
 {
 	class CActorControllerComponent;
-	struct SStateEvent;
 	struct SActorPhysics;
+	struct SStateEvent;
 	struct IItem;
 
 

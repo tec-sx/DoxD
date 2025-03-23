@@ -185,8 +185,7 @@ namespace DoxD
 	//f( MPEnviro )
 
 #define MAN_ACTOR_SCOPES( f ) \
-	f( FullBody1P ) \
-	f( FullBody3P ) \
+	f( FullBody ) \
 	f( AimPose ) \
 	f( LookPose ) \
 
