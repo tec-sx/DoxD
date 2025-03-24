@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="982945cc-bacb-303a-2d47-fc616a25089e">
+ <Files>
+  <File path="plaster_sandstone_a.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/concrete/plaster_sandstone_a_diff.dds</Path>
+  <Path usageCount="1">textures/generic/concrete/plaster_sandstone_a_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

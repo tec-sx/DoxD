@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="ce726c3c-0f17-6692-c1a7-6e30170230a0">
+ <Files>
+  <File path="road_pebbles_industrial.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/road_pebbles_industrial_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/road_pebbles_industrial_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/road_pebbles_industrial_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="90f4488f-a8cb-c479-2595-0413c48b3740">
+ <Files>
+  <File path="wood_floor_a.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/wood_floor_a_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_floor_a_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_floor_a_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

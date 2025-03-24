@@ -1,0 +1,18 @@
+<AssetMetadata version="0" type="Material" guid="1cc14870-5378-158f-57e6-fd68a70c16b8">
+ <Files>
+  <File path="brick_raw.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">7</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/brick/brick_raw_diff.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_raw_ddna.dds</Path>
+  <Path usageCount="1">textures/detail_bumpmaps/rock/stone_dmap.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_raw_displ.dds</Path>
+  <Path usageCount="1">objects/natural/rocks/forest_rocks/textures/moss_diff.dds</Path>
+  <Path usageCount="1">objects/natural/rocks/forest_rocks/textures/moss_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_raw_blend.dds</Path>
+ </Dependencies>
+</AssetMetadata>

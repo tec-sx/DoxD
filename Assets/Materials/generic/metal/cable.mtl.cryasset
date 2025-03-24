@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="92bb513d-21ca-4634-0beb-2b56424a3e44">
+ <Files>
+  <File path="cable.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/cable_diff.dds</Path>
+  <Path usageCount="1">textures/generic/metal/cable_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

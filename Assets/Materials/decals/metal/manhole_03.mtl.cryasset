@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="22379d62-39ca-2bf0-a217-7180ab48b732">
+ <Files>
+  <File path="manhole_03.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/metal/manhole_03.dds</Path>
+  <Path usageCount="1">textures/decals/metal/manhole_03_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

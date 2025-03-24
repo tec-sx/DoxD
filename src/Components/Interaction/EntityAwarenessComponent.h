@@ -37,10 +37,6 @@ namespace DoxD
 			return id;
 		}
 
-		// ***
-		// *** CEntityAwarenessComponent
-		// ***
-
 		enum EDebugBits
 		{
 			eDB_Debug = BIT(0),
@@ -53,56 +49,25 @@ namespace DoxD
 		};
 
 
-		/** Updates this instance. */
 		void Update();
-
-
-		/**
-		Functor that receives the results of deferred ray-cast operations.
-
-		\param	rayID  Identifier for the ray.
-		\param	result The result.
-		**/
 		void OnRayCastDataReceived(const QueuedRayID& rayID, const RayCastResult& result);
-
-
-		/**
-		Gets the position of the actor's eyes.
-
-		\return The eye position.
-		**/
-		ILINE const Vec3& GetPos() const { return m_eyePosition; }
-
-
-		/**
-		Gets the normalised direction the actor's eye are gazing.
-
-		\return The direction.
-		**/
-		ILINE const Quat& GetDir() const { return m_eyeDirection; }
-
-
-		/**
-		Sets proximity radius, which determines how far away from the actor we will search for entities.
-
-		\param	proximityRadius The proximity radius.
-		**/
-		ILINE void SetProximityRadius(float proximityRadius)
+		inline const Vec3& GetPos() const { return m_eyePosition; }
+		inline const Quat& GetDir() const { return m_eyeDirection; }
+		
+		inline void SetProximityRadius(float proximityRadius)
 		{
 			m_proximityRadius = proximityRadius;
 			m_validQueries &= ~(eWQ_Proximity | eWQ_InFrontOf);
 		}
 
-
-		ILINE Entities& ProximityQuery()
+		inline Entities& ProximityQuery()
 		{
 			RefreshQueryCache(eWQ_Proximity);
 
 			return m_entitiesInProximity;
 		}
 
-
-		ILINE Entities& NearQuery()
+		inline Entities& NearQuery()
 		{
 			RefreshQueryCache(eWQ_Proximity);
 			RefreshQueryCache(eWQ_CloseBy);
@@ -111,14 +76,7 @@ namespace DoxD
 		}
 
 
-		/**
-		Gets the entity ID which is being looked at. This may return an invalid enity.
-
-		\param	ignoreGlass (Optional) True to ignore glass.
-
-		\return The look at entity identifier if found, or INVALID_ENTITYID if none.
-		**/
-		ILINE const EntityId GetLookAtEntityId(bool ignoreGlass = false)
+		inline const EntityId GetLookAtEntityId(bool ignoreGlass = false)
 		{
 			RefreshQueryCache(eWQ_Raycast);
 
@@ -132,7 +90,7 @@ namespace DoxD
 
 		\return The entities in front of the actor.
 		**/
-		ILINE const Entities& GetEntitiesInFrontOf()
+		inline const Entities& GetEntitiesInFrontOf()
 		{
 			return InFrontOfQuery();
 		}
@@ -144,7 +102,7 @@ namespace DoxD
 
 		\return	null if it fails, else the first entity in the list of those in front of the actor.
 		**/
-		ILINE IEntity* GetEntityInFrontOf()
+		inline IEntity* GetEntityInFrontOf()
 		{
 			auto entities = InFrontOfQuery();
 
@@ -192,7 +150,7 @@ namespace DoxD
 
 		\return null if it fails, else the look at point.
 		**/
-		ILINE const ray_hit* GetLookAtPoint(const float maxDistance = 0.0f, bool ignoreGlass = false)
+		inline const ray_hit* GetLookAtPoint(const float maxDistance = 0.0f, bool ignoreGlass = false)
 		{
 			RefreshQueryCache(eWQ_Raycast);
 
@@ -214,7 +172,7 @@ namespace DoxD
 
 		\return null if it fails, else the successful raycast data.
 		**/
-		ILINE const ray_hit* RaycastQuery()
+		inline const ray_hit* RaycastQuery()
 		{
 			return GetLookAtPoint(m_proximityRadius);
 		}
@@ -397,7 +355,7 @@ namespace DoxD
 
 		\return A reference to a const Entities.
 		**/
-		ILINE const Entities& InFrontOfQuery()
+		inline const Entities& InFrontOfQuery()
 		{
 			RefreshQueryCache(eWQ_Proximity);
 			RefreshQueryCache(eWQ_InFrontOf);

@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Mesh" guid="d2019eb3-0d8b-d24e-509b-af4a84e00a8e">
+ <Files>
+  <File path="i_beam_2m.cgf"/>
+  <File path="i_beam_2m_lod1.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">368</Detail>
+  <Detail name="vertexCount">488</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./Steel_Beams.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

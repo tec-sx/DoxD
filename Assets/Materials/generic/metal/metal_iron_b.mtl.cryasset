@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="041cd36c-a70b-92e8-bb9f-7c9423dd470c">
+ <Files>
+  <File path="metal_iron_b.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/metal_iron_b_diff.dds</Path>
+  <Path usageCount="1">textures/generic/metal/metal_iron_b_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/metal_iron_b_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

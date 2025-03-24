@@ -61,9 +61,7 @@ namespace DoxD
 
 		virtual void OnResetState();
 
-		bool IsAIControlled() const { return m_isAIControlled; };
-		const bool IsPlayer() const;
-		const virtual Vec3 GetLocalEyePos() const;
+		bool IsAIControlled() const { return m_isAIControlled; }
 
 		virtual void AddVelocity(const Vec3& velocity) { m_pCharacterController->AddVelocity(velocity); }
 		virtual void SetVelocity(const Vec3& velocity) { m_pCharacterController->SetVelocity(velocity); }
@@ -73,7 +71,7 @@ namespace DoxD
 
 		float virtual GetMovementBaseSpeed(TInputFlags movementDirectionFlags) const;
 
-		bool GetShouldJump() { return m_shouldJump; };
+		bool GetShouldJump() { return m_shouldJump; }
 		void SetShouldJump(bool shouldJump) { m_shouldJump = shouldJump; };
 
 		EActorStance GetStance() const { return m_actorStance.GetStance(); }
@@ -87,13 +85,13 @@ namespace DoxD
 		void OnActionCrouchToggle();
 		void OnActionCrawlToggle();
 		void OnActionSitToggle();
-		void OnActionJogToggle() { m_isJogging = !m_isJogging; };
-		void OnActionSprintStart() { m_isSprinting = true; };
-		void OnActionSprintStop() { m_isSprinting = false; };
+		void OnActionJogToggle() { m_isJogging = !m_isJogging; }
+		void OnActionSprintStart() { m_isSprinting = true; }
+		void OnActionSprintStop() { m_isSprinting = false; }
 		bool IsSprinting() const { return m_isSprinting; }
 		bool IsJogging() const { return m_isJogging; }
 
-		const CActorComponent* GetActor() { return m_pActorComponent; };
+		const CActorComponent* GetActor() { return m_pActorComponent; }
 
 		float durationInAir{ 0.0f };
 		float durationOnGround{ 0.0f };

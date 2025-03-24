@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="11b248a8-a4d9-3bb0-b774-b97bbec0733e">
+ <Files>
+  <File path="brick_damaged.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/brick/brick_damaged_diff.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_damaged_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_damaged_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

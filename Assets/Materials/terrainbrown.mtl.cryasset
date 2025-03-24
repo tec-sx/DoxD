@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="371b3a5d-8d07-8cc8-1daf-bc3d5228426b">
+ <Files>
+  <File path="terrainbrown.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/white.dds</Path>
+ </Dependencies>
+</AssetMetadata>

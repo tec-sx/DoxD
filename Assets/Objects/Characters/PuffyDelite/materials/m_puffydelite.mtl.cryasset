@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Material" guid="e7a80c15-dec3-13a1-43ae-4a7f3916ebc0" source="" timestamp="1735038891">
+<AssetMetadata version="0" type="Material" guid="e7a80c15-dec3-13a1-43ae-4a7f3916ebc0" timestamp="1735038891">
  <Files>
   <File path="m_puffydelite.mtl"/>
  </Files>
@@ -7,8 +7,8 @@
   <Detail name="textureCount">3</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="2">%ENGINE%/EngineAssets/Textures/white.dds</Path>
-  <Path usageCount="3">%ENGINE%/EngineAssets/Textures/white_ddn.dds</Path>
   <Path usageCount="1">./chocomint_4096.dds</Path>
+  <Path usageCount="3">%ENGINE%/EngineAssets/Textures/white_ddn.dds</Path>
+  <Path usageCount="2">%ENGINE%/EngineAssets/Textures/white.dds</Path>
  </Dependencies>
 </AssetMetadata>

@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Material" guid="16dd7ddc-94ef-d655-84e5-49b7c7698e29" source="" timestamp="1734989549">
+<AssetMetadata version="0" type="Material" guid="16dd7ddc-94ef-d655-84e5-49b7c7698e29" timestamp="1734989549">
  <Files>
   <File path="m_dumpster.mtl"/>
  </Files>
@@ -7,9 +7,9 @@
   <Detail name="textureCount">4</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">./textures/dumpster_basecolor.dds</Path>
-  <Path usageCount="2">./textures/dumpster_normal_gl.dds</Path>
   <Path usageCount="4">%ENGINE%/EngineAssets/Textures/white.dds</Path>
   <Path usageCount="4">%ENGINE%/EngineAssets/Textures/white_ddn.dds</Path>
+  <Path usageCount="1">./textures/dumpster_basecolor.dds</Path>
+  <Path usageCount="2">./textures/dumpster_normal_gl.dds</Path>
  </Dependencies>
 </AssetMetadata>

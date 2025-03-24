@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="be423b30-a2f1-4aa1-2444-f9485d1c2a9b">
+ <Files>
+  <File path="dirt_leaking_2.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/dirt/dirt_leaking_2.dds</Path>
+ </Dependencies>
+</AssetMetadata>

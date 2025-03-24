@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="dbd00c44-d5aa-4d32-85a0-013b8b8ac6ee">
+ <Files>
+  <File path="vertical_12_hard.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/shadow/vertical_12_hard_diff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

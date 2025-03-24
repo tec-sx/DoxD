@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="9e30f2fe-f04d-a1f0-0b9e-35e664f89122">
+ <Files>
+  <File path="road_park_footsteps.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/roads/road_park_footsteps_diff.dds</Path>
+  <Path usageCount="1">textures/roads/road_park_footsteps_ddna.dds</Path>
+  <Path usageCount="1">textures/roads/road_park_footsteps_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

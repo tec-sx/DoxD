@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="cb572b6a-7e7d-32af-a139-744c31523dba">
+ <Files>
+  <File path="moss_terrain.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/moss_terrain_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/moss_terrain_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

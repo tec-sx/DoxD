@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Texture" guid="803d3f3e-1912-8ca6-2af2-1a5c77ffda5e">
+ <Files>
+  <File path="rusted_steel_spec.dds"/>
+  <File path="rusted_steel_spec.dds.1"/>
+  <File path="rusted_steel_spec.dds.2"/>
+  <File path="rusted_steel_spec.dds.3"/>
+  <File path="rusted_steel_spec.dds.4"/>
+  <File path="rusted_steel_spec.dds.5"/>
+  <File path="rusted_steel_spec.dds.6"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

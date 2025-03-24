@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="9cc2f83f-5bad-9d79-b2c8-a51ae99fcdee">
+ <Files>
+  <File path="cliff_island_3d.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="3">textures/terrain/detail/cliff_island_diff.dds</Path>
+  <Path usageCount="3">textures/terrain/detail/cliff_island_ddna.dds</Path>
+  <Path usageCount="3">textures/terrain/detail/cliff_island_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

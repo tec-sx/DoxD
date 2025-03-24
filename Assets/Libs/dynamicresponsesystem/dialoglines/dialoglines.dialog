@@ -15,7 +15,7 @@
 					"customData": ""
 				}
 			],
-			"maxQueuingDuration": -1.0
+			"maxQueuingDuration": 1.0
 		}
 	]
 }

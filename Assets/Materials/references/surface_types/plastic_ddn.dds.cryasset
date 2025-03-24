@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="5bf8c807-7832-3c95-8112-bda87fbd0009">
+ <Files>
+  <File path="plastic_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

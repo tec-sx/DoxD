@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="c03806d2-026c-359c-0855-71717803737c">
+ <Files>
+  <File path="rough_concrete_c.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/concrete/rough_concrete_c_diff.dds</Path>
+  <Path usageCount="1">textures/generic/concrete/rough_concrete_c_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/concrete/rough_concrete_c_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

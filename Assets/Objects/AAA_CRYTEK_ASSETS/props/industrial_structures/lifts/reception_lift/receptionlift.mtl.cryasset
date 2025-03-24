@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="ae79a703-a3d9-319e-d24c-0a7bbf348e0e">
+ <Files>
+  <File path="receptionlift.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">4</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/lifts/reception_lift/textures/receptionlift_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/lifts/reception_lift/textures/receptionlift_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

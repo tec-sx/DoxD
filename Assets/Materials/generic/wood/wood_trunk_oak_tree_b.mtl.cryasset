@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="326a870c-c564-f8ab-6604-87b15535e3b1">
+ <Files>
+  <File path="wood_trunk_oak_tree_b.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/wood_trunk_oak_tree_b_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_trunk_oak_tree_b_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_trunk_oak_tree_a_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

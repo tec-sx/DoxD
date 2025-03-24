@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="9c422176-59ff-7897-5c04-9cf9d42259c6">
+ <Files>
+  <File path="wood_light_coastal.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/wood_light_coastal_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_light_coastal_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

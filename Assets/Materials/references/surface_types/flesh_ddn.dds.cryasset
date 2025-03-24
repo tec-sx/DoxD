@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="c8ac7098-5939-53d1-b9b1-79a9abc188ca">
+ <Files>
+  <File path="flesh_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

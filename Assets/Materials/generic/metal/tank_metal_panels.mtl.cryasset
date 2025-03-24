@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="08214820-bc95-fb4d-805b-bbb4b21fa8a8">
+ <Files>
+  <File path="tank_metal_panels.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/tank_metal_panels_diff.dds</Path>
+  <Path usageCount="1">textures/generic/metal/tank_metal_panels_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/tank_metal_panels_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

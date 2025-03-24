@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="686770a0-a911-1921-0985-08d4cc24c620">
+ <Files>
+  <File path="gate_frame_metal.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_gates/textures/rusted_steel_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_gates/textures/rusted_steel_spec.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_gates/textures/rusted_steel_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

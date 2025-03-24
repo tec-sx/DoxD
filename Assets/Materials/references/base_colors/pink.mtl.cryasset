@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="ffe3bfec-8087-5caf-32be-a0586d65906b">
+ <Files>
+  <File path="pink.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/base_colors/pink_diff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

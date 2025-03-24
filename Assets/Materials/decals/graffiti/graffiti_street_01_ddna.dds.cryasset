@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="c28f49a5-0bbb-e4b9-d747-b82f4bad83ab">
+ <Files>
+  <File path="graffiti_street_01_ddna.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

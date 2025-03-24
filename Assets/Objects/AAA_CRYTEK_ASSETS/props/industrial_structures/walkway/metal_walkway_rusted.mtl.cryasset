@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Material" guid="62f942d1-c17b-b3e3-acb9-58c2ce3fbe10">
+ <Files>
+  <File path="metal_walkway_rusted.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">4</Detail>
+  <Detail name="textureCount">5</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/walkway/textures/grated_steel_diff.dds</Path>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/walkway/textures/grated_steel_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/walkway/textures/dirty_blend.dds</Path>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/walkway/textures/rusted_steel_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/walkway/textures/rusted_steel_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

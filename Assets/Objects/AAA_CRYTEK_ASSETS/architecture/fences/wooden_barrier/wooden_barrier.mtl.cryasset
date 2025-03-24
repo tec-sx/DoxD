@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="11e41d22-03e3-979e-41f6-a59c2aee471b">
+ <Files>
+  <File path="wooden_barrier.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/architecture/fences/wooden_barrier/textures/planks_a_diff.dds</Path>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/architecture/fences/wooden_barrier/textures/planks_a_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

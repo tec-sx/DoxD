@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="6aa67d6c-1945-4bf4-cb8d-96830c56bb46" source="EP_global_cm.tif">
+ <Files>
+  <File path="EP_global_cm.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1536</Detail>
+  <Detail name="height">256</Detail>
+  <Detail name="mipCount">7</Detail>
+ </Details>
+</AssetMetadata>

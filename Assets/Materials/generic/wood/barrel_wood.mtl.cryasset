@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="c47772fe-142f-05fb-fe8b-485f55ab4b31">
+ <Files>
+  <File path="barrel_wood.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/barrel_wood_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/barrel_wood_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/wood/barrel_wood_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

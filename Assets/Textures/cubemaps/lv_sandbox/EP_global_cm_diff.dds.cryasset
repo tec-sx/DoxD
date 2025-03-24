@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="64b3675f-9ed6-9d12-677d-70b1eb8dd16d">
+ <Files>
+  <File path="EP_global_cm_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">192</Detail>
+  <Detail name="height">32</Detail>
+  <Detail name="mipCount">1</Detail>
+ </Details>
+</AssetMetadata>

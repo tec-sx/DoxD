@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="72df2242-ed7b-ed3e-16fb-a4ea05b58cfd">
+ <Files>
+  <File path="rubber_floor.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/rubber/rubber_floor_diff.dds</Path>
+  <Path usageCount="1">textures/generic/rubber/rubber_floor_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/rubber/rubber_floor_spec.dds</Path>
+  <Path usageCount="1">textures/generic/rubber/rubber_floor_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

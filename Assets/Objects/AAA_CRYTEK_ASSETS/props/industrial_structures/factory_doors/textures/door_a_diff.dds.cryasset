@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Texture" guid="afa7c8e9-9201-016e-f33c-42a2c4483e5b">
+ <Files>
+  <File path="door_a_diff.dds"/>
+  <File path="door_a_diff.dds.1"/>
+  <File path="door_a_diff.dds.2"/>
+  <File path="door_a_diff.dds.3"/>
+  <File path="door_a_diff.dds.4"/>
+  <File path="door_a_diff.dds.5"/>
+  <File path="door_a_diff.dds.6"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

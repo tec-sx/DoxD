@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="731f29b2-ce91-79a0-6d79-43a45f7377fa">
+ <Files>
+  <File path="canopy_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

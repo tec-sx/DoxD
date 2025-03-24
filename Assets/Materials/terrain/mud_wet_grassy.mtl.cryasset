@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="80309b1e-31a5-7f74-da08-3febe5abe6d8">
+ <Files>
+  <File path="mud_wet_grassy.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/mud_wet_grassy_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/mud_wet_grassy_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/mud_wet_grassy_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

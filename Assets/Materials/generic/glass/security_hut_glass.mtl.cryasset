@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="c575c152-120c-ccd2-db1b-057cbd382ff8">
+ <Files>
+  <File path="security_hut_glass.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/glass/security_hut_glass_diff.dds</Path>
+  <Path usageCount="1">textures/generic/glass/security_hut_glass_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/glass/glass_dirty_tint.dds</Path>
+ </Dependencies>
+</AssetMetadata>

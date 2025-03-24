@@ -10,6 +10,6 @@
   <Detail name="bonesCount">10</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">objects/characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
+  <Path usageCount="1">materials/m_mouth.mtl</Path>
  </Dependencies>
 </AssetMetadata>

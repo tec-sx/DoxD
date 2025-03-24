@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="a03d80dc-e350-5e90-13ec-56cdfd890caa">
+ <Files>
+  <File path="roof_beam.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_beams/textures/metal_steelbar_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_beams/textures/metal_steelbar_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

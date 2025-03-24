@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="00ea8a76-1222-ad97-ec31-0fda5d95fd9c">
+ <Files>
+  <File path="river_bank_terrain_a.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/river_bank_terrain_a_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/river_bank_terrain_a_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/river_bank_terrain_a_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

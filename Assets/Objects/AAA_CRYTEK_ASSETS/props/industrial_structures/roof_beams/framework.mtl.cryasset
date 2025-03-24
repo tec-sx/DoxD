@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="f1dd967e-5f8f-009c-ba63-6c17892b91fd">
+ <Files>
+  <File path="framework.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_beams/textures/alphadetail_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_beams/textures/alphadetail_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/roof_beams/textures/detail_metal_detail.dds</Path>
+ </Dependencies>
+</AssetMetadata>

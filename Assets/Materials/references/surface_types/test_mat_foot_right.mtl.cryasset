@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="e7bae96e-72d7-5840-98a5-ab4b926bc935">
+ <Files>
+  <File path="test_mat_foot_right.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/grey.dds</Path>
+ </Dependencies>
+</AssetMetadata>

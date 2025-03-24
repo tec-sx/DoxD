@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="3a34c681-1593-ec91-36d5-4e8d0ed7ab09">
+ <Files>
+  <File path="human_body.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/blood/human_body.dds</Path>
+  <Path usageCount="1">textures/decals/blood/human_body_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

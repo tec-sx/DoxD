@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="7420f353-fb44-18dd-b0ff-e3ab5a1c9b1e">
+ <Files>
+  <File path="receptionliftbutton.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">10</Detail>
+  <Detail name="vertexCount">20</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./receptionlift.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

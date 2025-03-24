@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="38a5f91a-eb8d-42c1-98a2-3ca190a9b160">
+ <Files>
+  <File path="cargo_ship_metal.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/cargo_ship_metal_diff.dds</Path>
+  <Path usageCount="1">textures/generic/metal/cargo_ship_metal_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/cargo_ship_metal_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

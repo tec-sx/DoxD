@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="7b246f90-aec3-5302-ae2f-b5324e43c2b8">
+ <Files>
+  <File path="brick_smooth_moss.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/brick/brick_smooth_moss_diff.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_smooth_moss_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

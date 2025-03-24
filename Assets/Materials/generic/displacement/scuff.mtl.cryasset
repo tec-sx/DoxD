@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="d89c3fbe-8e79-cefb-373e-e1bd0f99ed19">
+ <Files>
+  <File path="scuff.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/flat_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/scuff_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

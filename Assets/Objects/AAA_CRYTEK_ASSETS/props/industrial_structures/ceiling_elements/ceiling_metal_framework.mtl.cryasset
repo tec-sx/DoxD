@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="b102997d-1f6a-b2ef-7fdd-eb2087841639">
+ <Files>
+  <File path="ceiling_metal_framework.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/ceiling_elements/textures/metalstripes_a_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/ceiling_elements/textures/metalstripes_a_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/ceiling_elements/textures/metalstripes_a_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

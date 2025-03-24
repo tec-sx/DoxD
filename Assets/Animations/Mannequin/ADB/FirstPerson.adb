@@ -1,9 +1,4 @@
 <AnimDB FragDef="Animations/Mannequin/ADB/PlayerFragmentIds.xml" TagDef="Animations/Mannequin/ADB/PlayerTags.xml">
- <SubADBs>
-  <SubADB Tags="Rotate" File="Animations/Mannequin/ADB/NPCCharacterFat.adb">
-   <FragmentID Name="Idle"/>
-  </SubADB>
- </SubADBs>
  <FragmentList>
   <Idle>
    <Fragment BlendOutDuration="0.2" Tags="">

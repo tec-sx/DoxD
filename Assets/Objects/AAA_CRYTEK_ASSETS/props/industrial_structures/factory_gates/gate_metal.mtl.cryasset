@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="b389fec0-2912-3fb3-5c14-be936533a963">
+ <Files>
+  <File path="gate_metal.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_gates/textures/gates_diff.dds</Path>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_gates/textures/gates_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

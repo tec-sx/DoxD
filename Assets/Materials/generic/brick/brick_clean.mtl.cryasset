@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="1e51f95d-a44f-481e-5eb8-719b1a3ffd2c">
+ <Files>
+  <File path="brick_clean.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/brick/brick_clean_diff.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_clean_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/brick/brick_clean_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

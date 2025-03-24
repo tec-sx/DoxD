@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="7f8691d6-acd9-7c32-1402-2a01481f938c">
+ <Files>
+  <File path="wood_planks_large_c_light.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/wood_planks_lrg_c_light_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_planks_lrg_c_light_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="ae185aaa-ceda-e167-ab33-11bcd14a08f8">
+ <Files>
+  <File path="hull_cool.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/flat_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/hull_cool_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

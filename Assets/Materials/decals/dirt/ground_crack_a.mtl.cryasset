@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="a385bf53-86e3-8644-99f5-bae4d7f614d4">
+ <Files>
+  <File path="ground_crack_a.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/dirt/ground_crack_a.dds</Path>
+  <Path usageCount="1">textures/decals/dirt/ground_crack_a_ddna.dds</Path>
+  <Path usageCount="1">textures/decals/dirt/ground_crack_a_displ.dds</Path>
+  <Path usageCount="1">textures/detail_bumpmaps/rock/rock_1_detail.dds</Path>
+ </Dependencies>
+</AssetMetadata>

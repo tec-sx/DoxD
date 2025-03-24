@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="07705fe1-21d5-ab53-8bc3-13c8dddbe20f">
+ <Files>
+  <File path="flamethrower_core.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/sprites/fire/flamethrower.dds</Path>
+ </Dependencies>
+</AssetMetadata>

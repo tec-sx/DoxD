@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="8d212f8a-ea54-f824-fce6-e97ac49fdff0">
+ <Files>
+  <File path="ao_100_soft.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/shadow/ao_soft_diff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

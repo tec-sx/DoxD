@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Mesh" guid="b3f2f457-4bb8-4a69-67c8-7f458a2a75aa">
+ <Files>
+  <File path="stairs_4m.cgf"/>
+  <File path="stairs_4m_lod1.cgf"/>
+  <File path="stairs_4m_lod2.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">5</Detail>
+  <Detail name="triangleCount">1952</Detail>
+  <Detail name="vertexCount">2624</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./metal_walkway.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

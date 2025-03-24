@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="0b44e54e-84d0-e3a9-4bab-fe0e56fe0a7c">
+ <Files>
+  <File path="window_frame_concrete.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_windows/textures/used_concrete_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/factory_windows/textures/used_concrete_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

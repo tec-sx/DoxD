@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="83267455-41cc-276c-dde8-d09062f9407c">
+ <Files>
+  <File path="concrete_pillars.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/concrete_beams/textures/used_concrete_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/concrete_beams/textures/used_concrete_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

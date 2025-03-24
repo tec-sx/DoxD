@@ -7,6 +7,7 @@
 #include "Components/Player/Input/PlayerInputComponent.h"
 #include "Actor/Animation/ActorAnimation.h"
 #include "Contracts/IActor.h"
+#include "Contracts/IEntityInteraction.h"
 #include "Snaplocks/Snaplock.h"
 
 namespace DoxD
@@ -170,6 +171,10 @@ namespace DoxD
 			const SActorMannequinParams* m_actorMannequinParams{ nullptr };
 			class CProceduralContextAim* m_pProceduralContextAim{ nullptr };
 			class CProceduralContextLook* m_pProceduralContextLook{ nullptr };
+
+			EntityId m_interactionEntityId{ INVALID_ENTITYID };
+			IInteractionPtr m_pInteraction;
+			bool b_isBusyInInteraction{ false };
 
 			CFate m_fate;
 	};

@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="e1480e53-14b2-bad1-676f-ac85f39c03e2">
+ <Files>
+  <File path="dirt_brown_4.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/dirt/dirt_2.dds</Path>
+  <Path usageCount="1">textures/decals/dirt/dirt_2_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

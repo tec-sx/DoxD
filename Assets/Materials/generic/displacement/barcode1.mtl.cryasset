@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="6c5b8219-b743-2059-576c-5dc1ae8d1200">
+ <Files>
+  <File path="barcode1.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/barcode1_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/barcode1_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

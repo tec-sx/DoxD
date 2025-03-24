@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="c3ad3265-8c6c-204d-067a-1e44f669f944">
+ <Files>
+  <File path="door_frame_a.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">56</Detail>
+  <Detail name="vertexCount">112</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./door_frame_metal.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

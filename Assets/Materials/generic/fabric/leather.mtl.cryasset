@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="71dee129-2150-3dda-b98b-79cb59a38a65">
+ <Files>
+  <File path="leather.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/fabric/leather_diff.dds</Path>
+  <Path usageCount="1">textures/generic/fabric/leather_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="ef42a062-beeb-37ba-6410-f1b958797a7a">
+ <Files>
+  <File path="ground_mossy_1.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/ground_mossy_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/ground_mossy_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/ground_mossy_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

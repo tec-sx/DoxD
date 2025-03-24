@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="dcb38b5d-8c11-95e8-1767-3f543b7145b5">
+ <Files>
+  <File path="beach_white_sand.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/beach_white_sand_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/beach_white_sand_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/beach_white_sand_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

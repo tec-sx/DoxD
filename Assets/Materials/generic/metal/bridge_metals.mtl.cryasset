@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="be303889-3d3b-ec51-6761-85ed0fff3538">
+ <Files>
+  <File path="bridge_metals.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/bridge_metals_diff.dds</Path>
+  <Path usageCount="1">textures/generic/metal/bridge_metals_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/bridge_metals_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

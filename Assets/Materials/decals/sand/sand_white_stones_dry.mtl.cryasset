@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="4b3eef15-910c-de81-9cd5-231d06d8abb6">
+ <Files>
+  <File path="sand_white_stones_dry.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/sand_white_stones_dry_a_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/sand_white_stones_dry_a_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/sand_white_stones_dry_a_displ.dds</Path>
+  <Path usageCount="1">textures/generic/blend_masks/decal_mask_a.dds</Path>
+ </Dependencies>
+</AssetMetadata>

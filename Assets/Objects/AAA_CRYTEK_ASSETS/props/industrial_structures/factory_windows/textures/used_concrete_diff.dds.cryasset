@@ -1,0 +1,17 @@
+<AssetMetadata version="0" type="Texture" guid="e0039721-5cc9-ac94-a097-09f2049b8c9a">
+ <Files>
+  <File path="used_concrete_diff.dds"/>
+  <File path="used_concrete_diff.dds.1"/>
+  <File path="used_concrete_diff.dds.2"/>
+  <File path="used_concrete_diff.dds.3"/>
+  <File path="used_concrete_diff.dds.4"/>
+  <File path="used_concrete_diff.dds.5"/>
+  <File path="used_concrete_diff.dds.6"/>
+  <File path="used_concrete_diff.dds.7"/>
+ </Files>
+ <Details>
+  <Detail name="width">2048</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

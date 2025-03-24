@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="d8a34ee4-826b-3236-d1f1-72ecc0ef040c">
+ <Files>
+  <File path="concrete_crack1.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/concrete/crack_concrete_01_diff.dds</Path>
+  <Path usageCount="1">textures/decals/concrete/crack_concrete_01_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

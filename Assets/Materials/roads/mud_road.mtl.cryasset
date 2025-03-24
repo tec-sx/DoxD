@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="4b046278-bce9-53c6-3c5c-b6fc6196aad4">
+ <Files>
+  <File path="mud_road.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/roads/mud_road_diff.dds</Path>
+  <Path usageCount="1">textures/roads/mud_road_ddna.dds</Path>
+  <Path usageCount="1">textures/roads/mud_road_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="769b7616-557d-e2b0-54bd-0d960cf00dab">
+ <Files>
+  <File path="gate_a.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">4</Detail>
+  <Detail name="triangleCount">12</Detail>
+  <Detail name="vertexCount">24</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./gate_metal.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

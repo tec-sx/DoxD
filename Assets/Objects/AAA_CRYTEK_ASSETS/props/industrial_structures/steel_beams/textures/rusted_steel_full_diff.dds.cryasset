@@ -1,0 +1,17 @@
+<AssetMetadata version="0" type="Texture" guid="74080797-bb32-d3f7-bef3-2f01775bf6dc">
+ <Files>
+  <File path="rusted_steel_full_diff.dds"/>
+  <File path="rusted_steel_full_diff.dds.1"/>
+  <File path="rusted_steel_full_diff.dds.2"/>
+  <File path="rusted_steel_full_diff.dds.3"/>
+  <File path="rusted_steel_full_diff.dds.4"/>
+  <File path="rusted_steel_full_diff.dds.5"/>
+  <File path="rusted_steel_full_diff.dds.6"/>
+  <File path="rusted_steel_full_diff.dds.7"/>
+ </Files>
+ <Details>
+  <Detail name="width">2048</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

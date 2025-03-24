@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="5b94a9ac-e34b-e868-83a0-872db7e4c0c4">
+ <Files>
+  <File path="wood_scots_pine_a_stripped.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/wood_scots_pine_a_stripped_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_scots_pine_a_stripped_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

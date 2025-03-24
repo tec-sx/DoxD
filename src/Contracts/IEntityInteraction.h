@@ -12,7 +12,6 @@ namespace DoxD
 		virtual void OnInteractionTick(IActor& actor) {};
 		virtual void OnInteractionComplete(IActor& actor) {};
 
-
 		virtual const string GetVerb() const { return "interaction_interact"; };
 		virtual const string GetVerbUI() const { return "@" + GetVerb(); };
 

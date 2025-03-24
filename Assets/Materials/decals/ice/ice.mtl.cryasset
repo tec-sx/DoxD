@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="4d679aff-337d-9333-8d79-b39ac31dcff8">
+ <Files>
+  <File path="ice.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/ice/ice.dds</Path>
+  <Path usageCount="1">textures/decals/ice/ice_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="4c87a138-3ec3-4b55-a42c-ca1a3ffc299f">
+ <Files>
+  <File path="window_frame_d.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">56</Detail>
+  <Detail name="vertexCount">72</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./window_frame_metal.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

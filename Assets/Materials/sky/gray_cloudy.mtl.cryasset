@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="0480b2cc-4670-cbdb-d388-9b583249801d">
+ <Files>
+  <File path="gray_cloudy.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/skys/gray_cloudy/box_12.dds</Path>
+ </Dependencies>
+</AssetMetadata>

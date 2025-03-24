@@ -27,27 +27,14 @@ namespace DoxD
 		desc.SetComponentFlags({ IEntityComponent::EFlags::Singleton });
 	}
 
-
-	// ***
-	// *** IEntityComponent
-	// ***
-
-
 	void CEntityInteractionComponent::Initialize()
 	{
 	}
-
-
-	// ***
-	// *** CEntityInteractionComponent
-	// ***
-
 
 	void CEntityInteractionComponent::AddInteraction(IInteractionPtr interaction)
 	{
 		m_interactionQueue.push_back(interaction);
 	}
-
 
 	void CEntityInteractionComponent::RemoveInteraction(string verb)
 	{

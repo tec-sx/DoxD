@@ -1,13 +1,13 @@
-<AssetMetadata version="0" type="Material" guid="bf5783ea-dce9-8008-8cc3-c1696446f91a" source="" timestamp="1735035100">
+<AssetMetadata version="0" type="Material" guid="bf5783ea-dce9-8008-8cc3-c1696446f91a" timestamp="1735035100">
  <Files>
-  <File path="Bridge_Ir.mtl"/>
+  <File path="bridge_ir.mtl"/>
  </Files>
  <Details>
   <Detail name="subMaterialCount">2</Detail>
   <Detail name="textureCount">2</Detail>
  </Details>
  <Dependencies>
-  <Path usageCount="1">Objects/Infrastructure/Bridge_Iron/_Maps/tiff/bridge.dds</Path>
   <Path usageCount="1">Objects/Infrastructure/Bridge_Iron/_Maps/tiff/road.dds</Path>
+  <Path usageCount="1">Objects/Infrastructure/Bridge_Iron/_Maps/tiff/bridge.dds</Path>
  </Dependencies>
 </AssetMetadata>

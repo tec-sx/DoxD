@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Texture" guid="903cca45-2b73-3c47-bcc8-d9cbe7ecc885">
+ <Files>
+  <File path="chainlink_diff.dds"/>
+  <File path="chainlink_diff.dds.1"/>
+  <File path="chainlink_diff.dds.2"/>
+  <File path="chainlink_diff.dds.3"/>
+  <File path="chainlink_diff.dds.4"/>
+  <File path="chainlink_diff.dds.5"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

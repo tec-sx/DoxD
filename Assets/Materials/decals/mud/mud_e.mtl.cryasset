@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="151ffa77-51bd-1e96-71ed-2a3c12464108">
+ <Files>
+  <File path="mud_e.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/mud/mud_e_diff.dds</Path>
+  <Path usageCount="1">textures/generic/mud/mud_e_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/mud/mud_e_displ.dds</Path>
+  <Path usageCount="1">textures/generic/blend_masks/decal_mask_b.dds</Path>
+ </Dependencies>
+</AssetMetadata>

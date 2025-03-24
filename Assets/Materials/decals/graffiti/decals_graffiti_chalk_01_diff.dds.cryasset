@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="36cdaa12-0b98-3b95-ba37-88d93a6c628e">
+ <Files>
+  <File path="decals_graffiti_chalk_01_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

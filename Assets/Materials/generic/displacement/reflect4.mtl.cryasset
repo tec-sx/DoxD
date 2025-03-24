@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="bea67a2c-13cf-e84b-6154-4c752f3da304">
+ <Files>
+  <File path="reflect4.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/reflect4_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/reflect4_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

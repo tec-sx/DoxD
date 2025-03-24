@@ -1,0 +1,18 @@
+<AssetMetadata version="0" type="Material" guid="ff80712d-1394-f608-069c-3d52e4d6606c">
+ <Files>
+  <File path="barbwire_fence.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">5</Detail>
+  <Detail name="textureCount">7</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/chainlock_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/chainlock_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/metal_steelbar_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/metal_steelbar_ddna.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/metal_detail.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/chainlink_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/barbwire_fence/textures/chainlink_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

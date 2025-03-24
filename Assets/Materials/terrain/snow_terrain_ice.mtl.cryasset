@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="c05ccdf8-aa38-6d5b-55fb-d0a70c0696ff">
+ <Files>
+  <File path="snow_terrain_ice.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/snow_terrain_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/snow_terrain_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/snow_terrain_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

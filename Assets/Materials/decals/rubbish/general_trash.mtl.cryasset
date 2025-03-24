@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="b7f553ca-83a6-8e45-f032-78bd8aa33a53">
+ <Files>
+  <File path="general_trash.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="2">textures/decals/rubbish/general_trash.dds</Path>
+  <Path usageCount="1">textures/decals/rubbish/general_trash_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

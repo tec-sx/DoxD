@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="e37d7212-c4b4-967d-0967-1a72a5b6c487">
+ <Files>
+  <File path="mud_rubbish.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/mud_rubbish_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/mud_rubbish_ddna.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/mud_rubbish_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

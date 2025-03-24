@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="a4f3b855-44a0-60da-0860-1b403b616a92">
+ <Files>
+  <File path="wood_sheets_ruff.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/wood/wood_sheets_ruff_diff.dds</Path>
+  <Path usageCount="1">textures/generic/wood/wood_sheets_ruff_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

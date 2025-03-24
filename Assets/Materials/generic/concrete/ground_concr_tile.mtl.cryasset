@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="384bd5c9-41fc-3594-b1a4-ab13d1fc6c21">
+ <Files>
+  <File path="ground_concr_tile.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/concrete/ground_concr_tile_2_diff.dds</Path>
+  <Path usageCount="1">textures/generic/concrete/ground_concr_tile_2_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/concrete/ground_concr_tile_2_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

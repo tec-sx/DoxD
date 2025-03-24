@@ -384,15 +384,5 @@ namespace DoxD
 			SetStance(EActorStance::sittingFloor);
 	}
 
-	const bool CActorControllerComponent::IsPlayer() const
-	{
-		return m_pActorComponent->IsPlayer();
-	}
-
-	const Vec3 CActorControllerComponent::GetLocalEyePos() const
-	{
-		return m_pActorComponent->GetLocalEyePos();
-	}
-
 	CRY_STATIC_AUTO_REGISTER_FUNCTION(&RegisterActorControllerComponent);
 }

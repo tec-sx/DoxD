@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="0852f07e-a4d2-ede2-d2a0-a126b5e08896">
+ <Files>
+  <File path="metal_thick_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

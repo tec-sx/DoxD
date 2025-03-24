@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="e234aaaf-5aeb-0267-134d-603149425fa1">
+ <Files>
+  <File path="chimney.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/chimneys/textures/chimney_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/chimneys/textures/chimney_spec.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/chimneys/textures/chimney_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

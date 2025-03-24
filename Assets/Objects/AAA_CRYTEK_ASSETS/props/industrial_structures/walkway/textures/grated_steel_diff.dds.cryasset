@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Texture" guid="bf7ede32-1357-b502-8f28-cee5afccb502">
+ <Files>
+  <File path="grated_steel_diff.dds"/>
+  <File path="grated_steel_diff.dds.1"/>
+  <File path="grated_steel_diff.dds.2"/>
+  <File path="grated_steel_diff.dds.3"/>
+  <File path="grated_steel_diff.dds.4"/>
+  <File path="grated_steel_diff.dds.5"/>
+  <File path="grated_steel_diff.dds.6"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

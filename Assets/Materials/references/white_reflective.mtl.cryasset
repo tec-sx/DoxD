@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="c96fd05a-20d8-a1fe-b21a-43af7d818a2c">
+ <Files>
+  <File path="white_reflective.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/white.dds</Path>
+ </Dependencies>
+</AssetMetadata>

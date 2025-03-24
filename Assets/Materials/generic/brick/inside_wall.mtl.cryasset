@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="acf4be82-79bd-b0c8-a178-2c3ab3f17341">
+ <Files>
+  <File path="inside_wall.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/brick/inside_wall_diff.dds</Path>
+  <Path usageCount="1">textures/generic/brick/inside_wall_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

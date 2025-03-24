@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="4f1748d7-1afc-5afe-2b49-2758f9940971">
+ <Files>
+  <File path="blast_fall.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/sprites/dirt/dirt_a.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="31ae432d-e904-d7c9-0788-1194fd471e8d">
+ <Files>
+  <File path="road_asphalt_smooth.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/terrain/detail/road_asphalt_smooth_diff.dds</Path>
+  <Path usageCount="1">textures/terrain/detail/road_asphalt_smooth_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

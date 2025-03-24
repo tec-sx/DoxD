@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="d455dd1e-4f96-1114-0ecc-07412d696157">
+ <Files>
+  <File path="cliff_face2.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/flat_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/cliff_face2_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

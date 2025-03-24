@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="714b12e2-c9d3-e1c7-48cc-bf823bd0c00c">
+ <Files>
+  <File path="EP_skytower_cm_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">192</Detail>
+  <Detail name="height">32</Detail>
+  <Detail name="mipCount">1</Detail>
+ </Details>
+</AssetMetadata>

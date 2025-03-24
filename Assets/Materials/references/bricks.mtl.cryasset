@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="c4822749-ac11-2295-d9d8-16dfdf0a3d9f">
+ <Files>
+  <File path="bricks.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/references/bricks.dds</Path>
+ </Dependencies>
+</AssetMetadata>

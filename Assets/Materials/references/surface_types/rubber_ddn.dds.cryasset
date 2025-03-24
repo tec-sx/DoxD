@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="7298d5af-7cb0-fec1-a79f-47d5ea5c56c5">
+ <Files>
+  <File path="rubber_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

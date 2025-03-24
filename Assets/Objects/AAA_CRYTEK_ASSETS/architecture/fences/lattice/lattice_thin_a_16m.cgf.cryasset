@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="070990fc-73b3-9326-2478-12d6c70cc1e7">
+ <Files>
+  <File path="lattice_thin_a_16m.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">2790</Detail>
+  <Detail name="vertexCount">5742</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./lattice.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

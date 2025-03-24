@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="bcbeadee-e664-d183-2642-8516ea984e14">
+ <Files>
+  <File path="floor_tiles_02.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/concrete/floor_tiles02_diff.dds</Path>
+  <Path usageCount="1">textures/generic/concrete/floor_tiles02_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

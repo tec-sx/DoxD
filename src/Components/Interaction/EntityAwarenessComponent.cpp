@@ -111,6 +111,7 @@ namespace DoxD
 		// selection of which ones run.
 		GetNearDotFiltered();
 		RaycastQuery();
+		InFrontOfQuery();
 	}
 
 

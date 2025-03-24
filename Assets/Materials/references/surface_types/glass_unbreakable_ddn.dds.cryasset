@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="f8d5b8e7-1873-94e2-fb37-ece0bd1b75e6">
+ <Files>
+  <File path="glass_unbreakable_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

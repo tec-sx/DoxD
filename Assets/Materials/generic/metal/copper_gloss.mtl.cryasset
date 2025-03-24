@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="9bf410ee-fbae-d936-a203-8bd431ec4fd5">
+ <Files>
+  <File path="copper_gloss.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/white.dds</Path>
+  <Path usageCount="1">textures/generic/metal/metals_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/copper_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

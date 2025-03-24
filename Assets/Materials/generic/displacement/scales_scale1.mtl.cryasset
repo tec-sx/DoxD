@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="32ae7e9e-6533-8600-21c5-4c264dbb7bcd">
+ <Files>
+  <File path="scales_scale1.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/scales_scale1_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/scales_scale1_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

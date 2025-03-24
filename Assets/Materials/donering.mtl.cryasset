@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="a650ecf0-1991-e531-a8d7-cbdadfa9d59f">
+ <Files>
+  <File path="donering.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/white.dds</Path>
+ </Dependencies>
+</AssetMetadata>

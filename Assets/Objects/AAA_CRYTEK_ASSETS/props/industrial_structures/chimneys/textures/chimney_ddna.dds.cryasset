@@ -1,0 +1,23 @@
+<AssetMetadata version="0" type="Texture" guid="acbfa0b8-0e51-a6ff-8cb5-960b5b751130">
+ <Files>
+  <File path="chimney_ddna.dds"/>
+  <File path="chimney_ddna.dds.a"/>
+  <File path="chimney_ddna.dds.1"/>
+  <File path="chimney_ddna.dds.1a"/>
+  <File path="chimney_ddna.dds.2"/>
+  <File path="chimney_ddna.dds.2a"/>
+  <File path="chimney_ddna.dds.3"/>
+  <File path="chimney_ddna.dds.3a"/>
+  <File path="chimney_ddna.dds.4"/>
+  <File path="chimney_ddna.dds.4a"/>
+  <File path="chimney_ddna.dds.5"/>
+  <File path="chimney_ddna.dds.5a"/>
+  <File path="chimney_ddna.dds.6"/>
+  <File path="chimney_ddna.dds.6a"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

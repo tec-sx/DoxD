@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="9cdea024-fa16-79df-20f5-99ceae33540f">
+ <Files>
+  <File path="glass_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

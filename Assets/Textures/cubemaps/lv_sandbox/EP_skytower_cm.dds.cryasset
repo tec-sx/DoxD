@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="92dd6133-7aff-eb51-a595-189e805d5536" source="EP_skytower_cm.tif">
+ <Files>
+  <File path="EP_skytower_cm.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1536</Detail>
+  <Detail name="height">256</Detail>
+  <Detail name="mipCount">7</Detail>
+ </Details>
+</AssetMetadata>

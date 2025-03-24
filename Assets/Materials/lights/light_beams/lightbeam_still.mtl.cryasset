@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="8dd42516-017e-9a7a-7eca-c7a99c26e585">
+ <Files>
+  <File path="lightbeam_still.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

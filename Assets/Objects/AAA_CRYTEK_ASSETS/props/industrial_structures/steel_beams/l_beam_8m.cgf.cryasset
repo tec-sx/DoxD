@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Mesh" guid="c8afd31b-c3b7-31b2-3cb3-becc9602a6d3">
+ <Files>
+  <File path="l_beam_8m.cgf"/>
+  <File path="l_beam_8m_lod1.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">214</Detail>
+  <Detail name="vertexCount">283</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./Steel_Beams.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

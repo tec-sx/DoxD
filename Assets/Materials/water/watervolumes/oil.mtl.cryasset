@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="f8a937f2-c782-9eb3-e675-d61f93252b3e">
+ <Files>
+  <File path="oil.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/cubemaps/generic_cubemap_day_cm.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="d9b32b7a-1605-ae98-ef5b-0f20885d3c4f">
+ <Files>
+  <File path="ship_hull_b.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/ship_hull_b_diff.dds</Path>
+  <Path usageCount="1">textures/generic/metal/ship_hull_b_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/ship_hull_b_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="6a4dbecf-6a1b-7e1f-3b29-a812221f774c">
+ <Files>
+  <File path="rock_dusty_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

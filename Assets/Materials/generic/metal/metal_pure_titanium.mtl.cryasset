@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="9a489a4e-6829-6986-95fb-b5866999703f">
+ <Files>
+  <File path="metal_pure_titanium.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/metal_gold_a_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

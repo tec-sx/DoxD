@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="48e99616-6d0c-d5ca-68a3-4b9878c55fa5">
+ <Files>
+  <File path="railroad_logo.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/paint/railroad_logo.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="96b0cdba-3b82-3444-37b7-d26f642e5aa4">
+ <Files>
+  <File path="metal_iron_cast_a.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/metal/metal_iron_cast_a_ddna.dds</Path>
+  <Path usageCount="1">textures/generic/metal/metal_iron_cast_a_spec.dds</Path>
+ </Dependencies>
+</AssetMetadata>

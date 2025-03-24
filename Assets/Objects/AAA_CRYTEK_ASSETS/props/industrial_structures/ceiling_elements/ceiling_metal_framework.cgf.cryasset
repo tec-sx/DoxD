@@ -1,0 +1,16 @@
+<AssetMetadata version="0" type="Mesh" guid="c5cbd8b1-0603-09c8-f184-c5a992150ba1">
+ <Files>
+  <File path="ceiling_metal_framework.cgf"/>
+  <File path="ceiling_metal_framework_lod1.cgf"/>
+  <File path="ceiling_metal_framework_lod2.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">336</Detail>
+  <Detail name="vertexCount">624</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">./ceiling_metal_framework.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

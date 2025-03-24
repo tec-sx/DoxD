@@ -1,6 +1,6 @@
 <ControllerDef>
- <Tags filename="Animations/Mannequin/ADB/PlayerTags.xml"/>
- <Fragments filename="Animations/Mannequin/ADB/PlayerFragmentIds.xml"/>
+ <Tags filename="Animations/Mannequin/ADB/NPCCharacterTags.xml"/>
+ <Fragments filename="Animations/Mannequin/ADB/NPCCharacterFragmentIds.xml"/>
  <FragmentDefs>
   <Idle scopes="FullBody" flags="Persistent+AutoReinstall"/>
   <Move scopes="FullBody"/>

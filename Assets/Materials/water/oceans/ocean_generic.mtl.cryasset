@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="fd42d1c5-9134-c4cf-b7ad-c66008743eb4">
+ <Files>
+  <File path="ocean_generic.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

@@ -1,5 +1,5 @@
 <cryasset>
- <AssetMetadata version="0" type="Mesh" guid="{B283C61E-CE0F-4E17-1AA6-D8C984FDBB45}">
+ <AssetMetadata version="0" type="Mesh" guid="b283c61e-ce0f-4e17-1aa6-d8c984fdbb45">
   <Files>
    <File path="Bridge_Ir.cgf"/>
   </Files>
@@ -7,6 +7,10 @@
    <Detail name="materialCount">3</Detail>
    <Detail name="triangleCount">1683</Detail>
    <Detail name="vertexCount">3050</Detail>
+   <Detail name="16BitPrecision">false</Detail>
   </Details>
+  <Dependencies>
+   <Path usageCount="1">./Bridge_Ir.mtl</Path>
+  </Dependencies>
  </AssetMetadata>
 </cryasset>

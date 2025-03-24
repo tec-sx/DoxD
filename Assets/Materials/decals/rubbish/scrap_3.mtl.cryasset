@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="64eb9d30-59a7-a1b5-a0a0-61a587c8588f">
+ <Files>
+  <File path="scrap_3.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/rubbish/scrap_3.dds</Path>
+  <Path usageCount="1">textures/decals/rubbish/scrap_3_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

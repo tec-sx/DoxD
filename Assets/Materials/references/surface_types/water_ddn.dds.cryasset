@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="ab5e2315-a559-005d-51b8-74609f0ddb48">
+ <Files>
+  <File path="water_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

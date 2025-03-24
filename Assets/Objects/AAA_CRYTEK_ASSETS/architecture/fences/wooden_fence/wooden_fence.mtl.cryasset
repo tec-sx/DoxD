@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="a328766e-137d-369d-bcc1-2d96c151e95c">
+ <Files>
+  <File path="wooden_fence.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/wooden_fence/textures/wood_beams_b_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/architecture/fences/wooden_fence/textures/wood_beams_b_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

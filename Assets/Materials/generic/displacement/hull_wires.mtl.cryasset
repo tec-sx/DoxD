@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="0a58d41a-182d-1f27-506d-e5f9d658733a">
+ <Files>
+  <File path="hull_wires.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/flat_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/hull_wires_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

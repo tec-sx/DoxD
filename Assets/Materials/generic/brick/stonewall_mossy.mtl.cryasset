@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="593e33b5-fa1d-4d29-d665-603b33b7fc94">
+ <Files>
+  <File path="stonewall_mossy.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/generic/brick/stonewall_mossy_diff.dds</Path>
+  <Path usageCount="1">textures/generic/brick/stonewall_mossy_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

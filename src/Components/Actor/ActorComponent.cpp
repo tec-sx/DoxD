@@ -300,60 +300,14 @@ namespace DoxD
 		if (!pCharacter)
 			return eyePosition;
 
-		const IAttachmentManager* pAttachmentManager = pCharacter->GetIAttachmentManager();
-		if (pAttachmentManager)
-		{
-			const auto eyeLeft = pAttachmentManager->GetIndexByName("c_eye_l");
-			const auto eyeRight = pAttachmentManager->GetIndexByName("c_eye_r");
-			Vec3 eyeLeftPosition;
-			Vec3 eyeRightPosition;
-			int eyeFlags = 0;
+		const IDefaultSkeleton& defaultSkeleton = pCharacter->GetIDefaultSkeleton();
+		const int32 leftEyeJointID = defaultSkeleton.GetJointIDByName("c_eye_l");
+		const int32 rightEyeJointID = defaultSkeleton.GetJointIDByName("c_eye_r");
 
-			// Is there a left eye?
-			const IAttachment* pEyeLeftAttachment = pAttachmentManager->GetInterfaceByIndex(eyeLeft);
-			if (pEyeLeftAttachment)
-			{
-				eyeLeftPosition = GetEntity()->GetRotation() * pEyeLeftAttachment->GetAttModelRelative().t;
-				eyeFlags |= 0x01;
-			}
+		Vec3 eyeLeftPosition = GetEntity()->GetRotation() * pCharacter->GetISkeletonPose()->GetAbsJointByID(leftEyeJointID).t;
+		Vec3 eyeRightPosition = GetEntity()->GetRotation() * pCharacter->GetISkeletonPose()->GetAbsJointByID(rightEyeJointID).t;
 
-			// Is there a right eye?
-			const IAttachment* pEyeRightAttachment = pAttachmentManager->GetInterfaceByIndex(eyeRight);
-			if (pEyeRightAttachment)
-			{
-				eyeRightPosition = GetEntity()->GetRotation() * pEyeRightAttachment->GetAttModelRelative().t;
-				eyeFlags |= 0x02;
-			}
-
-			static bool alreadyWarned{ false };
-			switch (eyeFlags)
-			{
-			case 0:
-				// Failure, didn't find any eyes.
-				// This will most likely spam the log. Disable it if it's annoying.
-				if (!alreadyWarned)
-				{
-					CryLogAlways("Character does not have 'c_eye_l' or 'c_eye_r' defined.");
-					alreadyWarned = true;
-				}
-				break;
-
-			case 1:
-				// Left eye only.
-				eyePosition = eyeLeftPosition;
-				break;
-
-			case 2:
-				// Right eye only.
-				eyePosition = eyeRightPosition;
-				break;
-
-			case 3:
-				// Both eyes, position between the two points.
-				eyePosition = (eyeLeftPosition + eyeRightPosition) / 2.0f;
-				break;
-			}
-		}
+		eyePosition = (eyeLeftPosition + eyeRightPosition) / 2.0f;
 
 		return eyePosition;
 	}
@@ -432,6 +386,20 @@ namespace DoxD
 
 	void CActorComponent::OnInputInteraction(int activationMode)
 	{
+		switch (activationMode)
+		{
+		case eAAM_OnPress:
+			CryLogAlways("CActorComponent::OnInputInteraction - Press");
+			OnActionInteractionStart();
+			break;
+
+		case eAAM_OnHold:
+			break;
+
+		case eAAM_OnRelease:
+			CryLogAlways("CActorComponent::OnInputInteraction - Release");
+			break;
+		}
 	}
 
 	void CActorComponent::OnActionItemUse()
@@ -457,16 +425,78 @@ namespace DoxD
 	}
 	void CActorComponent::OnActionInteractionStart()
 	{
+		// You shouldn't be allowed to start another interaction before the last one is completed.
+		if (b_isBusyInInteraction)
+			return;
+
+		if (m_pAwarenessComponent)
+		{
+			auto results = m_pAwarenessComponent->GetNearDotFiltered();
+			if (results.size() > 0)
+			{
+				m_interactionEntityId = results[0];
+				auto pInteractionEntity = gEnv->pEntitySystem->GetEntity(m_interactionEntityId);
+
+				// HACK: Another test - this time of setting an emote.
+				//auto emoteAction = new CActorAnimationActionEmote(g_emoteMannequinParams.tagIDs.Awe);
+				//QueueAction(*emoteAction);
+
+				if (auto pInteractor = pInteractionEntity->GetComponent<CEntityInteractionComponent>())
+				{
+					// There's an interactor component, so this is an interactive entity.
+					// #TODO: We should really only process an 'interact' verb - not simply the first entry.
+					auto verbs = pInteractor->GetVerbs();
+					if (verbs.size() > 0)
+					{
+						// Display the verbs in a cheap manner.
+						CryLogAlways("VERBS");
+						int index{ 1 };
+						for (auto& verb : verbs)
+						{
+							CryLogAlways("%d) %s", index, verb.c_str());
+							index++;
+						}
+
+						auto verb = verbs[0];
+
+						// #HACK: Another test - just calling the interaction directly instead.
+						m_pInteraction = pInteractor->GetInteraction(verb).lock();
+						CryLogAlways("Player started interacting with: %s", m_pInteraction->GetVerbUI().c_str());
+						m_pInteraction->OnInteractionStart(*this);
+					}
+				}
+			}
+		}
 	}
+
 	void CActorComponent::OnActionInteractionTick()
 	{
+		if (m_pInteraction)
+		{
+			CryWatch("Interacting with: %s", m_pInteraction->GetVerbUI().c_str());
+			m_pInteraction->OnInteractionTick(*this);
+		}
+		else
+		{
+			CryWatch("Interacting with nothing");
+		}
 	}
 	void CActorComponent::OnActionInteractionEnd()
 	{
+		if (m_pInteraction)
+		{
+			CryLogAlways("Player stopped interacting with: %s", m_pInteraction->GetVerbUI().c_str());
+			m_pInteraction->OnInteractionComplete(*this);
+		}
+		else
+		{
+			CryLogAlways("Player stopped interacting with nothing");
+		}
 	}
 
 	void CActorComponent::InteractionStart(IInteraction* pInteraction)
 	{
+		b_isBusyInInteraction = true;
 	}
 
 	void CActorComponent::InteractionTick(IInteraction* pInteraction)
@@ -475,6 +505,10 @@ namespace DoxD
 
 	void CActorComponent::InteractionEnd(IInteraction* pInteraction)
 	{
+		// No longer valid.
+		b_isBusyInInteraction = false;
+		m_pInteraction = nullptr;
+		m_interactionEntityId = INVALID_ENTITYID; // HACK: FIX: This seems weak, look for a better way to handle keeping an entity Id for later.
 	}
 
 	void CActorComponent::OnKill()
@@ -493,6 +527,7 @@ namespace DoxD
 
 	void CActorComponent::OnJump()
 	{
+		m_pActorControllerComponent->AddVelocity(Vec3(0, 0, 5.f));
 	}
 
 	void CActorComponent::OnEnterVehicle(const char* vehicleClassName, const char* seatName, bool bThirdPerson)
@@ -529,15 +564,7 @@ namespace DoxD
 
 	void CActorComponent::OnResetState()
 	{
-		// HACK: This prevents a weird crash when getting the context a second time.
 		m_pProceduralContextLook = nullptr;
-
-		//if (m_pActorAnimationComponent)
-		//{
-		//	m_pActorAnimationComponent->SetControllerDefinitionFile("Animations/Mannequin/ADB/FirstPersonControllerDefinition.xml");
-		//	m_pActorAnimationComponent->SetDefaultScopeContextName("ThirdPersonCharacter");
-		//	m_pActorAnimationComponent->SetDefaultFragmentName("Idle");
-		//}
 
 		if (m_pAnimationComponent && m_pAnimationComponent->GetActionController() != nullptr)
 		{
@@ -554,7 +581,7 @@ namespace DoxD
 
 			// Select a character definition based on first / third person mode. Hard coding the default scope isn't a great
 			// idea, but it's good enough for now. 
-			m_pAnimationComponent->SetDefaultScopeContextName("NPCCharacter");
+			//m_pAnimationComponent->SetDefaultScopeContextName("NPCCharacter");
 			//m_pActorAnimationComponent->SetCharacterFile(m_geometryThirdPerson.value);
 
 			// Queue the locomotion action, which switches fragments and tags as needed for actor locomotion.

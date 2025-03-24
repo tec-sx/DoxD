@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="f2bf73c9-c428-0b4e-f5ca-acdd3d521e58">
+ <Files>
+  <File path="decals_graffiti_paint_02_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">2048</Detail>
+  <Detail name="height">2048</Detail>
+  <Detail name="mipCount">10</Detail>
+ </Details>
+</AssetMetadata>

@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="ac8bb6ef-9d10-63bb-d1dd-8c37c8115f49">
+ <Files>
+  <File path="lightbeam_floodlight.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

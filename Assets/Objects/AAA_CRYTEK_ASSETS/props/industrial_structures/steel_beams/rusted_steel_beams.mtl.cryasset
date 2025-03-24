@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="d723da81-2b5b-945f-05ba-d19bfd448c6b">
+ <Files>
+  <File path="rusted_steel_beams.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/steel_beams/textures/rusted_steel_full_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/steel_beams/textures/rusted_steel_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

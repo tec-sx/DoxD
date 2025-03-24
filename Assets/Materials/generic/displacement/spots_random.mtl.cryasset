@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="0e1afbf6-8122-8fca-592f-1fae8b2cbba0">
+ <Files>
+  <File path="spots_random.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/flat_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/spots_random_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

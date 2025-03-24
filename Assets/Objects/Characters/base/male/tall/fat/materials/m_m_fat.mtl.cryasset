@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Material" guid="3eced6f5-eaac-edc7-cb72-2f8589980a93" source="" timestamp="1742166818">
+<AssetMetadata version="0" type="Material" guid="3eced6f5-eaac-edc7-cb72-2f8589980a93" timestamp="1742166818">
  <Files>
   <File path="m_m_fat.mtl"/>
  </Files>
@@ -7,13 +7,13 @@
   <Detail name="textureCount">8</Detail>
  </Details>
  <Dependencies>
+  <Path usageCount="1">Objects/Characters/base/male/tall/fat/anatomy/textures/eye_water_spec.dds</Path>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_body_01_diff.dds</Path>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_body_01_ddna.dds</Path>
+  <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_body_01_spec.dds</Path>
   <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_head_01_diff.dds</Path>
   <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_head_01_ddna.dds</Path>
   <Path usageCount="1">Objects/Characters/base/male/tall/fat/textures/m_fat_head_01_spec.dds</Path>
   <Path usageCount="1">Textures/cubemaps/01_bar/lp_global_cm_diff.dds</Path>
-  <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_body_01_diff.dds</Path>
-  <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_body_01_ddna.dds</Path>
-  <Path usageCount="1">objects/characters/base/male/tall/fat/textures/m_fat_body_01_spec.dds</Path>
-  <Path usageCount="1">Objects/Characters/base/male/tall/fat/anatomy/textures/eye_water_spec.dds</Path>
  </Dependencies>
 </AssetMetadata>

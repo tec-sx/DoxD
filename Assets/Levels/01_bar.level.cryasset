@@ -1,4 +1,4 @@
-<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1742726209">
+<AssetMetadata version="0" type="Level" guid="7428b1e0-c850-7330-f28b-926aadafa23b" source="" timestamp="1742853393">
  <Files>
   <File path="01_bar/01_bar.level"/>
  </Files>
@@ -29,12 +29,11 @@
   <Path>animations/human/male/fat/locomotion/fat_m_walk_start.caf</Path>
   <Path>animations/human/male/fat/poses/fat_m_lookpose.caf</Path>
   <Path>animations/mannequin/adb/firstpersoncontrollerdefinition.xml</Path>
-  <Path>animations/mannequin/adb/firstpersoncontrollerdefinition.xml</Path>
   <Path>animations/mannequin/adb/npccharactercontrollerdefinition.xml</Path>
+  <Path>animations/mannequin/adb/npccharacterfragmentids.xml</Path>
+  <Path>animations/mannequin/adb/npccharactertags.xml</Path>
   <Path>animations/mannequin/adb/playerfragmentids.xml</Path>
   <Path>animations/mannequin/adb/playertags.xml</Path>
-  <Path>animations/mannequin/preview/npccharacterpreview.xml</Path>
-  <Path>animations/mannequin/preview/player.xml</Path>
   <Path>animations/puffydelite/locomotion/idle.caf</Path>
   <Path>animations/puffydelite/locomotion/run.caf</Path>
   <Path>animations/puffydelite/locomotion/walk.caf</Path>
@@ -66,8 +65,10 @@
   <Path>editor/resourcecache/textures/three_lane_road/threelaneroadpatches01_4k_ddna.dds</Path>
   <Path>editor/resourcecache/textures/three_lane_road/threelaneroadpatches01_4k_height.dds</Path>
   <Path>editor/resourcecache/textures/three_lane_road/threelaneroadpatches01_4k_spec.dds</Path>
+  <Path>libs/flownodes/substitutions.xml</Path>
   <Path>materials/dev/dev_danger.mtl</Path>
   <Path>materials/dev/dev_info.mtl</Path>
+  <Path>materials/references/surface_types/test_mat_arm_left.mtl</Path>
   <Path>materials/terrain/asphalt/m_three_lane_road.mtl</Path>
   <Path>materials/terrain/river.mtl</Path>
   <Path>objects/aaa_crytek_assets/architecture/fences/barbwire_fence/barbwire_fence.mtl</Path>
@@ -91,6 +92,7 @@
   <Path>objects/aaa_crytek_assets/props/industrial_structures/pipes/wall_pipe/textures/pipes_diff.dds</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/eyes.skin</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/materials/m_eye.mtl</Path>
+  <Path>objects/characters/base/male/tall/fat/anatomy/materials/m_mouth.mtl</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/teeth_lower.skin</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/teeth_upper.skin</Path>
   <Path>objects/characters/base/male/tall/fat/anatomy/textures/eye_cornea_ddn.dds</Path>

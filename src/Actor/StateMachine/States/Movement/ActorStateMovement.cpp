@@ -441,7 +441,7 @@ namespace DoxD
 			ProcessSprint(actorControllerComponent, prePhysicsEvent);
 
 			m_stateGround.OnPrePhysicsUpdate(actorControllerComponent, prePhysicsEvent.m_frameTime,
-				m_flags.AreAnyFlagsActive(eActorStateFlags_CurrentItemIsHeavy), actorControllerComponent.IsPlayer());
+				m_flags.AreAnyFlagsActive(eActorStateFlags_CurrentItemIsHeavy), actorControllerComponent.GetActor()->IsPlayer());
 		}
 		break;
 

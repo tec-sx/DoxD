@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="6dc1baed-3f8a-82fa-b4dd-db9d9fc9a916">
+ <Files>
+  <File path="vegetation_ddn.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">512</Detail>
+  <Detail name="height">512</Detail>
+  <Detail name="mipCount">8</Detail>
+ </Details>
+</AssetMetadata>

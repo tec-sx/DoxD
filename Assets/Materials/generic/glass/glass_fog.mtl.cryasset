@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="ed0f498e-a577-a5c1-0202-5b0032dc93e7">
+ <Files>
+  <File path="glass_fog.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

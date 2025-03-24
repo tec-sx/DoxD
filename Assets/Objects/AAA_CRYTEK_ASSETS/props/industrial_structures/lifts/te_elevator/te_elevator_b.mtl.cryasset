@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="ed853362-3236-52bd-81d5-d41414022954">
+ <Files>
+  <File path="te_elevator_b.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">7</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="5">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/lifts/te_elevator/textures/te_elevator_diff.dds</Path>
+  <Path usageCount="5">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/lifts/te_elevator/textures/te_elevator_ddna.dds</Path>
+  <Path usageCount="2">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/lifts/te_elevator/textures/te_elevator_decal.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/lifts/te_elevator/textures/te_elevator_dirt.dds</Path>
+ </Dependencies>
+</AssetMetadata>

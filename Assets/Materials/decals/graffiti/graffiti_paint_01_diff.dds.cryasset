@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="aaa573da-33dc-1e6d-9afe-8a36a9200f07">
+ <Files>
+  <File path="graffiti_paint_01_diff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">4096</Detail>
+  <Detail name="height">4096</Detail>
+  <Detail name="mipCount">11</Detail>
+ </Details>
+</AssetMetadata>

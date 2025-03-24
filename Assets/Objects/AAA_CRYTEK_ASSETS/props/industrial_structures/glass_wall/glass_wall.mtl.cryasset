@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="5db2a10e-0ac6-5a72-faa3-1acb756d1c21">
+ <Files>
+  <File path="glass_wall.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/glass_wall/textures/grout.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/glass_wall/textures/glass_wall_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

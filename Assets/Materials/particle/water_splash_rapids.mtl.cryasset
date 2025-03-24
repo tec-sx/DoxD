@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="1766d027-9040-59cc-66ee-c407d4aa0638">
+ <Files>
+  <File path="water_splash_rapids.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/sprites/water/water_splash.dds</Path>
+  <Path usageCount="1">textures/sprites/water/water_splash_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

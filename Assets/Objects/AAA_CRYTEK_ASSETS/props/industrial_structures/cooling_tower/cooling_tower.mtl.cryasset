@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="bd4f4201-0431-934a-7222-d5e36ceeda0b">
+ <Files>
+  <File path="cooling_tower.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/cooling_tower/textures/concrete_wall03_diff.dds</Path>
+  <Path usageCount="1">objects/AAA_CRYTEK_ASSETS/props/industrial_structures/cooling_tower/textures/concrete_wall03_ddna.dds</Path>
+ </Dependencies>
+</AssetMetadata>

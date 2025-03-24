@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Material" guid="9f1ad0e2-0a53-6108-e8ad-f4c683062c0c">
+ <Files>
+  <File path="bumps.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">3</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/defaultnouvs.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/bumps_ddn.dds</Path>
+  <Path usageCount="1">textures/generic/displacement/bumps_displ.dds</Path>
+ </Dependencies>
+</AssetMetadata>

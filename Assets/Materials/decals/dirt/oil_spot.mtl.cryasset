@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="28d0aa29-1f44-76b7-3681-a671c86d1135">
+ <Files>
+  <File path="oil_spot.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/decals/dirt/dirt_10.dds</Path>
+  <Path usageCount="1">textures/detail_bumpmaps/plastic/plastic_detail.dds</Path>
+ </Dependencies>
+</AssetMetadata>

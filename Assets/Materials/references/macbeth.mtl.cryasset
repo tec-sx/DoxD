@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="d08ebdce-00ac-f598-0e8f-e40cf11c70e6">
+ <Files>
+  <File path="macbeth.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/references/macbeth.dds</Path>
+ </Dependencies>
+</AssetMetadata>

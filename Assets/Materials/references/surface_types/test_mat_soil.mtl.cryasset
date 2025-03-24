@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="c01fef63-e74d-3956-6e74-8a6ae3b04d87">
+ <Files>
+  <File path="test_mat_soil.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path usageCount="1">textures/defaults/grey.dds</Path>
+  <Path usageCount="1">materials/references/surface_types/soil_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>
